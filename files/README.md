@@ -8,7 +8,8 @@ A short introduction of this app could easily go here.
 You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
+* [Node.js](https://nodejs.org/)<% if (yarn) { %>
+* [Yarn](https://yarnpkg.com/)<% } else { %> (with NPM)<% } %>
 * [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/)
 
@@ -16,7 +17,7 @@ You will need the following things properly installed on your computer.
 
 * `git clone <repository-url>` this repository
 * `cd <%= name %>`
-* `npm install`
+* `<% if (yarn) { %>yarn<% } else { %>npm<% } %> install`
 
 ## Running / Development
 
