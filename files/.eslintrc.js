@@ -8,7 +8,7 @@ module.exports = {
     'ember'
   ],
   extends: [
-    'eslint:recommended', 
+    'eslint:recommended',
     'plugin:ember/recommended'
   ],
   env: {
@@ -19,13 +19,17 @@ module.exports = {
   overrides: [
     // node files
     {
-      files: [
-        'index.js',
+      files: [<% if (blueprint !== 'app') { %>
+        'index.js',<% } %>
         'testem.js',
         'ember-cli-build.js',
-        'config/**/*.js',
-        'tests/dummy/config/**/*.js'
-      ],
+        'config/**/*.js'<% if (blueprint !== 'app') { %>,
+        'tests/dummy/config/**/*.js'<% } %>
+      ],<% if (blueprint !== 'app') { %>
+      excludedFiles: [
+        'app/**',
+        'addon/**'
+      ],<% } %>
       parserOptions: {
         sourceType: 'script',
         ecmaVersion: 2015
@@ -33,7 +37,11 @@ module.exports = {
       env: {
         browser: false,
         node: true
-      }
+      }<% if (blueprint !== 'app') { %>,
+      plugins: ['node'],
+      rules: Object.assign({}, require('eslint-plugin-node').configs.recommended.rules, {
+        // add your custom rules and overrides for node files here
+      })<% } %>
     },
 
     // test files
