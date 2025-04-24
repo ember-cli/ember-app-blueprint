@@ -1,13 +1,29 @@
 {
   "name": "@ember/app-blueprint",
-  "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
+  "version": "0.0.1",
+  "description": "The blueprint for building ambitious applications",
+  "repository": "https://github.com/ember-cli/ember-app-blueprint.git",
+  "author": "EmberJS Tooling Team",
   "license": "MIT",
+  "keywords": [
+    "ember-blueprint"
+  ],
+  "scripts": {
+    "lint": "eslint . --cache && prettier . --check",
+    "lint:fix": "eslint . --fix && prettier . --write",
+    "test": "pnpm --filter 'blueprint-tests' test"
+  },
+  "dependencies": {
+    "ember-cli-normalize-entity-name": "^1.0.0",
+    "ember-cli-string-utils": "^1.1.0"
+  },
+  "devDependencies": {
+    "@nullvoxpopuli/eslint-configs": "^5.1.2",
+    "eslint": "^9.25.1",
+    "prettier": "^3.5.3"
+  },
+  "engines": {
+    "node": "18.* || >= 20"
+  },
   "packageManager": "pnpm@10.7.0"
 }
