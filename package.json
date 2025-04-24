@@ -14,8 +14,10 @@
     "test": "pnpm --filter 'blueprint-tests' test"
   },
   "dependencies": {
+    "fs-extra": "^10.0.0",
     "ember-cli-normalize-entity-name": "^1.0.0",
-    "ember-cli-string-utils": "^1.1.0"
+    "ember-cli-string-utils": "^1.1.0",
+    "sort-package-json": "^1.54.0"
   },
   "devDependencies": {
     "@nullvoxpopuli/eslint-configs": "^5.1.2",
