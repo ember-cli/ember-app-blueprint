@@ -5,7 +5,7 @@ const path = require("path");
 
 // Deps
 const fs = require("fs-extra");
-const chalk = require('chalk');
+const chalk = require("chalk");
 const stringUtil = require("ember-cli-string-utils");
 const sortPackageJson = require("sort-package-json");
 
@@ -20,8 +20,8 @@ const date = new Date();
  * Implementor's note: since ember-cli uses a configuration-focused custom object syntax,
  * it's easier to only define the called APIs / properties in this object, and have all
  * other utility functions defined outside the object here.
- * This way it's clearer 
- *   - what is an ember-cli API (and will be called for us), 
+ * This way it's clearer
+ *   - what is an ember-cli API (and will be called for us),
  *   - and what is owned by us, the blueprint (and what we need to call ourselves).
  */
 module.exports = {
@@ -34,8 +34,13 @@ module.exports = {
 
   beforeInstall() {
     this.ui.writeLine(chalk.blue(`@ember/app-blueprint v${blueprintVersion}`));
-    this.ui.writeLine('');
-    this.ui.writeLine(prependEmoji('✨', `Creating a new Ember app in ${chalk.yellow(process.cwd())}:`));
+    this.ui.writeLine("");
+    this.ui.writeLine(
+      prependEmoji(
+        "✨",
+        `Creating a new Ember app in ${chalk.yellow(process.cwd())}:`,
+      ),
+    );
   },
 
   /**
@@ -81,19 +86,18 @@ module.exports = {
     delete opts.verbose;
     delete opts.rawArgs;
 
-    let invokeScriptPrefix = 'npm run';
-    let execBinPrefix = 'npm exec';
+    let invokeScriptPrefix = "npm run";
+    let execBinPrefix = "npm exec";
 
-    if (options.packageManager === 'yarn') {
-      invokeScriptPrefix = 'yarn';
-      execBinPrefix = 'yarn';
+    if (options.packageManager === "yarn") {
+      invokeScriptPrefix = "yarn";
+      execBinPrefix = "yarn";
     }
 
-    if (options.packageManager === 'pnpm') {
-      invokeScriptPrefix = 'pnpm';
-      execBinPrefix = 'pnpm';
+    if (options.packageManager === "pnpm") {
+      invokeScriptPrefix = "pnpm";
+      execBinPrefix = "pnpm";
     }
-
 
     return {
       info,
@@ -105,21 +109,21 @@ module.exports = {
       name: info.name.dashed,
       modulePrefix: info.name.dashed,
       namespace: info.name.namespace,
-      yarn: options.packageManager === 'yarn',
-      pnpm: options.packageManager === 'pnpm',
-      npm: options.packageManager !== 'yarn' && options.packageManager !== 'pnpm',
+      yarn: options.packageManager === "yarn",
+      pnpm: options.packageManager === "pnpm",
+      npm:
+        options.packageManager !== "yarn" && options.packageManager !== "pnpm",
       invokeScriptPrefix,
       execBinPrefix,
       welcome: options.welcome,
-      blueprint: 'app',
+      blueprint: "app",
       lang: options.lang,
       emberData: options.emberData,
       ciProvider: options.ciProvider,
       typescript: options.typescript,
-      packageManager: options.packageManager ?? 'npm',
+      packageManager: options.packageManager ?? "npm",
     };
   },
-
 
   files(options) {
     if (this._files) {
@@ -128,19 +132,21 @@ module.exports = {
 
     let files = this._super();
 
-    if (options.ciProvider !== 'github') {
-      files = files.filter((file) => file.indexOf('.github') < 0);
+    if (options.ciProvider !== "github") {
+      files = files.filter((file) => file.indexOf(".github") < 0);
     }
 
     if (!options.typescript) {
       files = files.filter(
-        (file) => !['tsconfig.json', 'types/'].includes(file) && !file.endsWith('.d.ts')
+        (file) =>
+          !["tsconfig.json", "types/"].includes(file) &&
+          !file.endsWith(".d.ts"),
       );
     }
 
     if (!options.emberData) {
-      files = files.filter((file) => !file.includes('models/'));
-      files = files.filter((file) => !file.includes('ember-data/'));
+      files = files.filter((file) => !file.includes("models/"));
+      files = files.filter((file) => !file.includes("ember-data/"));
     }
 
     this._files = files;
@@ -150,10 +156,10 @@ module.exports = {
 };
 
 /************************
-  *
-  * Support / Utilities
-  *
-  ***********************/
+ *
+ * Support / Utilities
+ *
+ ***********************/
 
 function infoFor(options) {
   let entity = options.entity;
@@ -169,11 +175,10 @@ function infoFor(options) {
       raw: rawName,
       get namespace() {
         return classyName;
-      }
+      },
     },
     location,
   };
-
 }
 
 async function sortManifest(location) {
@@ -185,7 +190,6 @@ async function sortManifest(location) {
   });
 }
 
-
 /**
  * Derive a directory name from a package name.
  * Takes scoped packages into account.
@@ -195,10 +199,10 @@ async function sortManifest(location) {
  * @return {String} Derived directory name.
  */
 function directoryForPackageName(packageName) {
-  let isScoped = packageName[0] === '@' && packageName.includes('/');
+  let isScoped = packageName[0] === "@" && packageName.includes("/");
 
   if (isScoped) {
-    let slashIndex = packageName.indexOf('/');
+    let slashIndex = packageName.indexOf("/");
     let scopeName = packageName.substring(1, slashIndex);
     let packageNameWithoutScope = packageName.substring(slashIndex + 1);
     let pathParts = process.cwd().split(path.sep);
@@ -215,9 +219,11 @@ function directoryForPackageName(packageName) {
 }
 
 function supportEmoji() {
-  const hasEmojiTurnedOff = process.argv.indexOf('--no-emoji') > -1;
+  const hasEmojiTurnedOff = process.argv.indexOf("--no-emoji") > -1;
 
-  return process.stdout.isTTY && process.platform !== 'win32' && !hasEmojiTurnedOff;
+  return (
+    process.stdout.isTTY && process.platform !== "win32" && !hasEmojiTurnedOff
+  );
 }
 
 const areEmojiSupported = supportEmoji();
@@ -225,4 +231,3 @@ const areEmojiSupported = supportEmoji();
 function prependEmoji(emoji, msg) {
   return areEmojiSupported ? `${emoji}  ${msg}` : msg;
 }
-
