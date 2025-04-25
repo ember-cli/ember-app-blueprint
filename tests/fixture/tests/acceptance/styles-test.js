@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { visit } from '@ember/test-helpers';
-import { setupApplicationTest } from '<%= name %>/tests/helpers';
+import { setupApplicationTest } from 'test-app/tests/helpers';
 
 module('Acceptance | styles', function (hooks) {
   setupApplicationTest(hooks);

@@ -3,7 +3,7 @@
 import { module, test } from 'qunit';
 import { getApplication } from '@ember/test-helpers';
 import { assert as debugAssert } from '@ember/debug';
-import { setupApplicationTest } from '<%= name %>/tests/helpers';
+import { setupApplicationTest } from 'test-app/tests/helpers';
 
 module('Acceptance | app route', function (hooks) {
   setupApplicationTest(hooks);
