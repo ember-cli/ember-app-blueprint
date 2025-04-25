@@ -30,7 +30,7 @@ export function newProjectWithFixtures({
   beforeAll(async () => {
     const tmpDir = (await tmp.dir()).path;
     dir = join(tmpDir, name);
-    await execa({cwd: tmpDir})`${localEmberCli} new ${name} -b ${blueprintPath} --skip-git ${flags}`;
+    await execa({cwd: tmpDir})`${localEmberCli} new ${name} -b ${blueprintPath} --skip-git --pnpm ${flags}`;
 
     let addonFixture = fixturify.readSync(fixturePath);
     fixturify.writeSync(dir, addonFixture);
