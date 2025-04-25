@@ -22,9 +22,11 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.3.0",
+    "ember-cli": "^6.3.1",
     "eslint": "9.x",
     "eslint-config-prettier": "^9.1.0",
     "execa": "^9.1.0",
+    "fixturify": "^3.0.0",
     "globals": "^15.3.0",
     "prettier": "^3.2.5",
     "prettier-plugin-ember-template-tag": "^2.0.2",

@@ -1,12 +1,14 @@
 import assert from 'node:assert';
 
-import { beforeAll, afterAll } from 'vitest';
+import { beforeAll } from 'vitest';
 import { sync as resolveBinSync } from 'resolve-bin';
 import { execa } from 'execa';
 import tmp from 'tmp-promise';
+import { join } from 'path';
+import fixturify from 'fixturify';
 
-import copyWithTemplate from '../lib/copy-with-template.js';
-import { newApp } from '../lib/new-app.mjs';
+let localEmberCli = require.resolve('ember-cli/bin/ember');
+const blueprintPath = join(__dirname, '..');
 
 function findEmber() {
   return resolveBinSync('ember-cli', { executable: 'ember' });
@@ -14,47 +16,40 @@ function findEmber() {
 
 export const emberCli = findEmber();
 
-const appName = 'fancy-app-in-test';
+const appName = 'test-app';
 
 export function newProjectWithFixtures({
   flags = [],
   fixturePath,
   name = appName,
 } = {}) {
-  let info;
+  let dir;
 
   assert(fixturePath, `a fixturePath is required`);
 
   beforeAll(async () => {
-    info = await newApp({ name, flags: ['--skip-git', ...flags] });
+    const tmpDir = (await tmp.dir()).path;
+    dir = join(tmpDir, name);
+    await execa({cwd: tmpDir})`${localEmberCli} new ${name} -b ${blueprintPath} --skip-git ${flags}`;
 
-    // apply the fixture on top of the generated app
-    copyWithTemplate(fixturePath, info.dir, {
-      name,
-    });
+    let addonFixture = fixturify.readSync(fixturePath);
+    fixturify.writeSync(dir, addonFixture);
 
     // Sync the lints for the fixtures with the project's config
     await execa(`pnpm`, ['lint:fix'], {
-      cwd: info.dir,
+      cwd: dir,
     });
   });
 
-  afterAll(async () => {
-    try {
-      await tmp.cleanup();
-    } catch {
-      // if it fails to cleaup we don't want to break CI
-    }
-  });
+
 
   return {
-    tmp: () => info.tmpDir,
     appName: () => name,
-    dir: () => info.dir,
-    $: (...args) => execa({ cwd: info.dir })(...args),
+    dir: () => dir,
+    $: (...args) => execa({ cwd: dir })(...args),
     execa: (program, args, options = {}) => {
       return execa(program, args, {
-        cwd: info.dir,
+        cwd: dir,
         ...options,
       });
     },
