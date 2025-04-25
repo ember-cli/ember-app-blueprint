@@ -2,7 +2,6 @@
 
 const stringUtil = require('ember-cli-string-utils');
 const chalk = require('chalk');
-const { isExperimentEnabled } = require('../../lib/experiments');
 const directoryForPackageName = require('../../lib/utilities/directory-for-package-name');
 
 module.exports = {
@@ -24,9 +23,8 @@ module.exports = {
     let rawName = entity.name;
     let name = stringUtil.dasherize(rawName);
     let namespace = stringUtil.classify(rawName);
-    let embroider = isExperimentEnabled('EMBROIDER') || options.embroider;
 
-    let hasOptions = !options.welcome || options.packageManager || embroider || options.ciProvider;
+    let hasOptions = !options.welcome || options.packageManager || options.ciProvider;
     let blueprintOptions = '';
     if (hasOptions) {
       let indent = `\n            `;
@@ -38,7 +36,6 @@ module.exports = {
           !options.welcome && '"--no-welcome"',
           options.packageManager === 'yarn' && '"--yarn"',
           options.packageManager === 'pnpm' && '"--pnpm"',
-          embroider && '"--embroider"',
           options.ciProvider && `"--ci-provider=${options.ciProvider}"`,
           options.typescript && `"--typescript"`,
           !options.emberData && `"--no-ember-data"`,
@@ -75,7 +72,6 @@ module.exports = {
       welcome: options.welcome,
       blueprint: 'app',
       blueprintOptions,
-      embroider,
       lang: options.lang,
       emberData: options.emberData,
       ciProvider: options.ciProvider,

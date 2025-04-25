@@ -1,9 +1,11 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const { compatBuild } = require('@embroider/compat');
 
-module.exports = function (defaults) {
-  const app = new EmberApp(defaults, {
+module.exports = async function (defaults) {
+  const { buildOnce } = await import('@embroider/vite');
+  let app = new EmberApp(defaults, {
     <% if (emberData) {%>emberData: {
       deprecations: {
         // New projects can safely leave this deprecation disabled.
@@ -13,21 +15,8 @@ module.exports = function (defaults) {
         DEPRECATE_STORE_EXTENDS_EMBER_OBJECT: false,
       },
     },
-    <% } %><% if (typescript) {%>'ember-cli-babel': { enableTypeScriptTransform: true },
-
     <% } %>// Add options here
   });
 
-  <% if (embroider) { %>const { Webpack } = require('@embroider/webpack');
-  return require('@embroider/compat').compatBuild(app, Webpack, {
-    staticAddonTestSupportTrees: true,
-    staticAddonTrees: true,
-    staticEmberSource: true,
-    staticInvokables: true,
-    skipBabel: [
-      {
-        package: 'qunit',
-      },
-    ],
-  });<% } else { %>return app.toTree();<% } %>
+  return compatBuild(app, buildOnce);
 };
