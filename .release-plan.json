@@ -1,22 +1,18 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "0.0.0",
-      "newVersion": "0.1.0",
+      "impact": "patch",
+      "oldVersion": "0.1.0",
+      "newVersion": "0.1.1",
       "tagName": "latest",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
-        },
-        {
           "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-04-25)\n\n* @ember/app-blueprint 0.1.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#3](https://github.com/ember-cli/ember-app-blueprint/pull/3) Import the app blueprint from ember-cli and @embroider/app-blueprint ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#6](https://github.com/ember-cli/ember-app-blueprint/pull/6) fix repo url ([@mansona](https://github.com/mansona))\n  * [#4](https://github.com/ember-cli/ember-app-blueprint/pull/4) set up release plan ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2025-05-08)\n\n* @ember/app-blueprint 0.1.1 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#10](https://github.com/ember-cli/ember-app-blueprint/pull/10) Add @ember/test-waiters ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#7](https://github.com/ember-cli/ember-app-blueprint/pull/7) Remove @glimmer/tracking ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
