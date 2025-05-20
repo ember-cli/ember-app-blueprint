@@ -1,11 +1,15 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "patch",
-      "oldVersion": "0.1.0",
-      "newVersion": "0.1.1",
+      "impact": "minor",
+      "oldVersion": "0.1.1",
+      "newVersion": "0.2.0",
       "tagName": "latest",
       "constraints": [
+        {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
         {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
@@ -14,5 +18,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-05-08)\n\n* @ember/app-blueprint 0.1.1 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#10](https://github.com/ember-cli/ember-app-blueprint/pull/10) Add @ember/test-waiters ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#7](https://github.com/ember-cli/ember-app-blueprint/pull/7) Remove @glimmer/tracking ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-05-20)\n\n* @ember/app-blueprint 0.2.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#13](https://github.com/ember-cli/ember-app-blueprint/pull/13) Bump ember-cli and ember-source to 6.5 (beta) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#14](https://github.com/ember-cli/ember-app-blueprint/pull/14) Use *.cjs for the testem config ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#12](https://github.com/ember-cli/ember-app-blueprint/pull/12) Upgrade ember-data/warp-drive ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#11](https://github.com/ember-cli/ember-app-blueprint/pull/11) Don't emit application.hbs, use application.gjs ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#15](https://github.com/ember-cli/ember-app-blueprint/pull/15) Add imported module that is not declared ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
