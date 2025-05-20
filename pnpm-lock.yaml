@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      chalk:
+        specifier: ^5.4.1
+        version: 5.4.1
       ember-cli-string-utils:
         specifier: ^1.1.0
         version: 1.1.0
