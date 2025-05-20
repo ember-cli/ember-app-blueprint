@@ -14,7 +14,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "vitest"
+    "test": "node --exerimental-require-module node_modules/.bin/vitest"
   },
   "dependencies": {
     "chalk": "^4.1.2",

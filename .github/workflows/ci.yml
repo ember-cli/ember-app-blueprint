@@ -33,6 +33,3 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm test
-        env:
-          # Needed until we drop node 18
-          NODE_OPTIONS: "--experimental-require-module"
