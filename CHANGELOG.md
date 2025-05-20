@@ -2,6 +2,21 @@
 
 ## Release (2025-05-20)
 
+* @ember/app-blueprint 0.3.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#20](https://github.com/ember-cli/ember-app-blueprint/pull/20) Upgrade embroider dependencies ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#18](https://github.com/ember-cli/ember-app-blueprint/pull/18) Add missing dependency: chalk ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
+## Release (2025-05-20)
+
 * @ember/app-blueprint 0.2.0 (minor)
 
 #### :rocket: Enhancement
