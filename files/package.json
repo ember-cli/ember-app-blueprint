@@ -4,6 +4,7 @@
   "private": true,
   "description": "Small description for <%= name %> goes here",
   "repository": "",
+  "type": "module",
   "license": "MIT",
   "author": "",
   "directories": {

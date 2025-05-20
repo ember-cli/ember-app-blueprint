@@ -21,10 +21,20 @@ export default [
       },
     },
   },
+  {
+    files: ['**/*.cjs'],
+    languageOptions: {
+      sourceType: 'script',
+    },
+  },
   { languageOptions: { globals: globals.node } },
   pluginJs.configs.recommended,
   eslintConfigPrettier,
   {
-    ignores: ['tests/fixture/*', 'tests/fixture-ts/*', 'files/ember-cli-build.js'],
+    ignores: [
+      'tests/fixture/*',
+      'tests/fixture-ts/*',
+      'files/ember-cli-build.cjs',
+    ],
   },
 ];

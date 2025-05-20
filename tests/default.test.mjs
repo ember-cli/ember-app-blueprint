@@ -93,7 +93,7 @@ describe('basic functionality', function () {
           });
 
           writeFileSync(
-            join(project.dir(), 'testem-dev.js'),
+            join(project.dir(), 'testem-dev.cjs'),
             `module.exports = {
   test_page: 'tests/index.html?hidepassed',
   disable_watching: true,
@@ -115,7 +115,7 @@ describe('basic functionality', function () {
     },
   },
   middleware: [
-    require(__dirname + '/testem-proxy.js')('${appURL}')
+    require(__dirname + '/testem-proxy.cjs')('${appURL}')
   ],
 };
 `,
@@ -124,7 +124,7 @@ describe('basic functionality', function () {
           let testResult = await project.execa('pnpm', [
             'testem',
             '--file',
-            'testem-dev.js',
+            'testem-dev.cjs',
             'ci',
           ]);
           expect(testResult.exitCode).to.eq(0, testResult.output);
