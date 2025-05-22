@@ -68,7 +68,7 @@
     "@types/rsvp": "^4.0.9<% if (emberData) {%>",
     "@warp-drive/core-types": "~5.5.0<% }} %><% if (emberData) { %>",
     "@warp-drive/ember": "~5.5.0<% } %>",
-    "babel-plugin-ember-template-compilation": "^3.0.0",
+    "babel-plugin-ember-template-compilation": "^2.4.1",
     "concurrently": "^9.1.2",
     "decorator-transforms": "^2.3.0",
     "ember-auto-import": "^2.10.0",
