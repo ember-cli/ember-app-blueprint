@@ -1,5 +1,21 @@
 # Changelog
 
+## Release (2025-05-22)
+
+* @ember/app-blueprint 0.4.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#23](https://github.com/ember-cli/ember-app-blueprint/pull/23) run update-blueprint-deps ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#21](https://github.com/ember-cli/ember-app-blueprint/pull/21) Remove @ember-data/tracking ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-05-20)
 
 * @ember/app-blueprint 0.3.0 (minor)

@@ -2,8 +2,8 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "0.2.0",
-      "newVersion": "0.3.0",
+      "oldVersion": "0.3.0",
+      "newVersion": "0.4.0",
       "tagName": "latest",
       "constraints": [
         {
@@ -18,5 +18,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-05-20)\n\n* @ember/app-blueprint 0.3.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#20](https://github.com/ember-cli/ember-app-blueprint/pull/20) Upgrade embroider dependencies ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#18](https://github.com/ember-cli/ember-app-blueprint/pull/18) Add missing dependency: chalk ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-05-22)\n\n* @ember/app-blueprint 0.4.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#23](https://github.com/ember-cli/ember-app-blueprint/pull/23) run update-blueprint-deps ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#21](https://github.com/ember-cli/ember-app-blueprint/pull/21) Remove @ember-data/tracking ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
