@@ -2,6 +2,17 @@
 
 ## Release (2025-05-22)
 
+* @ember/app-blueprint 0.5.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#24](https://github.com/ember-cli/ember-app-blueprint/pull/24) run update-blueprint-deps --latest ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2025-05-22)
+
 * @ember/app-blueprint 0.4.0 (minor)
 
 #### :rocket: Enhancement
