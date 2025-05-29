@@ -4,7 +4,7 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default [
   {
-    files: ['**/*.js'],
+    files: ['**/*.js', '**/*.cjs'],
     languageOptions: { sourceType: 'commonjs' },
   },
   {
@@ -25,6 +25,6 @@ export default [
   pluginJs.configs.recommended,
   eslintConfigPrettier,
   {
-    ignores: ['tests/fixture/*', 'tests/fixture-ts/*', 'files/ember-cli-build.js'],
+    ignores: ['tests/fixture/*', 'tests/fixture-ts/*', 'files/ember-cli-build.cjs'],
   },
 ];
