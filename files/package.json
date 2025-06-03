@@ -36,7 +36,7 @@
     "@babel/runtime": "^7.27.1",
     "@babel/plugin-transform-runtime": "^7.27.1<% if (typescript) { %>",
     "@babel/plugin-transform-typescript": "^7.27.1<% } %>",
-    "@babel/eslint-parser": "^7.27.1<% if (typescript && emberData) { %>",
+    "@babel/eslint-parser": "^7.27.5<% if (typescript && emberData) { %>",
     "@ember-data/adapter": "~5.5.0",
     "@ember-data/graph": "~5.5.0",
     "@ember-data/json-api": "~5.5.0",
