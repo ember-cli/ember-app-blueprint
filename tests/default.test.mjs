@@ -115,7 +115,7 @@ describe('basic functionality', function () {
     },
   },
   middleware: [
-    require(__dirname + '/testem-proxy.js')('${appURL}')
+    require(__dirname + '/testem-proxy.cjs')('${appURL}')
   ],
 };
 `,
