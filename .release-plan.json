@@ -2,8 +2,8 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "0.4.0",
-      "newVersion": "0.5.0",
+      "oldVersion": "0.5.0",
+      "newVersion": "0.6.0",
       "tagName": "latest",
       "constraints": [
         {
@@ -14,5 +14,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-05-22)\n\n* @ember/app-blueprint 0.5.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#24](https://github.com/ember-cli/ember-app-blueprint/pull/24) run update-blueprint-deps --latest ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2025-06-05)\n\n* @ember/app-blueprint 0.6.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#28](https://github.com/ember-cli/ember-app-blueprint/pull/28) make sure we always use strict generators ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
