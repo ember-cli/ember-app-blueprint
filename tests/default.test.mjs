@@ -6,23 +6,39 @@ import { newProjectWithFixtures } from './helpers.mjs';
 
 const SCENARIOS = [
   {
-    flags: [
-      /* none, default */
-    ],
+    name: 'defaults',
+    flags: [],
     fixturePath: join(import.meta.dirname, 'fixture'),
   },
   {
+    name: 'compat (v1 addon support)',
+    // @glimmer/component >= 2.0.0 is a v2 addon, which we don't need when testing "compat mode"
+    // this test is "compat mode"
+    // compat mode forces us to use v1 addon infra, ember-cli, etc
+    flags: [
+      /* none, default */
+    ],
+    packageJson: {
+      devDependencies: {
+        '@glimmer/component': '^1.1.2',
+      },
+    },
+    fixturePath: join(import.meta.dirname, 'fixture'),
+  },
+  {
+    name: 'typescript',
     flags: ['--typescript'],
     fixturePath: join(import.meta.dirname, 'fixture-ts'),
   },
 ];
 
 describe('basic functionality', function () {
-  for (let { flags, fixturePath } of SCENARIOS) {
-    describe(`with flags: '${flags.join(' ')}'`, function () {
+  for (let { name, flags, packageJson, fixturePath } of SCENARIOS) {
+    describe(name, function () {
       let project = newProjectWithFixtures({
         fixturePath,
         flags,
+        packageJson,
       });
 
       it('verify files', async function () {
