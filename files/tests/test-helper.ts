@@ -1,7 +1,7 @@
 import Application from '<%= modulePrefix %>/app';
 import config from '<%= modulePrefix %>/config/environment';
 import * as QUnit from 'qunit';
-import { setApplication, getSettledState, currentUrl, currentRouteName } from '@ember/test-helpers';
+import { setApplication, getSettledState, currentURL, currentRouteName } from '@ember/test-helpers';
 import { getPendingWaiterState } from '@ember/test-waiters';
 import { setup } from 'qunit-dom';
 import { start as qunitStart, setupEmberOnerrorValidation } from 'ember-qunit';
