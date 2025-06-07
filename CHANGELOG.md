@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-06-07)
+
+* @ember/app-blueprint 0.7.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#27](https://github.com/ember-cli/ember-app-blueprint/pull/27) Remove unused dependencies ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-06-05)
 
 * @ember/app-blueprint 0.6.0 (minor)
