@@ -4,7 +4,8 @@ import { beforeAll } from 'vitest';
 import { sync as resolveBinSync } from 'resolve-bin';
 import { execa } from 'execa';
 import tmp from 'tmp-promise';
-import { join } from 'path';
+import fs from 'node:fs/promises';
+import { join } from 'node:path';
 import fixturify from 'fixturify';
 
 let localEmberCli = require.resolve('ember-cli/bin/ember');
@@ -21,6 +22,7 @@ const appName = 'test-app';
 export function newProjectWithFixtures({
   flags = [],
   fixturePath,
+  packageJson = {},
   name = appName,
 } = {}) {
   let dir;
@@ -30,18 +32,20 @@ export function newProjectWithFixtures({
   beforeAll(async () => {
     const tmpDir = (await tmp.dir()).path;
     dir = join(tmpDir, name);
-    await execa({cwd: tmpDir})`${localEmberCli} new ${name} -b ${blueprintPath} --skip-git --pnpm ${flags}`;
+    await execa({
+      cwd: tmpDir,
+    })`${localEmberCli} new ${name} -b ${blueprintPath} --skip-git --pnpm ${flags}`;
 
     let addonFixture = fixturify.readSync(fixturePath);
     fixturify.writeSync(dir, addonFixture);
+
+    await mergePackageJson(dir, packageJson);
 
     // Sync the lints for the fixtures with the project's config
     await execa(`pnpm`, ['lint:fix'], {
       cwd: dir,
     });
   });
-
-
 
   return {
     appName: () => name,
@@ -54,4 +58,34 @@ export function newProjectWithFixtures({
       });
     },
   };
+}
+
+async function mergePackageJson(dir, packageJson) {
+  let rootKeys = Object.keys(packageJson || {});
+
+  if (rootKeys.length === 0) {
+    return;
+  }
+
+  let packageJsonPath = join(dir, 'package.json');
+  let testPackageJson = JSON.parse(
+    (await fs.readFile(packageJsonPath)).toString(),
+  );
+
+  for (let rootKey of rootKeys) {
+    /**
+     * For searchability in logs
+     */
+    console.log(`Modifying ${rootKey} in package.json @ ${packageJsonPath}`);
+    let value = packageJson[rootKey];
+
+    let isObject = typeof value === 'object' && !Array.isArray(value);
+    if (!isObject) {
+      throw new Error(`${rootKey} customization is currently not implemented`);
+    }
+
+    Object.assign(testPackageJson[rootKey], value);
+  }
+
+  await fs.writeFile(packageJsonPath, JSON.stringify(testPackageJson, null, 2));
 }
