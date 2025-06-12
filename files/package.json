@@ -25,7 +25,7 @@
     "lint:types": "glint<% } %>",
     "start": "vite",
     "test": "concurrently \"<%= packageManager %>:lint\" \"<%= packageManager %>:test:*\" --names \"lint,test:\" --prefixColors auto",
-    "test:ember": "vite build --mode test && testem ci"
+    "test:ember": "NODE_ENV=development vite build --mode test && testem ci"
   },
   "exports": {
     "./tests/*": "./tests/*",
