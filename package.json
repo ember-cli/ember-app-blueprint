@@ -13,7 +13,11 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "concurrently 'pnpm:lint:*(!fix)'",
+    "lint:fix": "pnpm lint:eslint && pnpm format",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier . --check",
+    "format": "prettier . --write",
     "test": "vitest"
   },
   "dependencies": {
@@ -24,6 +28,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.3.0",
+    "concurrently": "^9.1.2",
     "ember-cli": "^6.3.1",
     "eslint": "9.x",
     "eslint-config-prettier": "^9.1.0",
