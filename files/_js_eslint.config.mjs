@@ -72,7 +72,7 @@ export default [
    * CJS node files
    */
   {
-    files: ['**/*.cjs'],
+    files: ['**/*.cjs', 'ember-cli-build.*', 'config/*'],
     plugins: {
       n,
     },
