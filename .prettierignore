@@ -1,0 +1,7 @@
+files/
+node_modules/
+tests/fixture/
+
+*.yml
+*.yaml
+*.md
