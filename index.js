@@ -4,6 +4,16 @@ const stringUtil = require('ember-cli-string-utils');
 const chalk = require('chalk');
 const directoryForPackageName = require('./lib/directory-for-package-name');
 
+function hasCompat(options) {
+  let compat = options.compat ?? true;
+
+  if (options.noCompat) {
+    compat = false;
+  }
+
+  return compat;
+}
+
 module.exports = {
   description: 'The default blueprint for ember-cli projects.',
 
@@ -59,6 +69,8 @@ module.exports = {
       execBinPrefix = 'pnpm';
     }
 
+    let compat = hasCompat(options);
+
     return {
       appDirectory: directoryForPackageName(name),
       name,
@@ -79,6 +91,8 @@ module.exports = {
       ciProvider: options.ciProvider,
       typescript: options.typescript,
       packageManager: options.packageManager ?? 'npm',
+      compat: compat,
+      noCompat: !compat,
     };
   },
 
@@ -104,6 +118,10 @@ module.exports = {
     if (!options.emberData) {
       files = files.filter((file) => !file.includes('models/'));
       files = files.filter((file) => !file.includes('ember-data/'));
+    }
+
+    if (hasCompat(options)) {
+      files = files.filter((file) => !file.includes('ember-cli-build.js'));
     }
 
     this._files = files;

@@ -1,7 +1,13 @@
+<% if (compat) { %>
 const {
   babelCompatSupport,
   templateCompatSupport,
 } = require('@embroider/compat/babel');
+<% } else { %>
+const { buildMacros } = require('@embroider/macros/babel');
+
+const macros = buildMacros();
+<% } %>
 
 module.exports = {
   plugins: [
@@ -13,8 +19,9 @@ module.exports = {
           'ember-cli-htmlbars',
           'ember-cli-htmlbars-inline-precompile',
           'htmlbars-inline-precompile',
-        ],
-        transforms: [...templateCompatSupport()],
+        ],<% if (compat) { %>
+        transforms: [...templateCompatSupport()],<% } else { %>
+        transforms: [...macros.templateMacros],<% } %>
       },
     ],
     [
@@ -32,8 +39,9 @@ module.exports = {
         useESModules: true,
         regenerator: false,
       },
-    ],
-    ...babelCompatSupport(),
+    ],<% if (compat) { %>
+    ...babelCompatSupport(),<% } else { %>
+    ...macros.babelMacros,<% } %>
   ],
 
   generatorOpts: {

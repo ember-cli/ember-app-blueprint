@@ -53,10 +53,10 @@
     "@ember/test-waiters": "^4.1.0",
     "@embroider/macros": "^1.18.0",
     "@embroider/core": "^4.1.0",
-    "@embroider/vite": "^1.1.5",
-    "@embroider/compat": "^4.1.0",
-    "@embroider/router": "^3.0.1",
-    "@embroider/config-meta-loader": "^1.0.0",
+    "@embroider/vite": "^1.1.5",<% if (compat) { %>
+    "@embroider/compat": "^4.1.0",<% } %>
+    "@embroider/router": "^3.0.1",<% if (compat) { %>
+    "@embroider/config-meta-loader": "^1.0.0",<% } %>
     "@eslint/js": "^9.27.0",
     "@glimmer/component": "^2.0.0<% if (typescript) { %>",
     "@glint/core": "^1.5.2",
@@ -75,8 +75,8 @@
     "ember-cli": "~6.5.0-beta.0",
     "ember-cli-babel": "^8.2.0",
     "ember-cli-deprecation-workflow": "^3.3.0<% if (emberData) { %>",
-    "ember-data": "~5.5.0<% } %>",
-    "ember-load-initializers": "^3.0.1",
+    "ember-data": "~5.5.0<% } %>",<% if (compat) { %>
+    "ember-load-initializers": "^3.0.1",<% } %>
     "ember-modifier": "^4.2.2",
     "ember-page-title": "^9.0.2",
     "ember-qunit": "^9.0.3",
