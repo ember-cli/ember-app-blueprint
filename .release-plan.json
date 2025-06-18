@@ -2,17 +2,21 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "0.5.0",
-      "newVersion": "0.6.0",
+      "oldVersion": "0.6.0",
+      "newVersion": "0.7.0",
       "tagName": "latest",
       "constraints": [
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-06-05)\n\n* @ember/app-blueprint 0.6.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#28](https://github.com/ember-cli/ember-app-blueprint/pull/28) make sure we always use strict generators ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2025-06-18)\n\n* @ember/app-blueprint 0.7.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#27](https://github.com/ember-cli/ember-app-blueprint/pull/27) Remove unused dependencies ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#35](https://github.com/ember-cli/ember-app-blueprint/pull/35) Adjust the lint command / enforce prettier in CI (our code, not for the output) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
