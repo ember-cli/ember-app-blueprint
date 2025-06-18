@@ -14,6 +14,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "concurrently 'pnpm:lint:*(!fix)'",
+    "lint:fix": "pnpm lint:eslint && pnpm format",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier . --check",
     "format": "prettier . --write",

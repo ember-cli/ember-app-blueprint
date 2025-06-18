@@ -24,7 +24,8 @@ module.exports = {
     let name = stringUtil.dasherize(rawName);
     let namespace = stringUtil.classify(rawName);
 
-    let hasOptions = !options.welcome || options.packageManager || options.ciProvider;
+    let hasOptions =
+      !options.welcome || options.packageManager || options.ciProvider;
     let blueprintOptions = '';
     if (hasOptions) {
       let indent = `\n            `;
@@ -66,7 +67,8 @@ module.exports = {
       blueprintVersion: require('./package').version,
       yarn: options.packageManager === 'yarn',
       pnpm: options.packageManager === 'pnpm',
-      npm: options.packageManager !== 'yarn' && options.packageManager !== 'pnpm',
+      npm:
+        options.packageManager !== 'yarn' && options.packageManager !== 'pnpm',
       invokeScriptPrefix,
       execBinPrefix,
       welcome: options.welcome,
@@ -93,7 +95,9 @@ module.exports = {
 
     if (!options.typescript) {
       files = files.filter(
-        (file) => !['tsconfig.json', 'app/config/', 'types/'].includes(file) && !file.endsWith('.d.ts')
+        (file) =>
+          !['tsconfig.json', 'app/config/', 'types/'].includes(file) &&
+          !file.endsWith('.d.ts'),
       );
     }
 
@@ -110,7 +114,12 @@ module.exports = {
   beforeInstall() {
     const prependEmoji = require('./lib/prepend-emoji');
 
-    this.ui.writeLine(prependEmoji('✨', `Creating a new Ember app in ${chalk.yellow(process.cwd())}:`));
+    this.ui.writeLine(
+      prependEmoji(
+        '✨',
+        `Creating a new Ember app in ${chalk.yellow(process.cwd())}:`,
+      ),
+    );
   },
 
   /**
