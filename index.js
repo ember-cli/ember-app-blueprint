@@ -4,6 +4,16 @@ const stringUtil = require('ember-cli-string-utils');
 const chalk = require('chalk');
 const directoryForPackageName = require('./lib/directory-for-package-name');
 
+function hasCompat(options) {
+  let compat = options.compat ?? true;
+
+  if (options.noCompat) {
+    compat = false;
+  }
+
+  return compat;
+}
+
 module.exports = {
   description: 'The default blueprint for ember-cli projects.',
 
@@ -59,6 +69,8 @@ module.exports = {
       execBinPrefix = 'pnpm';
     }
 
+    let compat = hasCompat(options);
+
     return {
       appDirectory: directoryForPackageName(name),
       name,
@@ -79,6 +91,8 @@ module.exports = {
       ciProvider: options.ciProvider,
       typescript: options.typescript,
       packageManager: options.packageManager ?? 'npm',
+      compat: compat,
+      noCompat: !compat,
     };
   },
 
@@ -104,6 +118,18 @@ module.exports = {
     if (!options.emberData) {
       files = files.filter((file) => !file.includes('models/'));
       files = files.filter((file) => !file.includes('ember-data/'));
+    }
+
+    if (hasCompat(options)) {
+      files = files.filter((file) => {
+        if (file.includes('ember-cli-build.js')) return false;
+        if (file.includes('config/environment.js')) return false;
+        if (file.includes('config/targets.js')) return false;
+
+        return true;
+      });
+    } else {
+      files = files.filter((file) => !file.includes('registry.ts'));
     }
 
     this._files = files;
@@ -159,6 +185,30 @@ module.exports = {
       fileInfo.outputBasePath = fileInfo.outputPath.replace('_ts_', '');
       fileInfo.outputPath = fileInfo.outputPath.replace('_ts_', '');
       fileInfo.displayPath = fileInfo.outputPath.replace('_ts_', '');
+      return fileInfo;
+    }
+
+    if (file.includes('__compat__')) {
+      if (!hasCompat(options)) {
+        return null;
+      }
+
+      let prefix = '__compat__';
+      fileInfo.outputBasePath = fileInfo.outputPath.replace(prefix, '');
+      fileInfo.outputPath = fileInfo.outputPath.replace(prefix, '');
+      fileInfo.displayPath = fileInfo.outputPath.replace(prefix, '');
+      return fileInfo;
+    }
+
+    if (file.includes('__no-compat__')) {
+      if (hasCompat(options)) {
+        return null;
+      }
+
+      let prefix = '__no-compat__';
+      fileInfo.outputBasePath = fileInfo.outputPath.replace(prefix, '');
+      fileInfo.outputPath = fileInfo.outputPath.replace(prefix, '');
+      fileInfo.displayPath = fileInfo.outputPath.replace(prefix, '');
       return fileInfo;
     }
 
