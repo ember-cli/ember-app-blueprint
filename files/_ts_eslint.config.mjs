@@ -92,7 +92,7 @@ export default ts.config(
    * CJS node files
    */
   {
-    files: ['**/*.cjs'],
+    files: ['**/*.cjs', 'ember-cli-build.*', 'config/*'],
     plugins: {
       n,
     },
