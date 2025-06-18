@@ -121,7 +121,13 @@ module.exports = {
     }
 
     if (hasCompat(options)) {
-      files = files.filter((file) => !file.includes('ember-cli-build.js'));
+      files = files.filter((file) => {
+        if (file.includes('ember-cli-build.js')) return false;
+        if (file.includes('config/environment.js')) return false;
+        if (file.includes('config/targets.js')) return false;
+
+        return true;
+      });
     } else {
       files = files.filter((file) => !file.includes('registry.ts'));
     }
@@ -179,6 +185,30 @@ module.exports = {
       fileInfo.outputBasePath = fileInfo.outputPath.replace('_ts_', '');
       fileInfo.outputPath = fileInfo.outputPath.replace('_ts_', '');
       fileInfo.displayPath = fileInfo.outputPath.replace('_ts_', '');
+      return fileInfo;
+    }
+
+    if (file.includes('__compat__')) {
+      if (!hasCompat(options)) {
+        return null;
+      }
+
+      let prefix = '__compat__';
+      fileInfo.outputBasePath = fileInfo.outputPath.replace(prefix, '');
+      fileInfo.outputPath = fileInfo.outputPath.replace(prefix, '');
+      fileInfo.displayPath = fileInfo.outputPath.replace(prefix, '');
+      return fileInfo;
+    }
+
+    if (file.includes('__no-compat__')) {
+      if (hasCompat(options)) {
+        return null;
+      }
+
+      let prefix = '__no-compat__';
+      fileInfo.outputBasePath = fileInfo.outputPath.replace(prefix, '');
+      fileInfo.outputPath = fileInfo.outputPath.replace(prefix, '');
+      fileInfo.displayPath = fileInfo.outputPath.replace(prefix, '');
       return fileInfo;
     }
 
