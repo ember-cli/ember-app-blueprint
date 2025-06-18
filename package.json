@@ -13,7 +13,7 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "lint": "concurrently 'pnpm:lint:*'",
+    "lint": "concurrently 'pnpm:lint:*(!fix)'",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier . --check",
     "format": "prettier . --write",
