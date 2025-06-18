@@ -122,6 +122,8 @@ module.exports = {
 
     if (hasCompat(options)) {
       files = files.filter((file) => !file.includes('ember-cli-build.js'));
+    } else {
+      files = files.filter((file) => !file.includes('registry.ts'));
     }
 
     this._files = files;
