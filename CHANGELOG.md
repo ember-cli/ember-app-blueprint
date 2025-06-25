@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-06-25)
+
+* @ember/app-blueprint 0.7.2 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#38](https://github.com/ember-cli/ember-app-blueprint/pull/38) Change Test mode to Development mode and fix NODE_ENV in tests ([@gossi](https://github.com/gossi))
+
+#### Committers: 1
+- Thomas Gossmann ([@gossi](https://github.com/gossi))
+
 ## Release (2025-06-24)
 
 * @ember/app-blueprint 0.7.1 (patch)

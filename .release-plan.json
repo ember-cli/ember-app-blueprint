@@ -2,8 +2,8 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "patch",
-      "oldVersion": "0.7.0",
-      "newVersion": "0.7.1",
+      "oldVersion": "0.7.1",
+      "newVersion": "0.7.2",
       "tagName": "latest",
       "constraints": [
         {
@@ -14,5 +14,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-06-24)\n\n* @ember/app-blueprint 0.7.1 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#33](https://github.com/ember-cli/ember-app-blueprint/pull/33) Fix NODE_ENV for tests ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-06-25)\n\n* @ember/app-blueprint 0.7.2 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#38](https://github.com/ember-cli/ember-app-blueprint/pull/38) Change Test mode to Development mode and fix NODE_ENV in tests ([@gossi](https://github.com/gossi))\n\n#### Committers: 1\n- Thomas Gossmann ([@gossi](https://github.com/gossi))\n"
 }
