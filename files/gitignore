@@ -8,6 +8,7 @@
 
 # misc
 /.env
+/.env.local
 /.env.*.local
 /.pnp*
 /.eslintcache
