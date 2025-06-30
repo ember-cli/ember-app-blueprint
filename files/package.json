@@ -24,8 +24,7 @@
     "lint:js:fix": "eslint . --fix<% if (typescript) { %>",
     "lint:types": "glint<% } %>",
     "start": "vite",
-    "test": "concurrently \"<%= packageManager %>:lint\" \"<%= packageManager %>:test:*\" --names \"lint,test:\" --prefixColors auto",
-    "test:ember": "vite build --mode development && testem ci"
+    "test": "vite build --mode development && testem ci"
   },
   "exports": {
     "./tests/*": "./tests/*",
