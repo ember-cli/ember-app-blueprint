@@ -1,18 +1,15 @@
-const {
+import { createRequire } from 'module';
+import { fileURLToPath } from 'url';
+
+import {
   babelCompatSupport,
   templateCompatSupport,
-} = require('@embroider/compat/babel');
+} from '@embroider/compat/babel';
 
-module.exports = {
+const require = createRequire(import.meta.url);
+
+export default {
   plugins: [
-    [
-      '@babel/plugin-transform-typescript',
-      {
-        allExtensions: true,
-        onlyRemoveTypeImports: true,
-        allowDeclareFields: true,
-      },
-    ],
     [
       'babel-plugin-ember-template-compilation',
       {
@@ -36,7 +33,7 @@ module.exports = {
     [
       '@babel/plugin-transform-runtime',
       {
-        absoluteRuntime: __dirname,
+        absoluteRuntime: fileURLToPath(new URL('.', import.meta.url)),
         useESModules: true,
         regenerator: false,
       },
