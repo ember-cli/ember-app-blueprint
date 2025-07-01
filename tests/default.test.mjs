@@ -68,10 +68,10 @@ describe('basic functionality', function () {
         let result;
 
         try {
-          result = await project.execa('pnpm', ['test:ember']);
+          result = await project.execa('pnpm', ['test']);
         } catch (err) {
           console.log(err.stdout, err.stderr);
-          throw 'Failed to successfully run test:ember';
+          throw 'Failed to successfully run test';
         }
 
         // make sure that each of the tests that we expect actually show up
