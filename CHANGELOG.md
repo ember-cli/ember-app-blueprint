@@ -1,5 +1,23 @@
 # Changelog
 
+## Release (2025-07-01)
+
+* @ember/app-blueprint 0.8.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#43](https://github.com/ember-cli/ember-app-blueprint/pull/43) No top-level ambiguous js ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#41](https://github.com/ember-cli/ember-app-blueprint/pull/41) Allow .env.test to be checked in to git ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#42](https://github.com/ember-cli/ember-app-blueprint/pull/42) Don't allow CI to run linting twice ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#38](https://github.com/ember-cli/ember-app-blueprint/pull/38) Change Test mode to Development mode and fix NODE_ENV in tests ([@gossi](https://github.com/gossi))
+
+#### Committers: 2
+- Thomas Gossmann ([@gossi](https://github.com/gossi))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-06-24)
 
 * @ember/app-blueprint 0.7.1 (patch)
