@@ -104,6 +104,7 @@ module.exports = {
     if (!options.emberData) {
       files = files.filter((file) => !file.includes('models/'));
       files = files.filter((file) => !file.includes('ember-data/'));
+      files = files.filter((file) => !file.includes('/store'));
     }
 
     this._files = files;
