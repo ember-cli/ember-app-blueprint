@@ -1,6 +1,7 @@
 {
   "name": "<%= name %>",
-  "version": "0.0.0",
+  "version": "0.0.0",<% if (minimal) { %>
+  "type": "module",<% } %>
   "private": true,
   "description": "Small description for <%= name %> goes here",
   "repository": "",
@@ -52,8 +53,8 @@
     "@ember/test-waiters": "^4.1.0",
     "@embroider/macros": "^1.18.0",
     "@embroider/core": "^4.1.0",
-    "@embroider/vite": "^1.1.5",
-    "@embroider/compat": "^4.1.0",
+    "@embroider/vite": "^1.1.5",<% if (!minimal) { %>
+    "@embroider/compat": "^4.1.0",<% } %>
     "@embroider/router": "^3.0.1",
     "@embroider/config-meta-loader": "^1.0.0",
     "@eslint/js": "^9.27.0",
@@ -69,13 +70,13 @@
     "@warp-drive/ember": "~5.5.0<% } %>",
     "babel-plugin-ember-template-compilation": "^2.4.1",
     "concurrently": "^9.1.2",
-    "decorator-transforms": "^2.3.0",
+    "decorator-transforms": "^2.3.0",<% if (!minimal) {
     "ember-auto-import": "^2.10.0",
     "ember-cli": "~6.5.0-beta.0",
-    "ember-cli-babel": "^8.2.0",
+    "ember-cli-babel": "^8.2.0",<% } %>
     "ember-cli-deprecation-workflow": "^3.3.0<% if (emberData) { %>",
-    "ember-data": "~5.5.0<% } %>",
-    "ember-load-initializers": "^3.0.1",
+    "ember-data": "~5.5.0<% } %>",<% if (!minimal) { %>
+    "ember-load-initializers": "^3.0.1",<% } %>
     "ember-modifier": "^4.2.2",
     "ember-page-title": "^9.0.2",
     "ember-qunit": "^9.0.3",

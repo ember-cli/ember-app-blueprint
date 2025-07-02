@@ -39,6 +39,7 @@ module.exports = {
           options.packageManager === 'pnpm' && '"--pnpm"',
           options.ciProvider && `"--ci-provider=${options.ciProvider}"`,
           options.typescript && `"--typescript"`,
+          options.minimal && `"--minimal"`,
           !options.emberData && `"--no-ember-data"`,
         ]
           .filter(Boolean)
@@ -64,6 +65,7 @@ module.exports = {
       name,
       modulePrefix: name,
       namespace,
+      minimal: options.minimal,
       blueprintVersion: require('./package').version,
       yarn: options.packageManager === 'yarn',
       pnpm: options.packageManager === 'pnpm',
@@ -104,6 +106,15 @@ module.exports = {
     if (!options.emberData) {
       files = files.filter((file) => !file.includes('models/'));
       files = files.filter((file) => !file.includes('ember-data/'));
+    }
+
+    if (options.minimal) {
+      files = files.filter((file) => {
+        return (
+          !file.includes('ember-cli-build.js') &&
+          !file.includes('environment.js')
+        );
+      });
     }
 
     this._files = files;
