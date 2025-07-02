@@ -1,11 +1,15 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "patch",
-      "oldVersion": "0.7.0",
-      "newVersion": "0.7.1",
+      "impact": "minor",
+      "oldVersion": "0.7.1",
+      "newVersion": "0.8.0",
       "tagName": "latest",
       "constraints": [
+        {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
         {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
@@ -14,5 +18,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-06-24)\n\n* @ember/app-blueprint 0.7.1 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#33](https://github.com/ember-cli/ember-app-blueprint/pull/33) Fix NODE_ENV for tests ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-07-01)\n\n* @ember/app-blueprint 0.8.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#43](https://github.com/ember-cli/ember-app-blueprint/pull/43) No top-level ambiguous js ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#41](https://github.com/ember-cli/ember-app-blueprint/pull/41) Allow .env.test to be checked in to git ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#42](https://github.com/ember-cli/ember-app-blueprint/pull/42) Don't allow CI to run linting twice ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#38](https://github.com/ember-cli/ember-app-blueprint/pull/38) Change Test mode to Development mode and fix NODE_ENV in tests ([@gossi](https://github.com/gossi))\n\n#### Committers: 2\n- Thomas Gossmann ([@gossi](https://github.com/gossi))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
