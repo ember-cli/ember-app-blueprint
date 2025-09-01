@@ -2,8 +2,8 @@ import { pageTitle } from 'ember-page-title';
 <% if (welcome) {%>import { WelcomePage } from 'ember-welcome-page';<% } %>
 
 <template>
-  {{pageTitle "<%= namespace %>"}}
-  <% if (welcome) { %>
+  {{pageTitle "<%= namespace %>"}}<% if (welcome) { %>
+
   {{outlet}}
 
   {{! The following component displays Ember's default welcome message. }}

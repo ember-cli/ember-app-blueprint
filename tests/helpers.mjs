@@ -19,6 +19,30 @@ export const emberCli = findEmber();
 
 const appName = 'test-app';
 
+export function newProject({ name = appName, flags = [] } = {}) {
+  let dir;
+
+  beforeAll(async () => {
+    const tmpDir = (await tmp.dir()).path;
+    dir = join(tmpDir, name);
+    await execa({
+      cwd: tmpDir,
+    })`${localEmberCli} new ${name} -b ${blueprintPath} --skip-git --pnpm ${flags}`;
+  });
+
+  return {
+    appName: () => name,
+    dir: () => dir,
+    $: (...args) => execa({ cwd: dir })(...args),
+    execa: (program, args, options = {}) => {
+      return execa(program, args, {
+        cwd: dir,
+        ...options,
+      });
+    },
+  };
+}
+
 export function newProjectWithFixtures({
   flags = [],
   fixturePath,
