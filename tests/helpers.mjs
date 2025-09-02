@@ -1,7 +1,6 @@
 import assert from 'node:assert';
 
 import { beforeAll } from 'vitest';
-import { sync as resolveBinSync } from 'resolve-bin';
 import { execa } from 'execa';
 import tmp from 'tmp-promise';
 import fs from 'node:fs/promises';
@@ -11,11 +10,6 @@ import fixturify from 'fixturify';
 let localEmberCli = require.resolve('ember-cli/bin/ember');
 const blueprintPath = join(__dirname, '..');
 
-function findEmber() {
-  return resolveBinSync('ember-cli', { executable: 'ember' });
-}
-
-export const emberCli = findEmber();
 
 const appName = 'test-app';
 

@@ -35,10 +35,10 @@
     "execa": "^9.1.0",
     "fixturify": "^3.0.0",
     "globals": "^15.3.0",
+    "jsonc-parser": "^3.3.1",
     "prettier": "^3.2.5",
     "prettier-plugin-ember-template-tag": "^2.0.2",
     "release-plan": "^0.16.0",
-    "resolve-bin": "^1.0.1",
     "strip-ansi": "^7.1.0",
     "tmp-promise": "^3.0.3",
     "vitest": "^3.1.2"
