@@ -1,38 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import tmp from 'tmp-promise';
-import { join } from 'node:path';
 
-import { execa } from 'execa';
-import fixturify from 'fixturify';
 import { parse } from 'jsonc-parser';
-
-let localEmberCli = require.resolve('ember-cli/bin/ember');
-const blueprintPath = join(__dirname, '..');
-
-async function generateApp({ name = 'test-app', flags = [] } = {}) {
-  const tmpDir = (await tmp.dir()).path;
-  const dir = join(tmpDir, name);
-
-  const { stdout, stderr } = await execa({
-    cwd: tmpDir,
-  })`${localEmberCli} new ${name} -b ${blueprintPath} --skip-git --skip-npm ${flags}`;
-
-  const files = fixturify.readSync(dir);
-
-  return {
-    stdout,
-    stderr,
-    name,
-    dir,
-    files,
-    execa: (program, args, options = {}) => {
-      return execa(program, args, {
-        cwd: dir,
-        ...options,
-      });
-    },
-  };
-}
+import { generateApp } from './helpers.mjs';
 
 /**
  * These tests are non-functional that are designed to test only the output of the blueprint
@@ -61,7 +30,6 @@ describe('Blueprint Arguments', function () {
         ]
       `)
     })
-
   });
 
   describe('--package-manager', async function () {
@@ -71,23 +39,28 @@ describe('Blueprint Arguments', function () {
       expect(parse(files['package.json']).scripts.lint).toMatchInlineSnapshot(`"concurrently "npm:lint:*(!fix)" --names "lint:" --prefixColors auto"`)
     });
 
+    it('works with --package-manager=pnpm', async function () {
+      const { files } = await generateApp({ flags: ['--package-manager=pnpm']});
+
+      expect(parse(files['package.json']).scripts.lint).toMatchInlineSnapshot(`"concurrently "pnpm:lint:*(!fix)" --names "lint:" --prefixColors auto"`)
+    });
+
     it('works with --pnpm in the same way as --package-manager=pnpm', async function () {
       const { files } = await generateApp({ flags: ['--pnpm']});
 
       expect(parse(files['package.json']).scripts.lint).toMatchInlineSnapshot(`"concurrently "pnpm:lint:*(!fix)" --names "lint:" --prefixColors auto"`)
     });
 
-    it('--package-manager=pnpm picks the right package manager for scripts', async function () {
-      const { files } = await generateApp({ flags: ['--pnpm']});
+    it('works with --package-manager=yarn',  async function () {
+      const { files } = await generateApp({ flags: ['--package-manager=yarn']});
 
-      expect(parse(files['package.json']).scripts.lint).toMatchInlineSnapshot(`"concurrently "pnpm:lint:*(!fix)" --names "lint:" --prefixColors auto"`)
+      expect(parse(files['package.json']).scripts.lint).toMatchInlineSnapshot(`"concurrently "yarn:lint:*(!fix)" --names "lint:" --prefixColors auto"`)
     });
 
-    /**
-     * soon... soon...
-     */
-    it.skip('freaks out and tells you off if you think about using yarn',  async function () {
-      // We'll get there
+    it('works with --yarn in the same way as --package-manager=yarn',  async function () {
+      const { files } = await generateApp({ flags: ['--yarn']});
+
+      expect(parse(files['package.json']).scripts.lint).toMatchInlineSnapshot(`"concurrently "yarn:lint:*(!fix)" --names "lint:" --prefixColors auto"`)
     });
   });
 
@@ -98,8 +71,8 @@ describe('Blueprint Arguments', function () {
       expect(files['.github'].workflows['ci.yml']).to.not.be.undefined;
     });
 
-    it('does not generate any wokflow files if --ci-provider=none is passed', async function() {
-      const { files } = await generateApp();
+    it('does not generate any workflow files if --ci-provider=none is passed', async function() {
+      const { files } = await generateApp({ flags: ['--ci-provider=none'] });
 
       expect(files['.github']).to.be.undefined;
     })

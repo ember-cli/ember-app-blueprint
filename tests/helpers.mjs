@@ -10,7 +10,6 @@ import fixturify from 'fixturify';
 let localEmberCli = require.resolve('ember-cli/bin/ember');
 const blueprintPath = join(__dirname, '..');
 
-
 const appName = 'test-app';
 
 export function newProject({ name = appName, flags = [] } = {}) {
@@ -69,6 +68,36 @@ export function newProjectWithFixtures({
     appName: () => name,
     dir: () => dir,
     $: (...args) => execa({ cwd: dir })(...args),
+    execa: (program, args, options = {}) => {
+      return execa(program, args, {
+        cwd: dir,
+        ...options,
+      });
+    },
+  };
+}
+
+export async function generateApp({ name = 'test-app', flags = [], skipNpm = true } = {}) {
+  const tmpDir = (await tmp.dir()).path;
+  const dir = join(tmpDir, name);
+
+  const { stdout, stderr } = await execa({
+    cwd: tmpDir,
+  })`${localEmberCli} new ${name} -b ${blueprintPath} --skip-git ${skipNpm ? '--skip-npm ' : ''}${flags}`;
+
+  if (!process.env.CI) {
+    console.log(stdout);
+    console.error(stderr);
+  }
+
+  return {
+    stdout,
+    stderr,
+    name,
+    dir,
+    get files() {
+      return fixturify.readSync(dir);
+    },
     execa: (program, args, options = {}) => {
       return execa(program, args, {
         cwd: dir,
