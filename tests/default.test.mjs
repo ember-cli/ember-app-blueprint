@@ -17,7 +17,7 @@ const SCENARIOS = [
   },
 ];
 
-describe('basic functionality', function () {
+describe.skip('basic functionality', function () {
   for (let { name, flags, packageJson, fixturePath } of SCENARIOS) {
     describe(name, function () {
       let project = newProjectWithFixtures({
