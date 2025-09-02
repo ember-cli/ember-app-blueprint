@@ -11,21 +11,6 @@ const SCENARIOS = [
     fixturePath: join(import.meta.dirname, 'fixture'),
   },
   {
-    name: 'compat (v1 addon support)',
-    // @glimmer/component >= 2.0.0 is a v2 addon, which we don't need when testing "compat mode"
-    // this test is "compat mode"
-    // compat mode forces us to use v1 addon infra, ember-cli, etc
-    flags: [
-      /* none, default */
-    ],
-    packageJson: {
-      devDependencies: {
-        '@glimmer/component': '^1.1.2',
-      },
-    },
-    fixturePath: join(import.meta.dirname, 'fixture'),
-  },
-  {
     name: 'typescript',
     flags: ['--typescript'],
     fixturePath: join(import.meta.dirname, 'fixture-ts'),
