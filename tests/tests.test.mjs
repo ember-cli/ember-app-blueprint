@@ -1,17 +1,13 @@
-import { beforeAll, describe, it, expect } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import fixturify from 'fixturify';
 import stripAnsi from 'strip-ansi';
 
 import { generateApp } from './helpers.mjs';
 
 describe('Slow(JavaScript): Runs tests', async function () {
-  let app;
-
-  beforeAll(async function () {
-    app = await generateApp({ flags: ['--pnpm'], skipNpm: false });
-  });
-
   it('runs in a freshly generated app', async function () {
+    let app = await generateApp({ flags: ['--pnpm'], skipNpm: false });
+
     let { stdout: stdout1, exitCode: exitCode1 } = await app.execa('pnpm', [
       'test',
     ]);
@@ -26,6 +22,10 @@ describe('Slow(JavaScript): Runs tests', async function () {
     expect(stdout1).to.contain('# todo  0');
     expect(stdout1).to.contain('# ok');
     expect(exitCode1).to.equal(0);
+  });
+
+  it('runs in an app with fixtures', async function () {
+    let app = await generateApp({ flags: ['--pnpm'], skipNpm: false });
 
     fixturify.writeSync(
       app.dir,
@@ -52,11 +52,14 @@ describe('Slow(JavaScript): Runs tests', async function () {
     expect(stdout2).to.contain('# todo  0');
     expect(stdout2).to.contain('# ok');
     expect(exitCode2).to.equal(0);
+  });
 
-    let fixtures = fixturify.readSync('./tests/fixtures/tests-js-20');
+  it('runs when serving /tests', async function () {
+    let app = await generateApp({ flags: ['--pnpm'], skipNpm: false });
 
     await app.execa('pnpm', ['install', '--save-dev', 'testem', 'http-proxy']);
 
+    let fixtures = fixturify.readSync('./tests/fixtures/tests-js-20');
     let server;
 
     try {
@@ -65,9 +68,12 @@ describe('Slow(JavaScript): Runs tests', async function () {
       let appURL = await new Promise((resolve) => {
         // Read app url from Vite server output
         server.stdout.on('data', (line) => {
-          let result = /Local:\s+(https?:\/\/.*)\//g.exec(
-            stripAnsi(line.toString()),
-          );
+          let parsed = stripAnsi(line.toString());
+          let result = /Local:\s+(https?:\/\/.*)\//g.exec(parsed);
+
+          if (process.env.CI) {
+            console.log(parsed);
+          }
 
           if (result) {
             resolve(result[1]);
@@ -88,25 +94,25 @@ describe('Slow(JavaScript): Runs tests', async function () {
         'ci',
       ]);
 
-      expect(testResult.exitCode).to.eq(0, testResult.output);
+      if (process.env.CI) {
+        console.log(testResult.stdout);
+        console.log(testResult.stderr);
+      }
+
+      expect(testResult.exitCode).to.eq(0);
     } finally {
-      server?.kill('SIGINT');
-      await server;
+      server?.kill('SIGKILL');
     }
   });
 });
 
 describe('Slow(TypeScript): Runs tests', async function () {
-  let app;
-
-  beforeAll(async function () {
-    app = await generateApp({
+  it('runs in a freshly generated app', async function () {
+    let app = await generateApp({
       flags: ['--pnpm', '--typescript'],
       skipNpm: false,
     });
-  });
 
-  it('runs in a freshly generated app', async function () {
     let { stdout: stdout1, exitCode: exitCode1 } = await app.execa('pnpm', [
       'test',
     ]);
@@ -121,6 +127,13 @@ describe('Slow(TypeScript): Runs tests', async function () {
     expect(stdout1).to.contain('# todo  0');
     expect(stdout1).to.contain('# ok');
     expect(exitCode1).to.equal(0);
+  });
+
+  it('runs in an app with fixtures', async function () {
+    let app = await generateApp({
+      flags: ['--pnpm', '--typescript'],
+      skipNpm: false,
+    });
 
     fixturify.writeSync(
       app.dir,
@@ -147,11 +160,17 @@ describe('Slow(TypeScript): Runs tests', async function () {
     expect(stdout2).to.contain('# todo  0');
     expect(stdout2).to.contain('# ok');
     expect(exitCode2).to.equal(0);
+  });
 
-    let fixtures = fixturify.readSync('./tests/fixtures/tests-js-20');
+  it('runs when serving /tests', async function () {
+    let app = await generateApp({
+      flags: ['--pnpm', '--typescript'],
+      skipNpm: false,
+    });
 
     await app.execa('pnpm', ['install', '--save-dev', 'testem', 'http-proxy']);
 
+    let fixtures = fixturify.readSync('./tests/fixtures/tests-js-20');
     let server;
 
     try {
@@ -160,9 +179,12 @@ describe('Slow(TypeScript): Runs tests', async function () {
       let appURL = await new Promise((resolve) => {
         // Read app url from Vite server output
         server.stdout.on('data', (line) => {
-          let result = /Local:\s+(https?:\/\/.*)\//g.exec(
-            stripAnsi(line.toString()),
-          );
+          let parsed = stripAnsi(line.toString());
+          let result = /Local:\s+(https?:\/\/.*)\//g.exec(parsed);
+
+          if (process.env.CI) {
+            console.log(parsed);
+          }
 
           if (result) {
             resolve(result[1]);
@@ -183,10 +205,14 @@ describe('Slow(TypeScript): Runs tests', async function () {
         'ci',
       ]);
 
-      expect(testResult.exitCode).to.eq(0, testResult.output);
+      if (process.env.CI) {
+        console.log(testResult.stdout);
+        console.log(testResult.stderr);
+      }
+
+      expect(testResult.exitCode).to.eq(0);
     } finally {
-      server?.kill('SIGINT');
-      await server;
+      server?.kill('SIGKILL');
     }
   });
 });
