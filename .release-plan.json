@@ -2,8 +2,8 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "patch",
-      "oldVersion": "0.8.0",
-      "newVersion": "0.8.1",
+      "oldVersion": "0.8.1",
+      "newVersion": "0.8.2",
       "tagName": "latest",
       "constraints": [
         {
@@ -14,5 +14,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-07-22)\n\n* @ember/app-blueprint 0.8.1 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#53](https://github.com/ember-cli/ember-app-blueprint/pull/53) Use @embroider/router ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-09-03)\n\n* @ember/app-blueprint 0.8.2 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#56](https://github.com/ember-cli/ember-app-blueprint/pull/56) Make sure that `npm run lint` doesn't fail on a newly generated app ([@pichfl](https://github.com/pichfl))\n\n#### Committers: 1\n- Florian Pichler ([@pichfl](https://github.com/pichfl))\n"
 }
