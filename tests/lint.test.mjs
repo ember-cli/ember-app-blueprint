@@ -1,25 +1,31 @@
-import { describe, it, expect } from 'vitest';
+import { beforeAll, describe, it, expect } from 'vitest';
 
-import { newProject } from './helpers.mjs';
+import { generateApp } from './helpers.mjs';
 
 describe('linting & formatting', function () {
-  describe('JavaScript', function () {
-    let project = newProject();
+  let app;
 
+  beforeAll(async function () {
+    app = await generateApp({ flags: ['--typescript'] });
+  });
+
+  describe('JavaScript', function () {
     it('yields output for JavaScript without errors', async function () {
-      let { exitCode } = await project.execa('pnpm', ['lint']);
+      let { exitCode } = await app.execa('pnpm', ['lint']);
 
       expect(exitCode).to.equal(0);
     });
   });
 
   describe('TypeScript', function () {
-    let project = newProject({
-      flags: ['--typescript'],
+    let app;
+
+    beforeAll(function () {
+      app = generateApp({ flags: ['--typescript'] });
     });
 
     it('yields output for JavaScript without errors', async function () {
-      let { exitCode } = await project.execa('pnpm', ['lint']);
+      let { exitCode } = await app.execa('pnpm', ['lint']);
 
       expect(exitCode).to.equal(0);
     });
