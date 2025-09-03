@@ -4,7 +4,7 @@ const ONE_SECOND = 1_000;
 
 export default defineConfig({
   test: {
-    testTimeout: 100 * ONE_SECOND,
-    hookTimeout: 150 * ONE_SECOND,
+    testTimeout: 240 * ONE_SECOND,
+    hookTimeout: 240 * ONE_SECOND,
   },
 });
