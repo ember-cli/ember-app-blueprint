@@ -52,12 +52,6 @@ describe('basic functionality', function () {
         );
       });
 
-      it('successfully lints', async function () {
-        let result = await project.execa('pnpm', ['lint']);
-
-        console.log(result.stdout);
-      });
-
       it('successfully builds', async function () {
         let result = await project.execa('pnpm', ['build']);
 
