@@ -2,17 +2,6 @@
 
 ## Release (2025-09-04)
 
-* @ember/app-blueprint 6.7.0 (minor)
-
-#### :rocket: Enhancement
-* `@ember/app-blueprint`
-  * [#65](https://github.com/ember-cli/ember-app-blueprint/pull/65) Update all dependencies for 6.7 release ([@mansona](https://github.com/mansona))
-
-#### Committers: 1
-- Chris Manson ([@mansona](https://github.com/mansona))
-
-## Release (2025-09-04)
-
 * @ember/app-blueprint 6.6.0 (minor)
 
 #### :rocket: Enhancement
