@@ -2,17 +2,21 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "6.6.0",
-      "newVersion": "6.7.0",
+      "oldVersion": "6.5.0",
+      "newVersion": "6.6.0",
       "tagName": "latest",
       "constraints": [
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-09-04)\n\n* @ember/app-blueprint 6.7.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#65](https://github.com/ember-cli/ember-app-blueprint/pull/65) Update all dependencies for 6.7 release ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2025-09-04)\n\n* @ember/app-blueprint 6.6.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#63](https://github.com/ember-cli/ember-app-blueprint/pull/63) reset blueprint to match ember-cli app blueprint (in the next release) ([@mansona](https://github.com/mansona))\n  * [#57](https://github.com/ember-cli/ember-app-blueprint/pull/57) run update-blueprint-deps to update to Ember 6.6 ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#60](https://github.com/ember-cli/ember-app-blueprint/pull/60) Split test files ([@pichfl](https://github.com/pichfl))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Florian Pichler ([@pichfl](https://github.com/pichfl))\n"
 }
