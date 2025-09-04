@@ -1,26 +1,43 @@
-import { describe, it, expect } from 'vitest';
+import { beforeAll, describe, it, expect } from 'vitest';
 
-import { newProject } from './helpers.mjs';
+import { generateApp } from './helpers.mjs';
 
 describe('linting & formatting', function () {
-  describe('JavaScript', function () {
-    let project = newProject();
+  let app;
 
-    it('yields output for JavaScript without errors', async function () {
-      let { exitCode } = await project.execa('pnpm', ['lint']);
+  beforeAll(async function () {
+    app = await generateApp({ flags: ['--typescript'], skipNpm: false });
+  });
+
+  describe('JavaScript', function () {
+    it('yields output without errors', async function () {
+      let { exitCode } = await app.execa('pnpm', ['lint']);
 
       expect(exitCode).to.equal(0);
     });
   });
 
   describe('TypeScript', function () {
-    let project = newProject({
-      flags: ['--typescript'],
+    let app;
+
+    beforeAll(async function () {
+      app = await generateApp({ flags: ['--typescript'], skipNpm: false });
     });
 
-    it('yields output for JavaScript without errors', async function () {
-      let { exitCode } = await project.execa('pnpm', ['lint']);
+    it('yields output without errors', async function () {
+      let { exitCode } = await app.execa('pnpm', ['lint']);
 
+      expect(exitCode).to.equal(0);
+    });
+
+    it('glint passes', async function () {
+      expect(
+        JSON.parse(app.files['package.json']).scripts['lint:types'],
+      ).to.equal('glint');
+
+      let { exitCode, stdout } = await app.execa('pnpm', ['lint:types']);
+
+      console.log(stdout);
       expect(exitCode).to.equal(0);
     });
   });
