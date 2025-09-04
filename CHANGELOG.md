@@ -1,5 +1,22 @@
 # Changelog
 
+## Release (2025-09-04)
+
+* @ember/app-blueprint 6.6.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#63](https://github.com/ember-cli/ember-app-blueprint/pull/63) reset blueprint to match ember-cli app blueprint (in the next release) ([@mansona](https://github.com/mansona))
+  * [#57](https://github.com/ember-cli/ember-app-blueprint/pull/57) run update-blueprint-deps to update to Ember 6.6 ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#60](https://github.com/ember-cli/ember-app-blueprint/pull/60) Split test files ([@pichfl](https://github.com/pichfl))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Florian Pichler ([@pichfl](https://github.com/pichfl))
+
 ## Release (2025-09-03)
 
 * @ember/app-blueprint 0.8.2 (patch)
