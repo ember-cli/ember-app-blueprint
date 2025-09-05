@@ -1,7 +1,6 @@
 files/
 node_modules/
-tests/fixture/
-tests/fixture-ts/
+tests/fixtures/
 
 *.yml
 *.yaml
