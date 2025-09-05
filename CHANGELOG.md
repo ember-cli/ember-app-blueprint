@@ -2,6 +2,17 @@
 
 ## Release (2025-09-05)
 
+* @ember/app-blueprint 6.9.0-alpha.1 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#76](https://github.com/ember-cli/ember-app-blueprint/pull/76) Prepare 6.9-alpha ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2025-09-05)
+
 * @ember/app-blueprint 6.8.0-beta.1 (minor)
 
 #### :rocket: Enhancement
