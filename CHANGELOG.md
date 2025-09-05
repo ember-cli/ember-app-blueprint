@@ -1,5 +1,50 @@
 # Changelog
 
+## Release (2025-09-05)
+
+* @ember/app-blueprint 6.8.0-beta.1 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#73](https://github.com/ember-cli/ember-app-blueprint/pull/73) Prepare 6.8 beta ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#75](https://github.com/ember-cli/ember-app-blueprint/pull/75) update the beta version ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2025-09-04)
+
+* @ember/app-blueprint 6.7.1 (patch)
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#71](https://github.com/ember-cli/ember-app-blueprint/pull/71) fix publish-branch for pnpm publish ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2025-09-04)
+
+* @ember/app-blueprint 6.7.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#65](https://github.com/ember-cli/ember-app-blueprint/pull/65) Update all dependencies for 6.7 release ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#67](https://github.com/ember-cli/ember-app-blueprint/pull/67) make sure that release-plan publishes from release branch ([@mansona](https://github.com/mansona))
+
+#### :memo: Documentation
+* `@ember/app-blueprint`
+  * [#70](https://github.com/ember-cli/ember-app-blueprint/pull/70) add a basic readme ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2025-09-04)
 
 * @ember/app-blueprint 6.6.0 (minor)
