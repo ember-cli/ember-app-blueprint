@@ -3,13 +3,17 @@ import { beforeAll, describe, it, expect } from 'vitest';
 import { generateApp } from './helpers.mjs';
 
 describe('linting & formatting', function () {
-  let app;
-
-  beforeAll(async function () {
-    app = await generateApp({ flags: ['--typescript'], skipNpm: false });
-  });
-
   describe('JavaScript', function () {
+    let app;
+
+    beforeAll(async function () {
+      /**
+       * We are passing --pnpm here because it's just faster to run in CI and realistically
+       * we don't need to worry about the differences between pnpm and npm at this level
+       */
+      app = await generateApp({ flags: ['--pnpm'], skipNpm: false });
+    });
+
     it('yields output without errors', async function () {
       let { exitCode } = await app.execa('pnpm', ['lint']);
 
@@ -21,7 +25,14 @@ describe('linting & formatting', function () {
     let app;
 
     beforeAll(async function () {
-      app = await generateApp({ flags: ['--typescript'], skipNpm: false });
+      /**
+       * We are passing --pnpm here because it's just faster to run in CI and realistically
+       * we don't need to worry about the differences between pnpm and npm at this level
+       */
+      app = await generateApp({
+        flags: ['--typescript', '--pnpm'],
+        skipNpm: false,
+      });
     });
 
     it('yields output without errors', async function () {
