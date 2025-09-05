@@ -25,7 +25,7 @@ The release process during release week should look like this:
 - Merge `beta` into `main`
 - Do an `alpha` release
 
-### Merge any outstanding `Prepare Alpha Release` branches
+### Merge any outstanding `Prepare Alpha Release` branches
 
 This makes sure that you are starting from a "clean slate" before doing any other releases. This will make each of the following steps easier to follow.
 
@@ -48,7 +48,7 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - Update blueprint dependencies to latest
 
   ```
-  pnpm dlx update-blueprint-deps --ember-source=latest
+  pnpm dlx update-blueprint-deps --filter ember-source --tag latest files/package.json
   ```
 
 - commit this update `git commit -am "update blueprint dependencies to latest"`
@@ -78,7 +78,7 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - Update blueprint dependencies to beta
 
   ```
-  node ./dev/update-blueprint-dependencies.js --ember-source=beta
+  pnpm dlx update-blueprint-deps --filter ember-source --tag beta files/package.json
   ```
 
 - commit this update `git commit -am "update blueprint dependencies to beta"`
@@ -98,20 +98,17 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - create a new branch to merge `beta` into `main` e.g. `git checkout --no-track -b merge-beta origin/main`
 - merge beta into this new branch e.g. `git merge origin/beta --no-ff`
   - **make sure to not update the .release-plan file** this should only ever be changed by the release-plan github scripts
-  - make sure to not update the `release-plan` config section to the `package.json`, `packages/addon-blueprint/package.json`, or `packages/app-blueprint/package.json`, during this step.
-  - **make sure to not update any .github/workflows/plan-release.yml file** this should still plan a beta release
-  - **make sure to not update any .github/workflows/publish.yml file** this should still publish a beta release
-  - **make sure to not update the CHANGELOG.md file** in this step.
+  - make sure to not update the `release-plan` config section to the `package.json` during this step.
+  - **make sure to not update any .github/workflows/plan-alpha-release.yml file** this should still plan an alpha release
+  - **make sure to not update any .github/workflows/publish-alpha.yml file** this should still publish an alpha release
 - manually update the version in package.json to be the next alpha.
   - e.g. if the current alpha is `"version": "6.6.0-alpha.3",` update it to be `"version": "6.7.0-alpha.0",`
-- manually update the alpha version in `packages/addon-blueprint/package.json` to be the same alpha
-- manually update the alpha version in `packages/app-blueprint/package.json` to be the same alpha
 - commit this change to the version in package.json: `git commit -am "update to the next alpha version"`
 - Update blueprint dependencies to alpha
 
-```
-node ./dev/update-blueprint-dependencies.js --ember-source=alpha --ember-data=canary
-```
+  ```
+  pnpm dlx update-blueprint-deps --filter ember-source --tag alpha files/package.json
+  ```
 
 - commit this update `git commit -am "update blueprint dependencies to alpha"`
 - push and open a PR targeting `main` with a PR title like `Prepare 6.6-alpha`
