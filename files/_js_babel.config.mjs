@@ -1,9 +1,11 @@
-const {
+import { fileURLToPath } from 'url';
+
+import {
   babelCompatSupport,
   templateCompatSupport,
-} = require('@embroider/compat/babel');
+} from '@embroider/compat/babel';
 
-module.exports = {
+export default {
   plugins: [
     [
       'babel-plugin-ember-template-compilation',
@@ -21,14 +23,14 @@ module.exports = {
       'module:decorator-transforms',
       {
         runtime: {
-          import: require.resolve('decorator-transforms/runtime-esm'),
+          import: 'decorator-transforms/runtime-esm',
         },
       },
     ],
     [
       '@babel/plugin-transform-runtime',
       {
-        absoluteRuntime: __dirname,
+        absoluteRuntime: fileURLToPath(new URL('.', import.meta.url)),
         useESModules: true,
         regenerator: false,
       },
