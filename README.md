@@ -7,5 +7,5 @@ If you have an existing app that you would like to upgrade to use Vite consider 
 ## Usage
 
 ```
-pnpm dlx ember-cli@latest app my-app-name -b @ember/app-blueprint --pnpm
+pnpm dlx ember-cli@latest new my-app-name -b @ember/app-blueprint --pnpm
 ```
