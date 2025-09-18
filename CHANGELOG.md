@@ -1,5 +1,25 @@
 # Changelog
 
+## Release (2025-09-18)
+
+* @ember/app-blueprint 6.9.0-alpha.2 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#78](https://github.com/ember-cli/ember-app-blueprint/pull/78) Use strict mode for all CJS files ([@simonihmig](https://github.com/simonihmig))
+
+#### :memo: Documentation
+* `@ember/app-blueprint`
+  * [#64](https://github.com/ember-cli/ember-app-blueprint/pull/64) Update the release document to match the ember-cli process ([@mansona](https://github.com/mansona))
+  * [#81](https://github.com/ember-cli/ember-app-blueprint/pull/81) Correct example usage command in README ([@abeforgit](https://github.com/abeforgit))
+  * [#80](https://github.com/ember-cli/ember-app-blueprint/pull/80) Fix formatting of README file ([@bertdeblock](https://github.com/bertdeblock))
+
+#### Committers: 4
+- Arne Bertrand ([@abeforgit](https://github.com/abeforgit))
+- Bert De Block ([@bertdeblock](https://github.com/bertdeblock))
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))
+
 ## Release (2025-09-05)
 
 * @ember/app-blueprint 6.9.0-alpha.1 (minor)
