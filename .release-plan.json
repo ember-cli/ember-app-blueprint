@@ -1,18 +1,22 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "6.9.0-alpha.0",
-      "newVersion": "6.9.0-alpha.1",
+      "impact": "patch",
+      "oldVersion": "6.9.0-alpha.1",
+      "newVersion": "6.9.0-alpha.2",
       "tagName": "alpha",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :memo: Documentation"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-09-05)\n\n* @ember/app-blueprint 6.9.0-alpha.1 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#76](https://github.com/ember-cli/ember-app-blueprint/pull/76) Prepare 6.9-alpha ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2025-09-18)\n\n* @ember/app-blueprint 6.9.0-alpha.2 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#78](https://github.com/ember-cli/ember-app-blueprint/pull/78) Use strict mode for all CJS files ([@simonihmig](https://github.com/simonihmig))\n\n#### :memo: Documentation\n* `@ember/app-blueprint`\n  * [#64](https://github.com/ember-cli/ember-app-blueprint/pull/64) Update the release document to match the ember-cli process ([@mansona](https://github.com/mansona))\n  * [#81](https://github.com/ember-cli/ember-app-blueprint/pull/81) Correct example usage command in README ([@abeforgit](https://github.com/abeforgit))\n  * [#80](https://github.com/ember-cli/ember-app-blueprint/pull/80) Fix formatting of README file ([@bertdeblock](https://github.com/bertdeblock))\n\n#### Committers: 4\n- Arne Bertrand ([@abeforgit](https://github.com/abeforgit))\n- Bert De Block ([@bertdeblock](https://github.com/bertdeblock))\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))\n"
 }
