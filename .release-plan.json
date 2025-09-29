@@ -1,15 +1,11 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "6.8.0-beta.0",
-      "newVersion": "6.8.0-beta.1",
+      "impact": "patch",
+      "oldVersion": "6.8.0-beta.1",
+      "newVersion": "6.8.0-beta.2",
       "tagName": "beta",
       "constraints": [
-        {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
-        },
         {
           "impact": "patch",
           "reason": "Appears in changelog section :house: Internal"
@@ -18,5 +14,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-09-05)\n\n* @ember/app-blueprint 6.8.0-beta.1 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#73](https://github.com/ember-cli/ember-app-blueprint/pull/73) Prepare 6.8 beta ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#75](https://github.com/ember-cli/ember-app-blueprint/pull/75) update the beta version ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2025-09-29)\n\n* @ember/app-blueprint 6.8.0-beta.2 (patch)\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#83](https://github.com/ember-cli/ember-app-blueprint/pull/83) update ember source to latest beta ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
