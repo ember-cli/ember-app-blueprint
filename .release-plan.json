@@ -2,17 +2,17 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "patch",
-      "oldVersion": "6.7.0",
-      "newVersion": "6.7.1",
+      "oldVersion": "6.7.1",
+      "newVersion": "6.7.2",
       "tagName": "latest",
       "constraints": [
         {
           "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-09-04)\n\n* @ember/app-blueprint 6.7.1 (patch)\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#71](https://github.com/ember-cli/ember-app-blueprint/pull/71) fix publish-branch for pnpm publish ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2025-10-02)\n\n* @ember/app-blueprint 6.7.2 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#82](https://github.com/ember-cli/ember-app-blueprint/pull/82) Use TypeScript way of accessing potentially undefined `podModulePrefix` ([@pichfl](https://github.com/pichfl))\n\n#### Committers: 1\n- Florian Pichler ([@pichfl](https://github.com/pichfl))\n"
 }
