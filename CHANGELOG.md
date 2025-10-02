@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-10-02)
+
+* @ember/app-blueprint 6.7.2 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#82](https://github.com/ember-cli/ember-app-blueprint/pull/82) Use TypeScript way of accessing potentially undefined `podModulePrefix` ([@pichfl](https://github.com/pichfl))
+
+#### Committers: 1
+- Florian Pichler ([@pichfl](https://github.com/pichfl))
+
 ## Release (2025-09-04)
 
 * @ember/app-blueprint 6.7.1 (patch)
