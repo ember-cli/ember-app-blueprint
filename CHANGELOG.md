@@ -2,6 +2,17 @@
 
 ## Release (2025-10-06)
 
+* @ember/app-blueprint 6.8.0-beta.5 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#91](https://github.com/ember-cli/ember-app-blueprint/pull/91) [bugfix beta] add legacy inspector support ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2025-10-06)
+
 * @ember/app-blueprint 6.8.0-beta.4 (patch)
 
 #### :bug: Bug Fix
