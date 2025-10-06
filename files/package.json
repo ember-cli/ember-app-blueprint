@@ -24,7 +24,7 @@
     "lint:js:fix": "eslint . --fix<% if (typescript) { %>",
     "lint:types": "glint<% } %>",
     "start": "vite",
-    "test": "vite build --mode development && testem ci"
+    "test": "vite build --mode development && ember test --path dist"
   },
   "exports": {
     "./tests/*": "./tests/*",
