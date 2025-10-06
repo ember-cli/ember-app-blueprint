@@ -1,18 +1,18 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "patch",
-      "oldVersion": "6.8.0-beta.3",
-      "newVersion": "6.8.0-beta.4",
+      "impact": "minor",
+      "oldVersion": "6.8.0-beta.4",
+      "newVersion": "6.8.0-beta.5",
       "tagName": "beta",
       "constraints": [
         {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-10-06)\n\n* @ember/app-blueprint 6.8.0-beta.4 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#88](https://github.com/ember-cli/ember-app-blueprint/pull/88) [bugfix beta] fix the use of ember test in the new blueprint ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2025-10-06)\n\n* @ember/app-blueprint 6.8.0-beta.5 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#91](https://github.com/ember-cli/ember-app-blueprint/pull/91) [bugfix beta] add legacy inspector support ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
