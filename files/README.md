@@ -11,7 +11,6 @@ You will need the following things properly installed on your computer.
 - [Node.js](https://nodejs.org/)<% if (pnpm) { %>
 - [pnpm](https://pnpm.io/)<% } else if (yarn) { %>
 - [Yarn](https://yarnpkg.com/)<% } else { %> (with npm)<% } %>
-- [Ember CLI](https://cli.emberjs.com/release/)
 - [Google Chrome](https://google.com/chrome/)
 
 ## Installation
@@ -28,12 +27,11 @@ You will need the following things properly installed on your computer.
 
 ### Code Generators
 
-Make use of the many generators for code, try `ember help generate` for more details
+Make use of the many generators for code, try `<%= execBinPrefix %> ember help generate` for more details
 
 ### Running Tests
 
 - `<%= invokeScriptPrefix %> test`
-- `<%= invokeScriptPrefix %> test <% if (npm) { %>-- <% } %>--server`
 
 ### Linting
 
@@ -42,7 +40,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Building
 
-- `<%= execBinPrefix %> ember build` (development)
+- `<%= execBinPrefix %> vite build --mode development` (development)
 - `<%= invokeScriptPrefix %> build` (production)
 
 ### Deploying
@@ -52,7 +50,7 @@ Specify what it takes to deploy your app.
 ## Further Reading / Useful Links
 
 - [ember.js](https://emberjs.com/)
-- [ember-cli](https://cli.emberjs.com/release/)
+- [Vite](https://vite.dev)
 - Development Browser Extensions
   - [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   - [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
