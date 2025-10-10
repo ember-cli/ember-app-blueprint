@@ -2,17 +2,25 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "6.8.0-beta.4",
-      "newVersion": "6.8.0-beta.5",
+      "oldVersion": "6.8.0-beta.5",
+      "newVersion": "6.8.0-beta.6",
       "tagName": "beta",
       "constraints": [
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :memo: Documentation"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-10-06)\n\n* @ember/app-blueprint 6.8.0-beta.5 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#91](https://github.com/ember-cli/ember-app-blueprint/pull/91) [bugfix beta] add legacy inspector support ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2025-10-10)\n\n* @ember/app-blueprint 6.8.0-beta.6 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#95](https://github.com/ember-cli/ember-app-blueprint/pull/95) [Beta] add services directory ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :memo: Documentation\n* `@ember/app-blueprint`\n  * [#97](https://github.com/ember-cli/ember-app-blueprint/pull/97) [documentation beta] update readme for Vite ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#93](https://github.com/ember-cli/ember-app-blueprint/pull/93) Add Windows tests ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }

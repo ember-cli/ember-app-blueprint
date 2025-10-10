@@ -1,5 +1,25 @@
 # Changelog
 
+## Release (2025-10-10)
+
+* @ember/app-blueprint 6.8.0-beta.6 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#95](https://github.com/ember-cli/ember-app-blueprint/pull/95) [Beta] add services directory ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :memo: Documentation
+* `@ember/app-blueprint`
+  * [#97](https://github.com/ember-cli/ember-app-blueprint/pull/97) [documentation beta] update readme for Vite ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#93](https://github.com/ember-cli/ember-app-blueprint/pull/93) Add Windows tests ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-10-06)
 
 * @ember/app-blueprint 6.8.0-beta.5 (minor)
