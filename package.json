@@ -49,7 +49,7 @@
     "release-plan": "^0.16.0",
     "strip-ansi": "^7.1.0",
     "tmp-promise": "^3.0.3",
-    "vitest": "^3.1.2"
+    "vitest": "^3.2.4"
   },
   "packageManager": "pnpm@10.7.0"
 }
