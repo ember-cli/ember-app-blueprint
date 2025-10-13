@@ -1,5 +1,26 @@
 # Changelog
 
+## Release (2025-10-13)
+
+* @ember/app-blueprint 6.8.0-beta.7 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#103](https://github.com/ember-cli/ember-app-blueprint/pull/103) [beta] update Vite to latest (v7) ([@mansona](https://github.com/mansona))
+  * [#98](https://github.com/ember-cli/ember-app-blueprint/pull/98) Update deps ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#100](https://github.com/ember-cli/ember-app-blueprint/pull/100) [beta] swap to the Vitest beta to fix CI ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#101](https://github.com/ember-cli/ember-app-blueprint/pull/101) [beta] update node version used in CI ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-10-10)
 
 * @ember/app-blueprint 6.8.0-beta.6 (minor)
