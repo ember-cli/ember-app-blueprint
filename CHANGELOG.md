@@ -2,114 +2,25 @@
 
 ## Release (2025-10-14)
 
-* @ember/app-blueprint 6.8.0-beta.8 (patch)
+* @ember/app-blueprint 6.8.0 (minor)
 
-#### :house: Internal
+#### :rocket: Enhancement
 * `@ember/app-blueprint`
-  * [#104](https://github.com/ember-cli/ember-app-blueprint/pull/104) Merge release into beta ([@mansona](https://github.com/mansona))
+  * [#109](https://github.com/ember-cli/ember-app-blueprint/pull/109) Release 6.8 ([@mansona](https://github.com/mansona))
 
 #### Committers: 1
 - Chris Manson ([@mansona](https://github.com/mansona))
 
-## Release (2025-10-13)
+## Release (2025-10-02)
 
-* @ember/app-blueprint 6.8.0-beta.7 (minor)
-
-#### :rocket: Enhancement
-* `@ember/app-blueprint`
-  * [#103](https://github.com/ember-cli/ember-app-blueprint/pull/103) [beta] update Vite to latest (v7) ([@mansona](https://github.com/mansona))
-  * [#98](https://github.com/ember-cli/ember-app-blueprint/pull/98) Update deps ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+* @ember/app-blueprint 6.7.2 (patch)
 
 #### :bug: Bug Fix
 * `@ember/app-blueprint`
-  * [#100](https://github.com/ember-cli/ember-app-blueprint/pull/100) [beta] swap to the Vitest beta to fix CI ([@mansona](https://github.com/mansona))
-
-#### :house: Internal
-* `@ember/app-blueprint`
-  * [#101](https://github.com/ember-cli/ember-app-blueprint/pull/101) [beta] update node version used in CI ([@mansona](https://github.com/mansona))
-
-#### Committers: 2
-- Chris Manson ([@mansona](https://github.com/mansona))
-- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
-
-## Release (2025-10-10)
-
-* @ember/app-blueprint 6.8.0-beta.6 (minor)
-
-#### :rocket: Enhancement
-* `@ember/app-blueprint`
-  * [#95](https://github.com/ember-cli/ember-app-blueprint/pull/95) [Beta] add services directory ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
-
-#### :memo: Documentation
-* `@ember/app-blueprint`
-  * [#97](https://github.com/ember-cli/ember-app-blueprint/pull/97) [documentation beta] update readme for Vite ([@mansona](https://github.com/mansona))
-
-#### :house: Internal
-* `@ember/app-blueprint`
-  * [#93](https://github.com/ember-cli/ember-app-blueprint/pull/93) Add Windows tests ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
-
-#### Committers: 2
-- Chris Manson ([@mansona](https://github.com/mansona))
-- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
-
-## Release (2025-10-06)
-
-* @ember/app-blueprint 6.8.0-beta.5 (minor)
-
-#### :rocket: Enhancement
-* `@ember/app-blueprint`
-  * [#91](https://github.com/ember-cli/ember-app-blueprint/pull/91) [bugfix beta] add legacy inspector support ([@mansona](https://github.com/mansona))
+  * [#82](https://github.com/ember-cli/ember-app-blueprint/pull/82) Use TypeScript way of accessing potentially undefined `podModulePrefix` ([@pichfl](https://github.com/pichfl))
 
 #### Committers: 1
-- Chris Manson ([@mansona](https://github.com/mansona))
-
-## Release (2025-10-06)
-
-* @ember/app-blueprint 6.8.0-beta.4 (patch)
-
-#### :bug: Bug Fix
-* `@ember/app-blueprint`
-  * [#88](https://github.com/ember-cli/ember-app-blueprint/pull/88) [bugfix beta] fix the use of ember test in the new blueprint ([@mansona](https://github.com/mansona))
-
-#### Committers: 1
-- Chris Manson ([@mansona](https://github.com/mansona))
-
-## Release (2025-10-03)
-
-* @ember/app-blueprint 6.8.0-beta.3 (patch)
-
-#### :bug: Bug Fix
-* `@ember/app-blueprint`
-  * [#86](https://github.com/ember-cli/ember-app-blueprint/pull/86) [bugfix beta] update ember-cli to beta ([@mansona](https://github.com/mansona))
-
-#### Committers: 1
-- Chris Manson ([@mansona](https://github.com/mansona))
-
-## Release (2025-09-29)
-
-* @ember/app-blueprint 6.8.0-beta.2 (patch)
-
-#### :house: Internal
-* `@ember/app-blueprint`
-  * [#83](https://github.com/ember-cli/ember-app-blueprint/pull/83) update ember source to latest beta ([@mansona](https://github.com/mansona))
-
-#### Committers: 1
-- Chris Manson ([@mansona](https://github.com/mansona))
-
-## Release (2025-09-05)
-
-* @ember/app-blueprint 6.8.0-beta.1 (minor)
-
-#### :rocket: Enhancement
-* `@ember/app-blueprint`
-  * [#73](https://github.com/ember-cli/ember-app-blueprint/pull/73) Prepare 6.8 beta ([@mansona](https://github.com/mansona))
-
-#### :house: Internal
-* `@ember/app-blueprint`
-  * [#75](https://github.com/ember-cli/ember-app-blueprint/pull/75) update the beta version ([@mansona](https://github.com/mansona))
-
-#### Committers: 1
-- Chris Manson ([@mansona](https://github.com/mansona))
+- Florian Pichler ([@pichfl](https://github.com/pichfl))
 
 ## Release (2025-09-04)
 
