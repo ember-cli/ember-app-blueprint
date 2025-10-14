@@ -1,18 +1,18 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "patch",
-      "oldVersion": "6.7.1",
-      "newVersion": "6.7.2",
+      "impact": "minor",
+      "oldVersion": "6.7.2",
+      "newVersion": "6.8.0",
       "tagName": "latest",
       "constraints": [
         {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-10-02)\n\n* @ember/app-blueprint 6.7.2 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#82](https://github.com/ember-cli/ember-app-blueprint/pull/82) Use TypeScript way of accessing potentially undefined `podModulePrefix` ([@pichfl](https://github.com/pichfl))\n\n#### Committers: 1\n- Florian Pichler ([@pichfl](https://github.com/pichfl))\n"
+  "description": "## Release (2025-10-14)\n\n* @ember/app-blueprint 6.8.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#109](https://github.com/ember-cli/ember-app-blueprint/pull/109) Release 6.8 ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }

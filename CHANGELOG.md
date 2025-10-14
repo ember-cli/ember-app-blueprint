@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-10-14)
+
+* @ember/app-blueprint 6.8.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#109](https://github.com/ember-cli/ember-app-blueprint/pull/109) Release 6.8 ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2025-10-02)
 
 * @ember/app-blueprint 6.7.2 (patch)
