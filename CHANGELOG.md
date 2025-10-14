@@ -1,5 +1,57 @@
 # Changelog
 
+## Release (2025-10-14)
+
+* @ember/app-blueprint 6.9.0-alpha.2 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#103](https://github.com/ember-cli/ember-app-blueprint/pull/103) [beta] update Vite to latest (v7) ([@mansona](https://github.com/mansona))
+  * [#98](https://github.com/ember-cli/ember-app-blueprint/pull/98) Update deps ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#95](https://github.com/ember-cli/ember-app-blueprint/pull/95) [Beta] add services directory ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#91](https://github.com/ember-cli/ember-app-blueprint/pull/91) [bugfix beta] add legacy inspector support ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#100](https://github.com/ember-cli/ember-app-blueprint/pull/100) [beta] swap to the Vitest beta to fix CI ([@mansona](https://github.com/mansona))
+  * [#88](https://github.com/ember-cli/ember-app-blueprint/pull/88) [bugfix beta] fix the use of ember test in the new blueprint ([@mansona](https://github.com/mansona))
+  * [#86](https://github.com/ember-cli/ember-app-blueprint/pull/86) [bugfix beta] update ember-cli to beta ([@mansona](https://github.com/mansona))
+  * [#82](https://github.com/ember-cli/ember-app-blueprint/pull/82) Use TypeScript way of accessing potentially undefined `podModulePrefix` ([@pichfl](https://github.com/pichfl))
+  * [#78](https://github.com/ember-cli/ember-app-blueprint/pull/78) Use strict mode for all CJS files ([@simonihmig](https://github.com/simonihmig))
+
+#### :memo: Documentation
+* `@ember/app-blueprint`
+  * [#97](https://github.com/ember-cli/ember-app-blueprint/pull/97) [documentation beta] update readme for Vite ([@mansona](https://github.com/mansona))
+  * [#64](https://github.com/ember-cli/ember-app-blueprint/pull/64) Update the release document to match the ember-cli process ([@mansona](https://github.com/mansona))
+  * [#81](https://github.com/ember-cli/ember-app-blueprint/pull/81) Correct example usage command in README ([@abeforgit](https://github.com/abeforgit))
+  * [#80](https://github.com/ember-cli/ember-app-blueprint/pull/80) Fix formatting of README file ([@bertdeblock](https://github.com/bertdeblock))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#108](https://github.com/ember-cli/ember-app-blueprint/pull/108) update release-plan ([@mansona](https://github.com/mansona))
+  * [#106](https://github.com/ember-cli/ember-app-blueprint/pull/106) Merge beta into main ([@mansona](https://github.com/mansona))
+  * [#105](https://github.com/ember-cli/ember-app-blueprint/pull/105) Prepare Beta Release v6.8.0-beta.8 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#104](https://github.com/ember-cli/ember-app-blueprint/pull/104) Merge release into beta ([@mansona](https://github.com/mansona))
+  * [#102](https://github.com/ember-cli/ember-app-blueprint/pull/102) Prepare Beta Release v6.8.0-beta.7 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#101](https://github.com/ember-cli/ember-app-blueprint/pull/101) [beta] update node version used in CI ([@mansona](https://github.com/mansona))
+  * [#96](https://github.com/ember-cli/ember-app-blueprint/pull/96) Prepare Beta Release v6.8.0-beta.6 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#93](https://github.com/ember-cli/ember-app-blueprint/pull/93) Add Windows tests ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#92](https://github.com/ember-cli/ember-app-blueprint/pull/92) Prepare Beta Release v6.8.0-beta.5 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#89](https://github.com/ember-cli/ember-app-blueprint/pull/89) Prepare Beta Release v6.8.0-beta.4 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#87](https://github.com/ember-cli/ember-app-blueprint/pull/87) Prepare Beta Release v6.8.0-beta.3 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#85](https://github.com/ember-cli/ember-app-blueprint/pull/85) Prepare Stable Release v6.7.2 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#84](https://github.com/ember-cli/ember-app-blueprint/pull/84) Prepare Beta Release v6.8.0-beta.2 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#83](https://github.com/ember-cli/ember-app-blueprint/pull/83) update ember source to latest beta ([@mansona](https://github.com/mansona))
+
+#### Committers: 7
+- Arne Bertrand ([@abeforgit](https://github.com/abeforgit))
+- Bert De Block ([@bertdeblock](https://github.com/bertdeblock))
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Florian Pichler ([@pichfl](https://github.com/pichfl))
+- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+- [@github-actions[bot]](https://github.com/apps/github-actions)
+
 ## Release (2025-09-05)
 
 * @ember/app-blueprint 6.9.0-alpha.1 (minor)
