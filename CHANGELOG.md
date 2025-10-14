@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-10-14)
+
+* @ember/app-blueprint 6.8.0-beta.8 (patch)
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#104](https://github.com/ember-cli/ember-app-blueprint/pull/104) Merge release into beta ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2025-10-13)
 
 * @ember/app-blueprint 6.8.0-beta.7 (minor)
