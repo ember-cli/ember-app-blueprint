@@ -2,6 +2,41 @@
 
 ## Release (2025-10-14)
 
+* @ember/app-blueprint 6.9.0-beta.1 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#111](https://github.com/ember-cli/ember-app-blueprint/pull/111) Prepare 6.9 Beta ([@mansona](https://github.com/mansona))
+  * [#109](https://github.com/ember-cli/ember-app-blueprint/pull/109) Release 6.8 ([@mansona](https://github.com/mansona))
+  * [#76](https://github.com/ember-cli/ember-app-blueprint/pull/76) Prepare 6.9-alpha ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#78](https://github.com/ember-cli/ember-app-blueprint/pull/78) Use strict mode for all CJS files ([@simonihmig](https://github.com/simonihmig))
+
+#### :memo: Documentation
+* `@ember/app-blueprint`
+  * [#64](https://github.com/ember-cli/ember-app-blueprint/pull/64) Update the release document to match the ember-cli process ([@mansona](https://github.com/mansona))
+  * [#81](https://github.com/ember-cli/ember-app-blueprint/pull/81) Correct example usage command in README ([@abeforgit](https://github.com/abeforgit))
+  * [#80](https://github.com/ember-cli/ember-app-blueprint/pull/80) Fix formatting of README file ([@bertdeblock](https://github.com/bertdeblock))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#110](https://github.com/ember-cli/ember-app-blueprint/pull/110) Prepare Stable Release v6.8.0 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#107](https://github.com/ember-cli/ember-app-blueprint/pull/107) Prepare Alpha Release v6.9.0-alpha.2 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#108](https://github.com/ember-cli/ember-app-blueprint/pull/108) update release-plan ([@mansona](https://github.com/mansona))
+  * [#106](https://github.com/ember-cli/ember-app-blueprint/pull/106) Merge beta into main ([@mansona](https://github.com/mansona))
+  * [#77](https://github.com/ember-cli/ember-app-blueprint/pull/77) Prepare Alpha Release v6.9.0-alpha.1 ([@github-actions[bot]](https://github.com/apps/github-actions))
+
+#### Committers: 5
+- Arne Bertrand ([@abeforgit](https://github.com/abeforgit))
+- Bert De Block ([@bertdeblock](https://github.com/bertdeblock))
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))
+- [@github-actions[bot]](https://github.com/apps/github-actions)
+
+## Release (2025-10-14)
+
 * @ember/app-blueprint 6.8.0 (minor)
 
 #### :rocket: Enhancement
