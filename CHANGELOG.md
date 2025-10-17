@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-10-17)
+
+* @ember/app-blueprint 6.8.1 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#116](https://github.com/ember-cli/ember-app-blueprint/pull/116) [bugfix release] update ember-cli version to latest stable ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2025-10-14)
 
 * @ember/app-blueprint 6.8.0 (minor)

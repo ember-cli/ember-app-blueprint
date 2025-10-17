@@ -1,18 +1,18 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "6.7.2",
-      "newVersion": "6.8.0",
+      "impact": "patch",
+      "oldVersion": "6.8.0",
+      "newVersion": "6.8.1",
       "tagName": "latest",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-10-14)\n\n* @ember/app-blueprint 6.8.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#109](https://github.com/ember-cli/ember-app-blueprint/pull/109) Release 6.8 ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2025-10-17)\n\n* @ember/app-blueprint 6.8.1 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#116](https://github.com/ember-cli/ember-app-blueprint/pull/116) [bugfix release] update ember-cli version to latest stable ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
