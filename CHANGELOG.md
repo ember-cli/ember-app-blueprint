@@ -1,5 +1,10 @@
 # Changelog
 
+
+
+
+
+
 ## Release (2025-10-14)
 
 * @ember/app-blueprint 6.9.0-beta.1 (minor)
