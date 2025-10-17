@@ -1,5 +1,20 @@
 # Changelog
 
+## Release (2025-10-17)
+
+* @ember/app-blueprint 6.10.0-alpha.1 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#113](https://github.com/ember-cli/ember-app-blueprint/pull/113) Prepare 6.10 alpha ([@mansona](https://github.com/mansona))
+
+#### :memo: Documentation
+* `@ember/app-blueprint`
+  * [#114](https://github.com/ember-cli/ember-app-blueprint/pull/114) update RELEASE.md with notes for after ember-cli release ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2025-10-14)
 
 * @ember/app-blueprint 6.9.0-alpha.2 (minor)
