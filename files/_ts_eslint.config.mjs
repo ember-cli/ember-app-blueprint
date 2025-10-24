@@ -83,6 +83,7 @@ export default ts.config(
     extends: [...ts.configs.recommendedTypeChecked, ember.configs.gts],
   },
   {
+    ...qunit.configs.recommended,
     files: ['tests/**/*-test.{js,gjs,ts,gts}'],
     plugins: {
       qunit,
@@ -92,16 +93,8 @@ export default ts.config(
    * CJS node files
    */
   {
-    files: [
-      '**/*.cjs',
-      'config/**/*.js',
-      'testem.js',
-      'testem*.js',
-      '.prettierrc.js',
-      '.stylelintrc.js',
-      '.template-lintrc.js',
-      'ember-cli-build.js',
-    ],
+    ...n.configs['flat/recommended-script'],
+    files: ['**/*.cjs', 'config/**/*.js', 'tests/dummy/config/**/*.js', 'ember-cli-build.js'],
     plugins: {
       n,
     },
@@ -118,6 +111,7 @@ export default ts.config(
    * ESM node files
    */
   {
+    ...n.configs['flat/recommended-module'],
     files: ['**/*.mjs'],
     plugins: {
       n,
@@ -131,5 +125,5 @@ export default ts.config(
         ...globals.node,
       },
     },
-  },
+  }
 );
