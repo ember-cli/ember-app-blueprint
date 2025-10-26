@@ -43,11 +43,14 @@ describe('Slow(JavaScript): Runs tests', async function () {
     expect(stdout2).to.match(/ok .* Acceptance \| app route/);
     expect(stdout2).to.match(/ok .* Acceptance \| index/);
     expect(stdout2).to.match(/ok .* Integration \| Component \| sweet/);
+    expect(stdout2).to.match(/ok .* Unit \| Adapter \| post/);
+    expect(stdout2).to.match(/ok .* Unit \| Model \| post/);
     expect(stdout2).to.match(/ok .* Unit \| Route \| fancy/);
+    expect(stdout2).to.match(/ok .* Unit \| Serializer \| post/);
     expect(stdout2).to.match(/ok .* Ember.onerror/);
 
-    expect(stdout2).to.contain('# tests 6');
-    expect(stdout2).to.contain('# pass  6');
+    expect(stdout2).to.contain('# tests 10');
+    expect(stdout2).to.contain('# pass  10');
     expect(stdout2).to.contain('# skip  0');
     expect(stdout2).to.contain('# todo  0');
     expect(stdout2).to.contain('# ok');
@@ -151,11 +154,14 @@ describe('Slow(TypeScript): Runs tests', async function () {
     expect(stdout2).to.match(/ok .* Acceptance \| app route/);
     expect(stdout2).to.match(/ok .* Acceptance \| index/);
     expect(stdout2).to.match(/ok .* Integration \| Component \| sweet/);
+    expect(stdout2).to.match(/ok .* Unit \| Adapter \| post/);
+    expect(stdout2).to.match(/ok .* Unit \| Model \| post/);
     expect(stdout2).to.match(/ok .* Unit \| Route \| fancy/);
+    expect(stdout2).to.match(/ok .* Unit \| Serializer \| post/);
     expect(stdout2).to.match(/ok .* Ember.onerror/);
 
-    expect(stdout2).to.contain('# tests 6');
-    expect(stdout2).to.contain('# pass  6');
+    expect(stdout2).to.contain('# tests 10');
+    expect(stdout2).to.contain('# pass  10');
     expect(stdout2).to.contain('# skip  0');
     expect(stdout2).to.contain('# todo  0');
     expect(stdout2).to.contain('# ok');
