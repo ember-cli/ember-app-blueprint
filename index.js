@@ -104,6 +104,8 @@ module.exports = {
     const warpDrive = options.warpDrive || options.emberData;
     if (!warpDrive) {
       files = files.filter((file) => !file.includes('services/store.ts'));
+    } else {
+      files = files.filter((file) => !file.includes('services/.gitkeep'));
     }
 
     this._files = files;
