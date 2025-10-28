@@ -4,19 +4,22 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const { compatBuild } = require('@embroider/compat');
 
 module.exports = async function (defaults) {
-  const { buildOnce } = await import('@embroider/vite');
+  <% if (warpDrive) {%>const { setConfig } = await import('@warp-drive/core/build-config');
+  <% } %>const { buildOnce } = await import('@embroider/vite');
+
   let app = new EmberApp(defaults, {
-    <% if (emberData) {%>emberData: {
-      deprecations: {
-        // New projects can safely leave this deprecation disabled.
-        // If upgrading, to opt-into the deprecated behavior, set this to true and then follow:
-        // https://deprecations.emberjs.com/id/ember-data-deprecate-store-extends-ember-object
-        // before upgrading to Ember Data 6.0
-        DEPRECATE_STORE_EXTENDS_EMBER_OBJECT: false,
-      },
-    },
-    <% } %>// Add options here
+    // Add options here
   });
+
+  <% if (warpDrive) {%>setConfig(app, __dirname, {
+    // this should be the most recent <major>.<minor> version for
+    // which all deprecations have been fully resolved
+    // and should be updated when that changes
+    compatWith: '5.8',
+    deprecations: {
+      // ... list individual deprecations that have been resolved here
+    }
+  });<% } %>
 
   return compatBuild(app, buildOnce);
 };

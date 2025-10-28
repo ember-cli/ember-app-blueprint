@@ -75,7 +75,7 @@ module.exports = {
       blueprint: 'app',
       blueprintOptions,
       lang: options.lang,
-      emberData: options.emberData,
+      warpDrive: options.warpDrive || options.emberData,
       ciProvider: options.ciProvider,
       typescript: options.typescript,
       packageManager: options.packageManager ?? 'npm',
@@ -101,9 +101,9 @@ module.exports = {
       );
     }
 
-    if (!options.emberData) {
-      files = files.filter((file) => !file.includes('models/'));
-      files = files.filter((file) => !file.includes('ember-data/'));
+    const warpDrive = options.warpDrive || options.emberData;
+    if (!warpDrive) {
+      files = files.filter((file) => !file.includes('services/store.ts'));
     }
 
     this._files = files;
