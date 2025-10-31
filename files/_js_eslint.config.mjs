@@ -66,6 +66,7 @@ export default [
     },
   },
   {
+    ...qunit.configs.recommended,
     files: ['tests/**/*-test.{js,gjs}'],
     plugins: {
       qunit,
@@ -75,16 +76,8 @@ export default [
    * CJS node files
    */
   {
-    files: [
-      '**/*.cjs',
-      'config/**/*.js',
-      'testem.js',
-      'testem*.js',
-      '.prettierrc.js',
-      '.stylelintrc.js',
-      '.template-lintrc.js',
-      'ember-cli-build.js',
-    ],
+    ...n.configs['flat/recommended-script'],
+    files: ['**/*.cjs', 'config/**/*.js', 'tests/dummy/config/**/*.js', 'ember-cli-build.js'],
     plugins: {
       n,
     },
@@ -101,6 +94,7 @@ export default [
    * ESM node files
    */
   {
+    ...n.configs['flat/recommended-module'],
     files: ['**/*.mjs'],
     plugins: {
       n,
