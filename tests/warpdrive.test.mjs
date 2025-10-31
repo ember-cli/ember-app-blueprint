@@ -107,7 +107,7 @@ describe('linting & formatting', function () {
       });
       fixturify.writeSync(
         app.dir,
-        fixturify.readSync('./tests/fixtures/warpdrive-ts'),
+        fixturify.readSync('./tests/fixtures/warpdrive-js'),
       );
     });
 
