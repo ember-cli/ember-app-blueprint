@@ -120,6 +120,13 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - Check the `Release Alpha` GitHub action to make sure the release succeeded
 
 
+### Release ember-cli and update ember-cli versions
+
+After doing all this release process you can go and release ember-cli. Once ember-cli has been updated you will need to come back here and update the ember-cli reference to be the release (and not the pre-release) for each of the branches.
+
+This is necessary because we're not in the same repository and can't make release `ember-cli` and `@ember/app-blueprint` atomically.
+
+
 ## Changelog updates
 
 `release-plan` is designed to automatically generate a Changelog that includes the titles of every PR that was merged since the last release. As we would like to make use of this auto-generated Changelog we need to make sure that PRs are named correctly and the Changelog included in the "Prepare Release" PRs are what we were expecting.
