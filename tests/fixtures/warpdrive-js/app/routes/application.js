@@ -7,8 +7,8 @@ export default class ApplicationRoute extends Route {
   model() {
     return {
       person: this.store.request({
-        url: 'https://swapi.dev/api/people/1'
-      })
+        url: 'https://swapi.dev/api/people/1',
+      }),
     };
   }
 }

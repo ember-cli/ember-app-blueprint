@@ -18,9 +18,9 @@ export default class ApplicationRoute extends Route {
     return {
       person: this.store.request(
         withReactiveResponse<Person>({
-          url: 'https://swapi.dev/api/people/1'
-        })
-      )
+          url: 'https://swapi.dev/api/people/1',
+        }),
+      ),
     };
   }
 }

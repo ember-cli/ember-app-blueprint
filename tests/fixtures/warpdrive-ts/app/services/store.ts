@@ -12,20 +12,18 @@ const Store = useLegacyStore({
           data: {
             type: 'person',
             id: '1',
-            attributes: { name: 'Luke Skywalker' }
-          }
+            attributes: { name: 'Luke Skywalker' },
+          },
         } as T;
-      }
-    }
+      },
+    },
   ],
   schemas: [
     // -- your schemas here
     withDefaults({
       type: 'person',
-      fields: [
-        { kind: 'field', name: 'name' }
-      ],
-    })
+      fields: [{ kind: 'field', name: 'name' }],
+    }),
   ],
 });
 
