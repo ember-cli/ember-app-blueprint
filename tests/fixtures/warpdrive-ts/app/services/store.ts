@@ -7,7 +7,7 @@ const Store = useLegacyStore({
   cache: JSONAPICache,
   handlers: [
     {
-      async request<T>(): Promise<T> {
+      request<T>(): Promise<T> {
         return {
           data: {
             type: 'person',
