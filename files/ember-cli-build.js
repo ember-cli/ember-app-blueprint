@@ -20,6 +20,6 @@ module.exports = async function (defaults) {
       // ... list individual deprecations that have been resolved here
     }
   });
-  <% } %>
+<% } %>
   return compatBuild(app, buildOnce);
 };
