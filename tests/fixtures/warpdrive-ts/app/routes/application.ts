@@ -2,7 +2,7 @@ import Route from '@ember/routing/route';
 import { service } from '@ember/service';
 import { withReactiveResponse } from '@warp-drive/core/request';
 import type { Type } from '@warp-drive/core/types/symbols';
-import type Store from 'my-test-app2/services/store';
+import type Store from 'test-app/services/store';
 
 export interface Person {
   id: string;

@@ -3,7 +3,7 @@ import { Request } from '@warp-drive/ember';
 import type { TOC } from '@ember/component/template-only';
 import type { Future } from '@warp-drive/core/request';
 import type { ReactiveDataDocument } from '@warp-drive/core/reactive';
-import type { Person } from 'my-test-app2/routes/application';
+import type { Person } from 'test-app/routes/application';
 
 const Route: TOC<{ Args: {
   model: {
