@@ -3,7 +3,7 @@ import fixturify from 'fixturify';
 
 import { generateApp } from './helpers.mjs';
 
-describe('Slow(JavaScript): Runs tests', async function () {
+it('Slow(JavaScript): Runs tests', async function () {
   let app = await generateApp({
     flags: ['--pnpm', '--typescript'],
     skipNpm: false,
@@ -34,7 +34,7 @@ describe('Slow(JavaScript): Runs tests', async function () {
   expect(exitCode2).to.equal(0);
 });
 
-describe('Slow(TypeScript): Runs tests', async function () {
+it('Slow(TypeScript): Runs tests', async function () {
   let app = await generateApp({
     flags: ['--pnpm', '--typescript'],
     skipNpm: false,
