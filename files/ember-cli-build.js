@@ -18,7 +18,7 @@ module.exports = async function (defaults) {
     compatWith: '5.8',
     deprecations: {
       // ... list individual deprecations that have been resolved here
-    }
+    },
   });
 <% } %>
   return compatBuild(app, buildOnce);
