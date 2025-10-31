@@ -1,5 +1,24 @@
 # Changelog
 
+## Release (2025-10-31)
+
+* @ember/app-blueprint 6.10.0-alpha.1 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#125](https://github.com/ember-cli/ember-app-blueprint/pull/125) Glint 2 (for `--typescript` projects) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#124](https://github.com/ember-cli/ember-app-blueprint/pull/124) Use modern EmberData/WarpDrive ([@runspired](https://github.com/runspired))
+  * [#113](https://github.com/ember-cli/ember-app-blueprint/pull/113) Prepare 6.10 alpha ([@mansona](https://github.com/mansona))
+
+#### :memo: Documentation
+* `@ember/app-blueprint`
+  * [#114](https://github.com/ember-cli/ember-app-blueprint/pull/114) update RELEASE.md with notes for after ember-cli release ([@mansona](https://github.com/mansona))
+
+#### Committers: 3
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Chris Thoburn ([@runspired](https://github.com/runspired))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-10-14)
 
 * @ember/app-blueprint 6.9.0-alpha.2 (minor)
