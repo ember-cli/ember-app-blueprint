@@ -8,15 +8,15 @@ const Store = useLegacyStore({
   handlers: [
     {
       request<T>(): Promise<T> {
-        return {
+        return Promise.resolve({
           data: {
             type: 'person',
             id: '1',
-            attributes: { name: 'Luke Skywalker' },
+            attributes: { name: 'Luke Skywalker' }
           },
-        } as T;
-      },
-    },
+        } as T);
+      }
+    }
   ],
   schemas: [
     // -- your schemas here

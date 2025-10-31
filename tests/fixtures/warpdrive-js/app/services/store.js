@@ -7,14 +7,14 @@ const Store = useLegacyStore({
   cache: JSONAPICache,
   handlers: [
     {
-      async request() {
-        return {
+      request() {
+        return Promise.resolve({
           data: {
             type: 'person',
             id: '1',
             attributes: { name: 'Luke Skywalker' },
           },
-        };
+        });
       },
     },
   ],
