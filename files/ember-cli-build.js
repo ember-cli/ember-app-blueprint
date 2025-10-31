@@ -10,8 +10,8 @@ module.exports = async function (defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
   });
-
-  <% if (warpDrive) {%>setConfig(app, __dirname, {
+<% if (warpDrive) {%>
+  setConfig(app, __dirname, {
     // this should be the most recent <major>.<minor> version for
     // which all deprecations have been fully resolved
     // and should be updated when that changes
