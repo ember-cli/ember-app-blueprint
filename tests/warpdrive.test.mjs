@@ -22,7 +22,7 @@ describe('Slow(JavaScript): Runs tests', async function () {
     console.log(stdout2);
   }
 
-  expect(stdout2).to.match(/ok .* Acceptance \| index/);
+  expect(stdout2).to.match(/ok .* Application \| index/);
   expect(stdout2).to.match(/ok .* Ember.onerror/);
 
   expect(stdout2).to.contain('# tests 2');
@@ -53,7 +53,7 @@ describe('Slow(TypeScript): Runs tests', async function () {
     console.log(stdout2);
   }
 
-  expect(stdout2).to.match(/ok .* Acceptance \| index/);
+  expect(stdout2).to.match(/ok .* Application \| index/);
   expect(stdout2).to.match(/ok .* Ember.onerror/);
 
   expect(stdout2).to.contain('# tests 2');
