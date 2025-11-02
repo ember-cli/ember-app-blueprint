@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-11-02)
+
+* @ember/app-blueprint 6.8.3 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#126](https://github.com/ember-cli/ember-app-blueprint/pull/126) [bugfix release] Add eslint parser option `project: true` ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 1
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+
 ## Release (2025-10-24)
 
 * @ember/app-blueprint 6.8.2 (patch)

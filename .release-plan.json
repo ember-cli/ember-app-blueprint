@@ -2,8 +2,8 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "patch",
-      "oldVersion": "6.8.1",
-      "newVersion": "6.8.2",
+      "oldVersion": "6.8.2",
+      "newVersion": "6.8.3",
       "tagName": "latest",
       "constraints": [
         {
@@ -14,5 +14,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-10-24)\n\n* @ember/app-blueprint 6.8.2 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#120](https://github.com/ember-cli/ember-app-blueprint/pull/120) [bugfix release] set node version in engines to >= 20 ([@aklkv](https://github.com/aklkv))\n\n#### Committers: 1\n- Alexey Kulakov ([@aklkv](https://github.com/aklkv))\n"
+  "description": "## Release (2025-11-02)\n\n* @ember/app-blueprint 6.8.3 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#126](https://github.com/ember-cli/ember-app-blueprint/pull/126) [bugfix release] Add eslint parser option `project: true` ([@mkszepp](https://github.com/mkszepp))\n\n#### Committers: 1\n- Markus Sanin ([@mkszepp](https://github.com/mkszepp))\n"
 }
