@@ -1,22 +1,14 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "6.9.0-beta.0",
-      "newVersion": "6.9.0-beta.1",
+      "impact": "patch",
+      "oldVersion": "6.9.0-beta.1",
+      "newVersion": "6.9.0-beta.2",
       "tagName": "beta",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
-        },
-        {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :memo: Documentation"
         },
         {
           "impact": "patch",
@@ -26,5 +18,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-10-14)\n\n* @ember/app-blueprint 6.9.0-beta.1 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#111](https://github.com/ember-cli/ember-app-blueprint/pull/111) Prepare 6.9 Beta ([@mansona](https://github.com/mansona))\n  * [#109](https://github.com/ember-cli/ember-app-blueprint/pull/109) Release 6.8 ([@mansona](https://github.com/mansona))\n  * [#76](https://github.com/ember-cli/ember-app-blueprint/pull/76) Prepare 6.9-alpha ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#78](https://github.com/ember-cli/ember-app-blueprint/pull/78) Use strict mode for all CJS files ([@simonihmig](https://github.com/simonihmig))\n\n#### :memo: Documentation\n* `@ember/app-blueprint`\n  * [#64](https://github.com/ember-cli/ember-app-blueprint/pull/64) Update the release document to match the ember-cli process ([@mansona](https://github.com/mansona))\n  * [#81](https://github.com/ember-cli/ember-app-blueprint/pull/81) Correct example usage command in README ([@abeforgit](https://github.com/abeforgit))\n  * [#80](https://github.com/ember-cli/ember-app-blueprint/pull/80) Fix formatting of README file ([@bertdeblock](https://github.com/bertdeblock))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#110](https://github.com/ember-cli/ember-app-blueprint/pull/110) Prepare Stable Release v6.8.0 ([@github-actions[bot]](https://github.com/apps/github-actions))\n  * [#107](https://github.com/ember-cli/ember-app-blueprint/pull/107) Prepare Alpha Release v6.9.0-alpha.2 ([@github-actions[bot]](https://github.com/apps/github-actions))\n  * [#108](https://github.com/ember-cli/ember-app-blueprint/pull/108) update release-plan ([@mansona](https://github.com/mansona))\n  * [#106](https://github.com/ember-cli/ember-app-blueprint/pull/106) Merge beta into main ([@mansona](https://github.com/mansona))\n  * [#77](https://github.com/ember-cli/ember-app-blueprint/pull/77) Prepare Alpha Release v6.9.0-alpha.1 ([@github-actions[bot]](https://github.com/apps/github-actions))\n\n#### Committers: 5\n- Arne Bertrand ([@abeforgit](https://github.com/abeforgit))\n- Bert De Block ([@bertdeblock](https://github.com/bertdeblock))\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))\n- [@github-actions[bot]](https://github.com/apps/github-actions)\n"
+  "description": "## Release (2025-11-06)\n\n* @ember/app-blueprint 6.9.0-beta.2 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#126](https://github.com/ember-cli/ember-app-blueprint/pull/126) [bugfix release] Add eslint parser option `project: true` ([@mkszepp](https://github.com/mkszepp))\n  * [#120](https://github.com/ember-cli/ember-app-blueprint/pull/120) [bugfix release] set node version in engines to >= 20 ([@aklkv](https://github.com/aklkv))\n  * [#116](https://github.com/ember-cli/ember-app-blueprint/pull/116) [bugfix release] update ember-cli version to latest stable ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#122](https://github.com/ember-cli/ember-app-blueprint/pull/122) Merge release into beta ([@mansona](https://github.com/mansona))\n  * [#127](https://github.com/ember-cli/ember-app-blueprint/pull/127) Prepare Stable Release v6.8.3 ([@github-actions[bot]](https://github.com/apps/github-actions))\n  * [#121](https://github.com/ember-cli/ember-app-blueprint/pull/121) Prepare Stable Release v6.8.2 ([@github-actions[bot]](https://github.com/apps/github-actions))\n  * [#117](https://github.com/ember-cli/ember-app-blueprint/pull/117) Prepare Stable Release v6.8.1 ([@github-actions[bot]](https://github.com/apps/github-actions))\n\n#### Committers: 4\n- Alexey Kulakov ([@aklkv](https://github.com/aklkv))\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Markus Sanin ([@mkszepp](https://github.com/mkszepp))\n- [@github-actions[bot]](https://github.com/apps/github-actions)\n"
 }
