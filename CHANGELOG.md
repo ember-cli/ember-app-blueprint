@@ -1,5 +1,31 @@
 # Changelog
 
+## Release (2025-11-07)
+
+* @ember/app-blueprint 6.10.0-alpha.2 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#126](https://github.com/ember-cli/ember-app-blueprint/pull/126) [bugfix release] Add eslint parser option `project: true` ([@mkszepp](https://github.com/mkszepp))
+  * [#120](https://github.com/ember-cli/ember-app-blueprint/pull/120) [bugfix release] set node version in engines to >= 20 ([@aklkv](https://github.com/aklkv))
+  * [#116](https://github.com/ember-cli/ember-app-blueprint/pull/116) [bugfix release] update ember-cli version to latest stable ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#130](https://github.com/ember-cli/ember-app-blueprint/pull/130) Merge beta into main ([@mansona](https://github.com/mansona))
+  * [#131](https://github.com/ember-cli/ember-app-blueprint/pull/131) fix warpdrive lint tests ([@mansona](https://github.com/mansona))
+  * [#129](https://github.com/ember-cli/ember-app-blueprint/pull/129) Prepare Beta Release v6.9.0-beta.2 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#122](https://github.com/ember-cli/ember-app-blueprint/pull/122) Merge release into beta ([@mansona](https://github.com/mansona))
+  * [#127](https://github.com/ember-cli/ember-app-blueprint/pull/127) Prepare Stable Release v6.8.3 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#121](https://github.com/ember-cli/ember-app-blueprint/pull/121) Prepare Stable Release v6.8.2 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#117](https://github.com/ember-cli/ember-app-blueprint/pull/117) Prepare Stable Release v6.8.1 ([@github-actions[bot]](https://github.com/apps/github-actions))
+
+#### Committers: 4
+- Alexey Kulakov ([@aklkv](https://github.com/aklkv))
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+- [@github-actions[bot]](https://github.com/apps/github-actions)
+
 ## Release (2025-10-31)
 
 * @ember/app-blueprint 6.10.0-alpha.1 (minor)
