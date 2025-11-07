@@ -51,5 +51,5 @@
     "tmp-promise": "^3.0.3",
     "vitest": "^4.0.0-beta.17"
   },
-  "packageManager": "pnpm@10.7.0"
+  "packageManager": "pnpm@10.20.0"
 }
