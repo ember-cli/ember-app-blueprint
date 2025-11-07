@@ -126,7 +126,7 @@ describe('linting & formatting', function () {
     it('glint passes', async function () {
       expect(
         JSON.parse(app.files['package.json']).scripts['lint:types'],
-      ).to.equal('glint');
+      ).to.equal('ember-tsc --noEmit');
 
       let { exitCode, stdout } = await app.execa('pnpm', ['lint:types']);
 
