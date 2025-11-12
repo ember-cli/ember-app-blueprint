@@ -24,7 +24,7 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 import qunit from 'eslint-plugin-qunit';
 import n from 'eslint-plugin-n';
 
-import babelParser from '@babel/eslint-parser';
+import babelParser from '@babel/eslint-parser/experimental-worker';
 
 const parserOptions = {
   esm: {
@@ -34,7 +34,6 @@ const parserOptions = {
     },
     ts: {
       projectService: true,
-      project: true,
       tsconfigRootDir: import.meta.dirname,
     },
   },
