@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-11-12)
+
+* @ember/app-blueprint 6.10.0-alpha.3 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#134](https://github.com/ember-cli/ember-app-blueprint/pull/134) Restore correct version of babel-plugin-ember-template-compilation ([@ef4](https://github.com/ef4))
+
+#### Committers: 1
+- Edward Faulkner ([@ef4](https://github.com/ef4))
+
 ## Release (2025-11-07)
 
 * @ember/app-blueprint 6.10.0-alpha.2 (patch)
