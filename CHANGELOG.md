@@ -2,6 +2,17 @@
 
 ## Release (2025-11-12)
 
+* @ember/app-blueprint 6.10.0-alpha.4 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#133](https://github.com/ember-cli/ember-app-blueprint/pull/133) remove ember-auto-import from newly generated app ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2025-11-12)
+
 * @ember/app-blueprint 6.10.0-alpha.3 (patch)
 
 #### :bug: Bug Fix

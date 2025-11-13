@@ -2,8 +2,8 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "patch",
-      "oldVersion": "6.10.0-alpha.2",
-      "newVersion": "6.10.0-alpha.3",
+      "oldVersion": "6.10.0-alpha.3",
+      "newVersion": "6.10.0-alpha.4",
       "tagName": "alpha",
       "constraints": [
         {
@@ -14,5 +14,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-11-12)\n\n* @ember/app-blueprint 6.10.0-alpha.3 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#134](https://github.com/ember-cli/ember-app-blueprint/pull/134) Restore correct version of babel-plugin-ember-template-compilation ([@ef4](https://github.com/ef4))\n\n#### Committers: 1\n- Edward Faulkner ([@ef4](https://github.com/ef4))\n"
+  "description": "## Release (2025-11-12)\n\n* @ember/app-blueprint 6.10.0-alpha.4 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#133](https://github.com/ember-cli/ember-app-blueprint/pull/133) remove ember-auto-import from newly generated app ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
