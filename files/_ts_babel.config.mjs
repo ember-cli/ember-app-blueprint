@@ -29,7 +29,7 @@ export default {
       'module:decorator-transforms',
       {
         runtime: {
-          import: 'decorator-transforms/runtime-esm',
+          import: import.meta.resolve('decorator-transforms/runtime-esm'),
         },
       },
     ],
