@@ -1,5 +1,28 @@
 # Changelog
 
+## Release (2025-11-21)
+
+* @ember/app-blueprint 6.10.0-alpha.5 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#140](https://github.com/ember-cli/ember-app-blueprint/pull/140) Use an `.mjs` file for configuring Stylelint ([@bertdeblock](https://github.com/bertdeblock))
+  * [#142](https://github.com/ember-cli/ember-app-blueprint/pull/142) Use pnpm v10 ([@bertdeblock](https://github.com/bertdeblock))
+  * [#138](https://github.com/ember-cli/ember-app-blueprint/pull/138) Update generated ESLint config ([@bertdeblock](https://github.com/bertdeblock))
+  * [#44](https://github.com/ember-cli/ember-app-blueprint/pull/44) Use ESM for the babel config ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#139](https://github.com/ember-cli/ember-app-blueprint/pull/139) Remove `/declarations/` entry in `.gitignore` file ([@bertdeblock](https://github.com/bertdeblock))
+
+#### :memo: Documentation
+* `@ember/app-blueprint`
+  * [#141](https://github.com/ember-cli/ember-app-blueprint/pull/141) Update some links to use https ([@bertdeblock](https://github.com/bertdeblock))
+
+#### Committers: 2
+- Bert De Block ([@bertdeblock](https://github.com/bertdeblock))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-11-12)
 
 * @ember/app-blueprint 6.10.0-alpha.4 (patch)
