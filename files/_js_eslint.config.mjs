@@ -14,6 +14,7 @@
  */
 import globals from 'globals';
 import js from '@eslint/js';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
 import ember from 'eslint-plugin-ember/recommended';
 <% if (warpDrive) { %>import WarpDrive from 'eslint-plugin-warp-drive/recommended';<% } %>
@@ -28,20 +29,13 @@ const esmParserOptions = {
   ecmaVersion: 'latest',
 };
 
-export default [
+export default defineConfig([
+  globalIgnores(['dist/', 'coverage/', '!**/.*']),
   js.configs.recommended,
   eslintConfigPrettier,
   ember.configs.base,
   ember.configs.gjs,
   <% if (warpDrive) { %>...WarpDrive,<% } %>
-
-  /**
-   * Ignores must be in their own object
-   * https://eslint.org/docs/latest/use/configure/ignore
-   */
-  {
-    ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
-  },
   /**
    * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
    */
@@ -75,16 +69,7 @@ export default [
    * CJS node files
    */
   {
-    files: [
-      '**/*.cjs',
-      'config/**/*.js',
-      'testem.js',
-      'testem*.js',
-      '.prettierrc.js',
-      '.stylelintrc.js',
-      '.template-lintrc.js',
-      'ember-cli-build.js',
-    ],
+    files: ['**/*.cjs', 'config/**/*.js', 'ember-cli-build.js'],
     plugins: {
       n,
     },
@@ -115,4 +100,4 @@ export default [
       },
     },
   },
-];
+]);
