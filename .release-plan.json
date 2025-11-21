@@ -1,18 +1,26 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "patch",
-      "oldVersion": "6.10.0-alpha.3",
-      "newVersion": "6.10.0-alpha.4",
+      "impact": "minor",
+      "oldVersion": "6.10.0-alpha.4",
+      "newVersion": "6.10.0-alpha.5",
       "tagName": "alpha",
       "constraints": [
         {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :memo: Documentation"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-11-12)\n\n* @ember/app-blueprint 6.10.0-alpha.4 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#133](https://github.com/ember-cli/ember-app-blueprint/pull/133) remove ember-auto-import from newly generated app ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2025-11-21)\n\n* @ember/app-blueprint 6.10.0-alpha.5 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#140](https://github.com/ember-cli/ember-app-blueprint/pull/140) Use an `.mjs` file for configuring Stylelint ([@bertdeblock](https://github.com/bertdeblock))\n  * [#142](https://github.com/ember-cli/ember-app-blueprint/pull/142) Use pnpm v10 ([@bertdeblock](https://github.com/bertdeblock))\n  * [#138](https://github.com/ember-cli/ember-app-blueprint/pull/138) Update generated ESLint config ([@bertdeblock](https://github.com/bertdeblock))\n  * [#44](https://github.com/ember-cli/ember-app-blueprint/pull/44) Use ESM for the babel config ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#139](https://github.com/ember-cli/ember-app-blueprint/pull/139) Remove `/declarations/` entry in `.gitignore` file ([@bertdeblock](https://github.com/bertdeblock))\n\n#### :memo: Documentation\n* `@ember/app-blueprint`\n  * [#141](https://github.com/ember-cli/ember-app-blueprint/pull/141) Update some links to use https ([@bertdeblock](https://github.com/bertdeblock))\n\n#### Committers: 2\n- Bert De Block ([@bertdeblock](https://github.com/bertdeblock))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }

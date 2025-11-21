@@ -1,6 +1,6 @@
 {
   "name": "@ember/app-blueprint",
-  "version": "6.10.0-alpha.4",
+  "version": "6.10.0-alpha.5",
   "description": "Blueprint for next generation of Ember apps",
   "keywords": [
     "ember-blueprint"
