@@ -35,3 +35,17 @@ Does the following:
   - ember-cli brings in a ton of old dependencies, so removing it makes installs much faster
   - downside though is that you no longer have scaffolding (`ember g`) -- however, you could use `pnpm dlx ember-cli g ...` (or `npx ember-cli g`)
 
+### `--minimal`
+
+```
+pnpm dlx ember-cli@latest new my-app-name \
+  --blueprint @ember/app-blueprint@alpha \
+  --pnpm \
+  --minimal
+```
+
+Does the following
+- everything listed under `--no-compat`
+- Removes all linting, formatting, and testing support
+  - leaves you with a minimal app that you can use for demos, and PRing to other repositories that have multi-framework support (and probably use other testing tools for that multi-framework support)
+
