@@ -3,6 +3,17 @@
 const stringUtil = require('ember-cli-string-utils');
 const chalk = require('chalk');
 const directoryForPackageName = require('./lib/directory-for-package-name');
+const { sortPackageJson } = require('sort-package-json');
+
+function stringifyAndNormalize(contents) {
+  return `${JSON.stringify(contents, null, 2)}\n`;
+}
+
+const replacers = {
+  'package.json'(content) {
+    return this.updatePackageJson(content);
+  },
+};
 
 module.exports = {
   description: 'The default blueprint for ember-cli projects.',
@@ -177,6 +188,10 @@ module.exports = {
   buildFileInfo(intoDir, templateVariables, file, options) {
     let fileInfo = this._super.buildFileInfo.apply(this, arguments);
 
+    if (file in replacers) {
+      fileInfo.replacer = replacers[file].bind(this, templateVariables);
+    }
+
     if (file.includes('_js_')) {
       if (options.typescript) {
         return null;
@@ -200,5 +215,63 @@ module.exports = {
     }
 
     return fileInfo;
+  },
+
+  updatePackageJson(options, content) {
+    let contents = JSON.parse(content);
+
+    if (options.minimal) {
+      // Remove linting
+      {
+        delete contents.scripts['format'];
+        delete contents.scripts['lint'];
+        delete contents.scripts['lint:fix'];
+        delete contents.scripts['lint:js'];
+        delete contents.scripts['lint:js:fix'];
+        delete contents.scripts['lint:css'];
+        delete contents.scripts['lint:css:fix'];
+        delete contents.scripts['lint:hbs'];
+        delete contents.scripts['lint:hbs:fix'];
+
+        delete contents.devDependencies['@babel/eslint-parser'];
+        delete contents.devDependencies['eslint'];
+        delete contents.devDependencies['eslint-config-prettier'];
+        delete contents.devDependencies['eslint-plugin-ember'];
+        delete contents.devDependencies['eslint-plugin-n'];
+        delete contents.devDependencies['eslint-plugin-qunit'];
+        delete contents.devDependencies['eslint-plugin-warp-drive'];
+        delete contents.devDependencies['globals'];
+        delete contents.devDependencies['prettier'];
+        delete contents.devDependencies['prettier-plugin-ember-template-tag'];
+        delete contents.devDependencies['stylelint'];
+        delete contents.devDependencies['stylelint-config-standard'];
+        delete contents.devDependencies['typescript-eslint'];
+      }
+      // Remove testing
+      {
+        delete contents.devDependencies['@ember/test-helpers'];
+        delete contents.devDependencies['@ember/test-waiters'];
+        delete contents.devDependencies['qunit'];
+        delete contents.devDependencies['qunit-dom'];
+        delete contents.devDependencies['testem'];
+      }
+    }
+    if (options.noCompat) {
+      contents.type = 'module';
+      contents.engines.node = '>= 24';
+      delete contents.directory;
+      delete contents.devDependencies['@ember/string'];
+      delete contents.devDependencies['@embroider/compat'];
+      delete contents.devDependencies['@embroider/config-meta-loader'];
+      delete contents.devDependencies['ember-resolver'];
+      // Users should use npx ember-cli instead
+      delete contents.devDependencies['ember-cli'];
+      delete contents.devDependencies['ember-cli-babel'];
+      delete contents.devDependencies['ember-load-initializers'];
+      // This arguable should still exist, but it's a v1 addon
+      delete contents.devDependencies['ember-cli-deprecation-workflow'];
+    }
+
+    return stringifyAndNormalize(sortPackageJson(contents));
   },
 };
