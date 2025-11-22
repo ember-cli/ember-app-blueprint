@@ -50,8 +50,6 @@ jobs:
         if: '"${{matrix.os}}" == "windows-latest"'
         with:
           env-mapping: |
-            TEMP,{{ DEV_DRIVE }}/TEMP
-      - run: mkdir $TEMP
-        if: '"${{matrix.os}}" == "windows-latest"'
+            TEMP,{{ DEV_DRIVE }}
       - run: pnpm install --frozen-lockfile
       - run: pnpm test
