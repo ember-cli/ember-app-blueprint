@@ -18,14 +18,13 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v3<% if (pnpm) { %>
+      - uses: actions/checkout@v6<% if (pnpm) { %>
       - uses: pnpm/action-setup@v4
         with:
           version: 10<% } %>
       - name: Install Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
-          node-version: 18
           cache: <%= pnpm ? 'pnpm' : yarn ? 'yarn' : 'npm' %>
       - name: Install Dependencies
         run: <%= pnpm ? 'pnpm install --frozen-lockfile' : yarn ? 'yarn install --frozen-lockfile' : 'npm ci' %>
@@ -38,14 +37,13 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v3<% if (pnpm) { %>
+      - uses: actions/checkout@v6<% if (pnpm) { %>
       - uses: pnpm/action-setup@v4
         with:
           version: 10<% } %>
       - name: Install Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
-          node-version: 18
           cache: <%= pnpm ? 'pnpm' : yarn ? 'yarn' : 'npm' %>
       - name: Install Dependencies
         run: <%= pnpm ? 'pnpm install --frozen-lockfile' : yarn ? 'yarn install --frozen-lockfile' : 'npm ci' %>
