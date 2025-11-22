@@ -25,6 +25,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v6
         with:
+          node-version: 22
           cache: <%= pnpm ? 'pnpm' : yarn ? 'yarn' : 'npm' %>
       - name: Install Dependencies
         run: <%= pnpm ? 'pnpm install --frozen-lockfile' : yarn ? 'yarn install --frozen-lockfile' : 'npm ci' %>
@@ -44,6 +45,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v6
         with:
+          node-version: 22
           cache: <%= pnpm ? 'pnpm' : yarn ? 'yarn' : 'npm' %>
       - name: Install Dependencies
         run: <%= pnpm ? 'pnpm install --frozen-lockfile' : yarn ? 'yarn install --frozen-lockfile' : 'npm ci' %>
