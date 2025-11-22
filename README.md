@@ -48,4 +48,7 @@ Does the following
 - everything listed under `--no-compat`
 - Removes all linting, formatting, and testing support
   - leaves you with a minimal app that you can use for demos, and PRing to other repositories that have multi-framework support (and probably use other testing tools for that multi-framework support)
+- different defaults:
+  - warp-drive becomes _opt-in_ (pass `--warp-drive` if you want it -- normally requires `--no-warp-drive` to remove)
+  - ember-welcome-page becomes _opt-in_ (normally requires `--no-welcome` to remove)
 
