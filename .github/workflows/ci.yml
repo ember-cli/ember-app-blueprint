@@ -49,6 +49,8 @@ jobs:
       - uses: samypr100/setup-dev-drive@v3
         if: '"${{matrix.os}}" == "windows-latest"'
         with:
+          mount-if-exists: true
+          drive-type: Fixed
           env-mapping: |
             TEMP,{{ DEV_DRIVE }}
       - run: pnpm install --frozen-lockfile
