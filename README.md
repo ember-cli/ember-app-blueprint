@@ -9,3 +9,29 @@ If you have an existing app that you would like to upgrade to use Vite consider 
 ```
 pnpm dlx ember-cli@latest new my-app-name -b @ember/app-blueprint --pnpm
 ```
+
+## Options
+
+### `--no-compat`
+
+```
+pnpm dlx ember-cli@latest new my-app-name \
+  --blueprint @ember/app-blueprint@alpha \
+  --pnpm \
+  --no-compat
+```
+
+Does the following:
+- enables `type=module` in package.json (required for vite-ssr, and many ESM tools)
+- makes the build and boot _MUCH FASTER_   
+  (in large apps, this can have your app's boot be up to 1 minute faster)
+- removes `@embroider/compat`
+  - removes support for:
+    - hbs (both for component files, and testing)
+    - content-for (in the HTML files)
+    - v1 addons
+    - node-land config/environment.js
+- removes `ember-cli`
+  - ember-cli brings in a ton of old dependencies, so removing it makes installs much faster
+  - downside though is that you no longer have scaffolding (`ember g`) -- however, you could use `pnpm dlx ember-cli g ...` (or `npx ember-cli g`)
+

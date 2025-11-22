@@ -1,7 +1,8 @@
 {
   "name": "<%= name %>",
   "version": "0.0.0",
-  "private": true,
+  "<% if (noCompat) { %>type": "module",
+  "<% } %>private": true,
   "description": "Small description for <%= name %> goes here",
   "repository": "",
   "license": "MIT",
