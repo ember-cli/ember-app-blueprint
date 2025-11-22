@@ -157,11 +157,30 @@ module.exports = {
       files = files.filter((file) => !file.includes('services/.gitkeep'));
     }
 
+    if (options.noCompat) {
+      files = files.filter((file) => {
+        return !file.includes('controllers/') && !file.includes('helpers/');
+      });
+    }
+
     if (options.minimal) {
       files = files.filter((file) => {
         return (
+          !file.includes('components/') &&
+          !file.includes('styles/') &&
+          !file.includes('services/') &&
+          !file.includes('public/') &&
+          !file.includes('tests/') &&
+          !file.includes('routes/') &&
           !file.includes('ember-cli-build.js') &&
-          !file.includes('environment.js')
+          !file.includes('environment.js') &&
+          !file.includes('template-lintrc') &&
+          !file.includes('prettierrc') &&
+          !file.includes('stylelint') &&
+          !file.includes('ember-cli') &&
+          !file.includes('watchman') &&
+          !file.includes('testem') &&
+          !file.includes('eslint.config')
         );
       });
     }
