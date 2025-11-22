@@ -40,6 +40,7 @@ module.exports = {
           options.ciProvider && `"--ci-provider=${options.ciProvider}"`,
           options.typescript && `"--typescript"`,
           options.minimal && `"--minimal"`,
+          options.noCompat && `"--noCompat"`,
           !options.emberData && `"--no-ember-data"`,
           !options.warpDrive && `"--no-warp-drive"`,
         ]
@@ -78,6 +79,7 @@ module.exports = {
     }
 
     let noCompat = !compat;
+    let notMinimal = !minimal;
 
     return {
       appDirectory: directoryForPackageName(name),
@@ -102,6 +104,7 @@ module.exports = {
       compat,
       noCompat,
       minimal,
+      notMinimal,
     };
   },
 
