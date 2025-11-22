@@ -93,7 +93,7 @@ module.exports = {
       node: {
         dirname: hasDirname
           ? 'import.meta.dirname'
-          : 'dirname(fileURLToPath(impart.meta.url))',
+          : 'dirname(fileURLToPath(import.meta.url))',
         dirnameOldImports: hasDirname
           ? ''
           : [
