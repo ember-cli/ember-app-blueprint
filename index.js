@@ -61,12 +61,29 @@ module.exports = {
       execBinPrefix = 'pnpm';
     }
 
+    let minimal = false;
+    let compat = true;
+    /**
+     * --minimal overrides compat/no-compat
+     */
+    if (options.minimal) {
+      minimal = true;
+      compat = false;
+    }
+
+    if (!minimal) {
+      if (options.noCompat) {
+        compat = false;
+      }
+    }
+
+    let noCompat = !compat;
+
     return {
       appDirectory: directoryForPackageName(name),
       name,
       modulePrefix: name,
       namespace,
-      minimal: options.minimal,
       blueprintVersion: require('./package').version,
       yarn: options.packageManager === 'yarn',
       pnpm: options.packageManager === 'pnpm',
@@ -82,6 +99,9 @@ module.exports = {
       ciProvider: options.ciProvider,
       typescript: options.typescript,
       packageManager: options.packageManager ?? 'npm',
+      compat,
+      noCompat,
+      minimal,
     };
   },
 
