@@ -73,6 +73,7 @@ module.exports = {
       execBinPrefix = 'pnpm';
     }
 
+    let welcome = options.welcome;
     let warpDrive = options.warpDrive ?? options.emberData;
     let minimal = false;
     let compat = true;
@@ -82,11 +83,16 @@ module.exports = {
     if (options.minimal) {
       minimal = true;
       compat = false;
-      warpDrive =
-        options.emberData =
-        options.warpDrive =
-          process.argv.includes('--ember-data') ||
-          process.argv.includes('--warp-drive');
+
+      // Invert defaults
+      {
+        welcome = options.welcome = process.argv.includes('--welcome');
+        warpDrive =
+          options.emberData =
+          options.warpDrive =
+            process.argv.includes('--ember-data') ||
+            process.argv.includes('--warp-drive');
+      }
     }
 
     if (!minimal) {
@@ -110,7 +116,7 @@ module.exports = {
         options.packageManager !== 'yarn' && options.packageManager !== 'pnpm',
       invokeScriptPrefix,
       execBinPrefix,
-      welcome: options.welcome,
+      welcome,
       blueprint: 'app',
       blueprintOptions,
       lang: options.lang,
