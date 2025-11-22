@@ -6,13 +6,23 @@ import { newProjectWithFixtures } from './helpers.mjs';
 
 const SCENARIOS = [
   {
-    name: 'defaults',
+    name: 'no-compat',
     flags: ['--no-compat'],
     fixturePath: join(import.meta.dirname, 'fixture-gjs-only'),
   },
   {
-    name: 'typescript',
+    name: 'minimal',
+    flags: ['--minimal'],
+    fixturePath: join(import.meta.dirname, 'fixture-gjs-only'),
+  },
+  {
+    name: 'typescript + no-compat',
     flags: ['--typescript', '--no-compat'],
+    fixturePath: join(import.meta.dirname, 'fixture-gts-only'),
+  },
+  {
+    name: 'typescript + minimal',
+    flags: ['--typescript', '--minimal'],
     fixturePath: join(import.meta.dirname, 'fixture-gts-only'),
   },
 ];
