@@ -220,6 +220,8 @@ module.exports = {
   updatePackageJson(options, content) {
     let contents = JSON.parse(content);
 
+    console.log(options);
+
     if (options.minimal) {
       // Remove linting
       {
@@ -266,7 +268,7 @@ module.exports = {
     if (options.noCompat) {
       contents.type = 'module';
       contents.engines.node = '>= 24';
-      delete contents.directory;
+      delete contents.directories;
       delete contents.devDependencies['@ember/string'];
       delete contents.devDependencies['@ember/optional-features'];
       delete contents.devDependencies['@embroider/compat'];
