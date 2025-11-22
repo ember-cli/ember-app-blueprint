@@ -47,11 +47,11 @@ jobs:
       # https://github.com/actions/runner-images/issues/12647
       # https://github.com/samypr100/setup-dev-drive/tree/main
       - uses: samypr100/setup-dev-drive@v3
-        if: ${{matrix.os}} == windows-latest
+        if: '"${{matrix.os}}" == "windows-latest"'
         with:
           env-mapping: |
             TEMP,{{ DEV_DRIVE }}/TEMP
       - run: mkdir $TEMP
-        if: ${{matrix.os}} == windows-latest
+        if: '"${{matrix.os}}" == "windows-latest"'
       - run: pnpm install --frozen-lockfile
       - run: pnpm test
