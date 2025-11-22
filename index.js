@@ -11,8 +11,12 @@ const { compare } = require('compare-versions');
  * to use the hacks needed for older nodes.
  */
 let nodeVersion = process.version;
+let localNodeHasDirname = compare(nodeVersion, '22.16.0', '>=');
 
-let hasDirname = compare(nodeVersion, '22.16.0', '>=');
+/**
+ * aka, the current non-active LTS (in maintenance mode)
+ */
+const OLDEST_SUPPORTED_NODE = '20';
 
 module.exports = {
   description: 'The default blueprint for ember-cli projects.',
@@ -34,6 +38,10 @@ module.exports = {
     let name = stringUtil.dasherize(rawName);
     let namespace = stringUtil.classify(rawName);
 
+    if (!options.nodeVersion && !localNodeHasDirname) {
+      options.nodeVersion = OLDEST_SUPPORTED_NODE;
+    }
+
     let hasOptions =
       !options.welcome || options.packageManager || options.ciProvider;
     let blueprintOptions = '';
@@ -49,6 +57,7 @@ module.exports = {
           options.packageManager === 'pnpm' && '"--pnpm"',
           options.ciProvider && `"--ci-provider=${options.ciProvider}"`,
           options.typescript && `"--typescript"`,
+          options.nodeVersion && `"--nodeVersion=${options.nodeVersion}"`,
           !options.emberData && `"--no-ember-data"`,
           !options.warpDrive && `"--no-warp-drive"`,
         ]
@@ -59,6 +68,11 @@ module.exports = {
 
     let invokeScriptPrefix = 'npm run';
     let execBinPrefix = 'npm exec';
+    let currentNodeMajor = nodeVersion.split('.')[0].replace('v', '');
+    let requestedNodeVersion = options.nodeVersion || nodeVersion;
+    let requestedNodeMajor = options.nodeVersion || currentNodeMajor;
+
+    let hasDirname = compare(requestedNodeVersion, '22.16.0', '>=');
 
     if (options.packageManager === 'yarn') {
       invokeScriptPrefix = 'yarn';
@@ -73,6 +87,7 @@ module.exports = {
     return {
       appDirectory: directoryForPackageName(name),
       name,
+      requestedNodeMajor,
       modulePrefix: name,
       namespace,
       blueprintVersion: require('./package').version,
