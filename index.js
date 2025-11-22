@@ -189,7 +189,6 @@ module.exports = {
     let fileInfo = this._super.buildFileInfo.apply(this, arguments);
 
     if (file in replacers) {
-      console.log(intoDir, templateVariables, file, options);
       fileInfo.replacer = replacers[file].bind(this, templateVariables);
     }
 
