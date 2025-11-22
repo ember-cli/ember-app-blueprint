@@ -40,7 +40,7 @@ module.exports = {
           options.ciProvider && `"--ci-provider=${options.ciProvider}"`,
           options.typescript && `"--typescript"`,
           options.minimal && `"--minimal"`,
-          options.noCompat && `"--noCompat"`,
+          options.noCompat && `"--no-compat"`,
           !options.emberData && `"--no-ember-data"`,
           !options.warpDrive && `"--no-warp-drive"`,
         ]
