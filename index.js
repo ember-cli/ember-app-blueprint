@@ -10,8 +10,8 @@ function stringifyAndNormalize(contents) {
 }
 
 const replacers = {
-  'package.json'(content) {
-    return this.updatePackageJson(content);
+  'package.json'(...args) {
+    return this.updatePackageJson(...args);
   },
 };
 
@@ -189,6 +189,7 @@ module.exports = {
     let fileInfo = this._super.buildFileInfo.apply(this, arguments);
 
     if (file in replacers) {
+      console.log(intoDir, templateVariables, file, options);
       fileInfo.replacer = replacers[file].bind(this, templateVariables);
     }
 
@@ -234,6 +235,8 @@ module.exports = {
         delete contents.scripts['lint:hbs:fix'];
 
         delete contents.devDependencies['@babel/eslint-parser'];
+        delete contents.devDependencies['@eslint/js'];
+        delete contents.devDependencies['concurrently'];
         delete contents.devDependencies['eslint'];
         delete contents.devDependencies['eslint-config-prettier'];
         delete contents.devDependencies['eslint-plugin-ember'];
@@ -255,12 +258,18 @@ module.exports = {
         delete contents.devDependencies['qunit-dom'];
         delete contents.devDependencies['testem'];
       }
+      // Extraneous deps.
+      // if folks go minimal, they know what they are doing
+      {
+        delete contents.devDependencies['ember-welcome-page'];
+      }
     }
     if (options.noCompat) {
       contents.type = 'module';
       contents.engines.node = '>= 24';
       delete contents.directory;
       delete contents.devDependencies['@ember/string'];
+      delete contents.devDependencies['@ember/optional-features'];
       delete contents.devDependencies['@embroider/compat'];
       delete contents.devDependencies['@embroider/config-meta-loader'];
       delete contents.devDependencies['ember-resolver'];
