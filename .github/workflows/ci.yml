@@ -23,7 +23,7 @@ jobs:
 
   test:
     name: Test
-    runs-on: ${{ matrix.os }} w/ node ${{ matrix.node }}
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
