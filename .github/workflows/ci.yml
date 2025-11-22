@@ -42,16 +42,10 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           cache: pnpm
-      # windows-latest (windows-2025) doesn't have a D: drive.
-      #   So running tests on windows is _very_ slow withotu a Dev Drive
-      # https://github.com/actions/runner-images/issues/12647
-      # https://github.com/samypr100/setup-dev-drive/tree/main
-      - uses: samypr100/setup-dev-drive@v3
-        if: '"${{matrix.os}}" == "windows-latest"'
-        with:
-          mount-if-exists: true
-          drive-type: Fixed
-          env-mapping: |
-            TEMP,{{ DEV_DRIVE }}
+      - name: Set TEMP to D:/Temp on windows
+        if: ${{matrix.os}} == windows-latest
+        run: |
+          mkdir "D:\\Temp"
+          echo "TEMP=D:\\Temp" >> $env:GITHUB_ENV
       - run: pnpm install --frozen-lockfile
       - run: pnpm test
