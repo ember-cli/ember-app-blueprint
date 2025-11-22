@@ -3,6 +3,16 @@
 const stringUtil = require('ember-cli-string-utils');
 const chalk = require('chalk');
 const directoryForPackageName = require('./lib/directory-for-package-name');
+const { compare } = require('compare-versions');
+
+/**
+ * We support node versions until they are end-of-life'd.
+ * But that doesn't mean that we force folks who stay up to date
+ * to use the hacks needed for older nodes.
+ */
+let nodeVersion = process.version;
+
+let hasDirname = compare(nodeVersion, '22.16.0', '>=');
 
 module.exports = {
   description: 'The default blueprint for ember-cli projects.',
@@ -80,6 +90,17 @@ module.exports = {
       ciProvider: options.ciProvider,
       typescript: options.typescript,
       packageManager: options.packageManager ?? 'npm',
+      node: {
+        dirname: hasDirname
+          ? 'import.meta.dirname'
+          : 'dirname(fileURLToPath(impart.meta.url))',
+        dirnameOldImports: hasDirname
+          ? ''
+          : [
+              "import { dirname } from 'node:path';\n",
+              "import { fileURLToPath } from 'node:url';\n",
+            ].join(''),
+      },
     };
   },
 

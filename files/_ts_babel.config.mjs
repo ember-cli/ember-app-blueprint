@@ -1,4 +1,4 @@
-import {
+<%= node.dirnameOldImports %>import {
   babelCompatSupport,
   templateCompatSupport,
 } from '@embroider/compat/babel';
@@ -36,7 +36,7 @@ export default {
     [
       '@babel/plugin-transform-runtime',
       {
-        absoluteRuntime: import.meta.dirname,
+        absoluteRuntime: <%= node.dirname %>,
         useESModules: true,
         regenerator: false,
       },
