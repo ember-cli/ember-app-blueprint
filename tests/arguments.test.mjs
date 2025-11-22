@@ -147,6 +147,51 @@ describe('Blueprint Arguments', function () {
     });
   });
 
+  describe('--node-version', async function () {
+    let currentMajor = process.version.split('.')[0].replace('v', '');
+
+    it('default node is the current node', async function () {
+      const { files } = await generateApp({
+        name: 'foo',
+      });
+
+      expect(parse(files['package.json']).engines.node).toBe(
+        `>= ${currentMajor}`,
+      );
+
+      if (currentMajor >= 22) {
+        expect(files['babel.config.mjs']).to.contain(`import.meta.dirname`);
+      } else {
+        expect(files['babel.config.mjs']).to.not.contain(`import.meta.dirname`);
+      }
+
+      expect(files['.github'].workflows['ci.yml']).to.contain(
+        `node-version: ${currentMajor}`,
+      );
+    });
+
+    it('--node-version sets engine and CI nodes', async function () {
+      const { files } = await generateApp({
+        name: 'foo',
+        flags: ['--node-version=22'],
+      });
+
+      expect(parse(files['package.json']).engines.node).toBe('>= 22');
+      expect(files['.github'].workflows['ci.yml']).to.contain(
+        `node-version: 22`,
+      );
+    });
+
+    it('--node-version >= 22.16 uses import.meta.dirname', async function () {
+      const { files } = await generateApp({
+        name: 'foo',
+        flags: ['--node-version=22.16'],
+      });
+
+      expect(files['babel.config.mjs']).to.contain(`import.meta.dirname`);
+    });
+  });
+
   describe('--no-welcome', async function () {
     it('generates an app with the welcome page component by default', async function () {
       const { files } = await generateApp();
