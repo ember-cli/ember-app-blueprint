@@ -155,8 +155,17 @@ describe('Blueprint Arguments', function () {
         name: 'foo',
       });
 
-      expect(files['babel.config.mjs']).not.includes(`import.meta.dirname`);
-      expect(files['.github/workflow/ci.yml']).includes(
+      expect(parse(files['package.json']).engines.node).toBe(
+        `>= ${currentMajor}`,
+      );
+
+      if (currentMajor >= 22) {
+        expect(files['babel.config.mjs']).to.contain(`import.meta.dirname`);
+      } else {
+        expect(files['babel.config.mjs']).to.not.contain(`import.meta.dirname`);
+      }
+
+      expect(files['.github'].workflows['ci.yml']).to.contain(
         `node-version: ${currentMajor}`,
       );
     });
@@ -168,7 +177,9 @@ describe('Blueprint Arguments', function () {
       });
 
       expect(parse(files['package.json']).engines.node).toBe('>= 22');
-      expect(files['.github/workflow/ci.yml']).includes(`node-version: 22`);
+      expect(files['.github'].workflows['ci.yml']).to.contain(
+        `node-version: 22`,
+      );
     });
 
     it('--node-version >= 22.16 uses import.meta.dirname', async function () {
@@ -177,7 +188,7 @@ describe('Blueprint Arguments', function () {
         flags: ['--node-version=22.16'],
       });
 
-      expect(files['babel.config.mjs']).includes(`import.meta.dirname`);
+      expect(files['babel.config.mjs']).to.contain(`import.meta.dirname`);
     });
   });
 
