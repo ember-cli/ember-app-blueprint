@@ -1,3 +1,5 @@
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import {
   babelCompatSupport,
   templateCompatSupport,
@@ -28,7 +30,7 @@ export default {
     [
       '@babel/plugin-transform-runtime',
       {
-        absoluteRuntime: import.meta.dirname,
+        absoluteRuntime: dirname(fileURLToPath(import.meta.url)),
         useESModules: true,
         regenerator: false,
       },
