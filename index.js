@@ -3,6 +3,17 @@
 const stringUtil = require('ember-cli-string-utils');
 const chalk = require('chalk');
 const directoryForPackageName = require('./lib/directory-for-package-name');
+const { sortPackageJson } = require('sort-package-json');
+
+function stringifyAndNormalize(contents) {
+  return `${JSON.stringify(contents, null, 2)}\n`;
+}
+
+const replacers = {
+  'package.json'(...args) {
+    return this.updatePackageJson(...args);
+  },
+};
 
 module.exports = {
   description: 'The default blueprint for ember-cli projects.',
@@ -143,6 +154,10 @@ module.exports = {
   buildFileInfo(intoDir, templateVariables, file, options) {
     let fileInfo = this._super.buildFileInfo.apply(this, arguments);
 
+    if (file in replacers) {
+      fileInfo.replacer = replacers[file].bind(this, templateVariables);
+    }
+
     if (file.includes('_js_')) {
       if (options.typescript) {
         return null;
@@ -166,5 +181,11 @@ module.exports = {
     }
 
     return fileInfo;
+  },
+
+  updatePackageJson(options, content) {
+    let contents = JSON.parse(content);
+
+    return stringifyAndNormalize(sortPackageJson(contents));
   },
 };
