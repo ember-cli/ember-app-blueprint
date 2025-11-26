@@ -9,7 +9,7 @@ export default [
   },
   {
     files: [
-      'files/*/app/**/*.js',
+      'files/app/**/*.js',
       'files-override/**/*.mjs',
       'files-override/*/app/**/*.js',
       'files-override/*/tests/**/*.js',

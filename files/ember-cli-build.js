@@ -7,7 +7,7 @@ module.exports = async function (defaults) {
   <% if (warpDrive) {%>const { setConfig } = await import('@warp-drive/core/build-config');
   <% } %>const { buildOnce } = await import('@embroider/vite');
 
-  let app = new EmberApp(defaults, {
+  const app = new EmberApp(defaults, {
     // Add options here
   });
 <% if (warpDrive) {%>
