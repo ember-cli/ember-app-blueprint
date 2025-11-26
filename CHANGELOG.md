@@ -1,5 +1,22 @@
 # Changelog
 
+## Release (2025-11-26)
+
+* @ember/app-blueprint 6.10.0-alpha.6 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#145](https://github.com/ember-cli/ember-app-blueprint/pull/145) Update generated workflow files ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#149](https://github.com/ember-cli/ember-app-blueprint/pull/149) Fix the full path display during project generation ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#146](https://github.com/ember-cli/ember-app-blueprint/pull/146) Test against our supported node versions (and fix the babel config for the maintenance-node version (20)) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#148](https://github.com/ember-cli/ember-app-blueprint/pull/148) Sort the package.json, using the replacers strategy ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-11-21)
 
 * @ember/app-blueprint 6.10.0-alpha.5 (minor)
