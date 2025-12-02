@@ -7,7 +7,7 @@ import { pageTitle } from 'ember-page-title';
   {{outlet}}
 
   {{! The following component displays Ember's default welcome message. }}
-  <WelcomePage @extension="gts" />
+  <WelcomePage @extension="<% if (typescript) {%>gts<% } else { %>gjs<% } %>" />
   {{! Feel free to remove this! }}<% } else { %>
   <h2 id="title">Welcome to Ember</h2>
 
