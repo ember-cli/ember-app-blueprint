@@ -74,7 +74,7 @@
     "ember-resolver": "^13.1.1",
     "ember-source": "~6.10.0-alpha.1",
     "ember-template-lint": "^7.9.3<% if (welcome) { %>",
-    "ember-welcome-page": "^7.0.2<% } %>",
+    "ember-welcome-page": "^8.0.3<% } %>",
     "eslint": "^9.37.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-ember": "^12.7.4",
