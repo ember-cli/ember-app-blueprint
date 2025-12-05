@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-12-05)
+
+* @ember/app-blueprint 6.10.0-alpha.7 (patch)
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#159](https://github.com/ember-cli/ember-app-blueprint/pull/159) don't run CI when you only change markdown files ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2025-11-26)
 
 * @ember/app-blueprint 6.10.0-alpha.6 (minor)
