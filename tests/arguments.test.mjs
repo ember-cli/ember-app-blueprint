@@ -154,7 +154,7 @@ describe('Blueprint Arguments', function () {
       expect(parse(files['package.json']).devDependencies['ember-welcome-page'])
         .to.not.be.undefined;
       expect(files.app.templates['application.gjs']).to.contain(
-        '<WelcomePage />',
+        '<WelcomePage @extension="gjs" />',
       );
     });
 
@@ -164,7 +164,7 @@ describe('Blueprint Arguments', function () {
       expect(parse(files['package.json']).devDependencies['ember-welcome-page'])
         .to.be.undefined;
       expect(files.app.templates['application.gjs']).not.to.contain(
-        '<WelcomePage />',
+        '<WelcomePage @extension="gjs" />',
       );
     });
   });
