@@ -1,5 +1,31 @@
 # Changelog
 
+## Release (2025-12-05)
+
+* @ember/app-blueprint 6.9.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#152](https://github.com/ember-cli/ember-app-blueprint/pull/152) Update all dependencies for 6.9 release ([@mansona](https://github.com/mansona))
+  * [#76](https://github.com/ember-cli/ember-app-blueprint/pull/76) Prepare 6.9-alpha ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#154](https://github.com/ember-cli/ember-app-blueprint/pull/154) [bugfix beta] remove project: true from eslint config in TS projects ([@mansona](https://github.com/mansona))
+  * [#78](https://github.com/ember-cli/ember-app-blueprint/pull/78) Use strict mode for all CJS files ([@simonihmig](https://github.com/simonihmig))
+
+#### :memo: Documentation
+* `@ember/app-blueprint`
+  * [#64](https://github.com/ember-cli/ember-app-blueprint/pull/64) Update the release document to match the ember-cli process ([@mansona](https://github.com/mansona))
+  * [#81](https://github.com/ember-cli/ember-app-blueprint/pull/81) Correct example usage command in README ([@abeforgit](https://github.com/abeforgit))
+  * [#80](https://github.com/ember-cli/ember-app-blueprint/pull/80) Fix formatting of README file ([@bertdeblock](https://github.com/bertdeblock))
+
+#### Committers: 4
+- Arne Bertrand ([@abeforgit](https://github.com/abeforgit))
+- Bert De Block ([@bertdeblock](https://github.com/bertdeblock))
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))
+
 ## Release (2025-11-02)
 
 * @ember/app-blueprint 6.8.3 (patch)
