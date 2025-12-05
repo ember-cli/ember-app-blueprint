@@ -1,6 +1,7 @@
 import { beforeAll, describe, it, expect } from 'vitest';
 
 import { generateApp } from './helpers.mjs';
+import fixturify from 'fixturify';
 
 describe('linting & formatting', function () {
   describe('JavaScript', function () {
@@ -39,6 +40,11 @@ describe('linting & formatting', function () {
         flags: ['--typescript', '--pnpm'],
         skipNpm: false,
       });
+
+      fixturify.writeSync(
+        app.dir,
+        fixturify.readSync('./tests/fixtures/lint-ts'),
+      );
     });
 
     it('yields output without errors', async function (context) {
