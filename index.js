@@ -31,7 +31,7 @@ const replacers = {
       return ejs.render(raw, locals);
     }
 
-    return contents;
+    return ejs.render(contents, locals);
   },
   'app/config/environment.ts'(locals, contents) {
     if (locals.noCompat) {
@@ -44,7 +44,20 @@ const replacers = {
       return ejs.render(raw, locals);
     }
 
-    return contents;
+    return ejs.render(contents, locals);
+  },
+  'app/templates/application.gts'(locals, contents) {
+    if (locals.minimal) {
+      let filePath = join(
+        CONDITIONAL_FILES,
+        'minimal',
+        'app/templates/application.gts',
+      );
+      let raw = readFileSync(filePath).toString();
+      return ejs.render(raw, locals);
+    }
+
+    return ejs.render(contents, locals);
   },
   'package.json'(...args) {
     return this.updatePackageJson(...args);
@@ -61,7 +74,7 @@ const replacers = {
     let prefix = locals.typescript ? '_ts_' : '_js_';
 
     let filePath = join(
-      [
+      ...[
         CONDITIONAL_FILES,
         locals.noCompat && 'no-compat',
         prefix + 'babel.config.mjs',

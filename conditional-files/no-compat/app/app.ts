@@ -1,7 +1,7 @@
 <% if (warpDrive) { %>import '@warp-drive/ember/install';
-import Application from 'ember-strict-application-resolver';
+<% } %>import Application from 'ember-strict-application-resolver';
 import config from '<%= modulePrefix %>/config/environment';<% if (notMinimal) { %>
-import { importSync, isDevelopingApp, macroCondition } from '@embroider/macros';< } %>
+import { importSync, isDevelopingApp, macroCondition } from '@embroider/macros';<% } %>
 import setupInspector from '@embroider/legacy-inspector-support/ember-source-4.12';
 
 <% if (notMinimal) { %>

@@ -18,7 +18,8 @@
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier . --check",
     "format": "prettier . --write",
-    "test": "vitest"
+    "test": "vitest",
+    "new:app": "pnpm dlx ember-cli@latest new my-app --blueprint ."
   },
   "release-plan": {
     "semverIncrementAs": {
