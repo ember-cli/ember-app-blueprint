@@ -37,7 +37,14 @@ const replacers = {
   },
   'babel.config.mjs'(locals) {
     let prefix = locals.typescript ? '_ts_' : '_js_';
-    let filePath = join(CONDITIONAL_FILES, prefix + 'babel.config.mjs');
+
+    let filePath = join(
+      [
+        CONDITIONAL_FILES,
+        locals.noCompat && 'no-compat',
+        prefix + 'babel.config.mjs',
+      ].filter(Boolean),
+    );
 
     let raw = readFileSync(filePath).toString();
 
