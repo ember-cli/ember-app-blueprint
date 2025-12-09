@@ -357,6 +357,8 @@ module.exports = {
         '#config': './app/config/environment',
         '#components/*': './app/components/*',
       };
+
+      contents.devDependencies['ember-strict-application-resolver'] = '^0.1.0';
     }
 
     return stringifyAndNormalize(sortPackageJson(contents));
