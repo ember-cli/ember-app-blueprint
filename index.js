@@ -24,6 +24,19 @@ function stringifyAndNormalize(contents) {
  * (see `conditional-files`)
  */
 const replacers = {
+  'app/config/environment.ts'(locals, contents) {
+    if (locals.noCompat) {
+      let filePath = join(
+        CONDITIONAL_FILES,
+        'no-compat',
+        'app/config/environment.ts',
+      );
+      let raw = readFileSync(filePath).toString();
+      return ejs.render(raw, locals);
+    }
+
+    return contents;
+  },
   'package.json'(...args) {
     return this.updatePackageJson(...args);
   },
