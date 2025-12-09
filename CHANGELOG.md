@@ -1,5 +1,21 @@
 # Changelog
 
+## Release (2025-12-09)
+
+* @ember/app-blueprint 6.10.0-alpha.7 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#153](https://github.com/ember-cli/ember-app-blueprint/pull/153) Pass extension to WelcomePage component ([@evoactivity](https://github.com/evoactivity))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#159](https://github.com/ember-cli/ember-app-blueprint/pull/159) don't run CI when you only change markdown files ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Liam Potter ([@evoactivity](https://github.com/evoactivity))
+
 ## Release (2025-11-26)
 
 * @ember/app-blueprint 6.10.0-alpha.6 (minor)
