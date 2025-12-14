@@ -27,6 +27,7 @@ export default [
   {
     ignores: [
       'tests/fixtures/*',
+      'files/vite.config.*',
       'files/ember-cli-build.js',
       'conditional-files/_js_*',
       'conditional-files/_ts_*',

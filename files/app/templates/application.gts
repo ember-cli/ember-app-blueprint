@@ -1,6 +1,7 @@
 import { pageTitle } from 'ember-page-title';
 <% if (welcome) {%>import { WelcomePage } from 'ember-welcome-page';<% } %>
 
+
 <template>
   {{pageTitle "<%= namespace %>"}}<% if (welcome) { %>
 
