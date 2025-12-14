@@ -80,6 +80,7 @@ export default defineConfig([
     extends: [...ts.configs.recommendedTypeChecked, ember.configs.gts],
   },
   {
+    ...qunit.configs.recommended,
     files: ['tests/**/*-test.{js,gjs,ts,gts}'],
     plugins: {
       qunit,
@@ -89,6 +90,7 @@ export default defineConfig([
    * CJS node files
    */
   {
+    ...n.configs['flat/recommended-script'],
     files: ['**/*.cjs', 'config/**/*.js', 'ember-cli-build.js'],
     plugins: {
       n,
@@ -106,6 +108,7 @@ export default defineConfig([
    * ESM node files
    */
   {
+    ...n.configs['flat/recommended-module'],
     files: ['**/*.mjs'],
     plugins: {
       n,
