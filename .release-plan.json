@@ -1,22 +1,22 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "6.10.0-alpha.5",
-      "newVersion": "6.10.0-alpha.6",
+      "impact": "patch",
+      "oldVersion": "6.10.0-alpha.6",
+      "newVersion": "6.10.0-alpha.7",
       "tagName": "alpha",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
         },
         {
           "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-11-26)\n\n* @ember/app-blueprint 6.10.0-alpha.6 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#145](https://github.com/ember-cli/ember-app-blueprint/pull/145) Update generated workflow files ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#149](https://github.com/ember-cli/ember-app-blueprint/pull/149) Fix the full path display during project generation ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#146](https://github.com/ember-cli/ember-app-blueprint/pull/146) Test against our supported node versions (and fix the babel config for the maintenance-node version (20)) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#148](https://github.com/ember-cli/ember-app-blueprint/pull/148) Sort the package.json, using the replacers strategy ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-12-09)\n\n* @ember/app-blueprint 6.10.0-alpha.7 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#153](https://github.com/ember-cli/ember-app-blueprint/pull/153) Pass extension to WelcomePage component ([@evoactivity](https://github.com/evoactivity))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#159](https://github.com/ember-cli/ember-app-blueprint/pull/159) don't run CI when you only change markdown files ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Liam Potter ([@evoactivity](https://github.com/evoactivity))\n"
 }
