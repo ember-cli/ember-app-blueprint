@@ -236,7 +236,6 @@ module.exports = {
     if (options.noCompat) {
       files = files.filter((file) => {
         return (
-          !file.includes('deprecation-workflow') &&
           !file.includes('ember-cli') &&
           !file.includes('ember-cli-build.js') &&
           !file.includes('controllers/') &&
@@ -254,6 +253,7 @@ module.exports = {
           !file.includes('.github/') &&
           !file.includes('.prettierignore') &&
           !file.includes('README') &&
+          !file.includes('deprecation-workflow') &&
           !file.includes('components/') &&
           !file.includes('eslint.config') &&
           !file.includes('prettierrc') &&
@@ -350,6 +350,7 @@ module.exports = {
         delete contents.devDependencies['tracked-built-ins'];
         delete contents.devDependencies['ember-page-title'];
         delete contents.devDependencies['ember-modifier'];
+        delete contents.devDependencies['ember-cli-deprecation-workflow'];
       }
       // common-in-the-vite-ecosystem alias
       {
@@ -369,8 +370,6 @@ module.exports = {
       delete contents.devDependencies['ember-cli'];
       delete contents.devDependencies['ember-cli-babel'];
       delete contents.devDependencies['ember-load-initializers'];
-      // This arguable should still exist, but it's a v1 addon
-      delete contents.devDependencies['ember-cli-deprecation-workflow'];
 
       // A nice feature of modern apps is using sub-path imports
       // Why specify the whole app name, when you can use `#`?
