@@ -40,7 +40,7 @@
   "devDependencies": {
     "@eslint/js": "^9.3.0",
     "concurrently": "^9.1.2",
-    "ember-cli": "^6.3.1",
+    "ember-cli": "^6.9.1",
     "eslint": "9.x",
     "eslint-config-prettier": "^9.1.0",
     "execa": "^9.1.0",
