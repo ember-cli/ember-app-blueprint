@@ -8,19 +8,19 @@ import { beforeAll } from 'vitest';
 
 const SCENARIOS = [
   {
-    name: 'minimal',
+    name: 'default',
     flags: ['--minimal'],
     fixturePath: join(import.meta.dirname, 'fixtures/tests-js-10'),
   },
 
   {
-    name: 'typescript + minimal',
+    name: 'typescript',
     flags: ['--typescript', '--minimal'],
     fixturePath: join(import.meta.dirname, 'fixtures/tests-ts-10'),
   },
 ];
 
-describe('basic functionality', function () {
+describe('--minimal', function () {
   for (let { name, flags, fixturePath } of SCENARIOS) {
     describe(name, function () {
       let app;

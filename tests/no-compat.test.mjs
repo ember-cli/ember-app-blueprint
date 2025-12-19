@@ -8,19 +8,19 @@ import { beforeAll } from 'vitest';
 
 const SCENARIOS = [
   {
-    name: 'no-compat',
+    name: 'default',
     flags: ['--no-compat'],
     fixturePath: join(import.meta.dirname, 'fixtures/tests-js-10'),
   },
   
   {
-    name: 'typescript + no-compat',
+    name: 'typescript',
     flags: ['--typescript', '--no-compat'],
     fixturePath: join(import.meta.dirname, 'fixtures/tests-ts-10'),
   },
 ];
 
-describe('basic functionality', function () {
+describe('--no-compat', function () {
   for (let { name, flags, fixturePath } of SCENARIOS) {
     describe(name, function () {
       let app;
