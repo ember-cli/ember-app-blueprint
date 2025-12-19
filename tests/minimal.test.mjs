@@ -2,59 +2,65 @@ import { describe, it, expect } from 'vitest';
 import { join } from 'path';
 import { existsSync, writeFileSync } from 'fs';
 import stripAnsi from 'strip-ansi';
-import { newProjectWithFixtures } from './helpers.mjs';
+import { generateApp } from './helpers.mjs';
+import fixturify from 'fixturify';
+import { beforeAll } from 'vitest';
 
 const SCENARIOS = [
   {
     name: 'no-compat',
     flags: ['--no-compat'],
-    fixturePath: join(import.meta.dirname, 'fixture-gjs-only'),
+    fixturePath: join(import.meta.dirname, 'fixtures/tests-js-10'),
   },
   {
     name: 'minimal',
     flags: ['--minimal'],
-    fixturePath: join(import.meta.dirname, 'fixture-gjs-only'),
+    fixturePath: join(import.meta.dirname, 'fixtures/tests-js-10'),
   },
   {
     name: 'typescript + no-compat',
     flags: ['--typescript', '--no-compat'],
-    fixturePath: join(import.meta.dirname, 'fixture-gts-only'),
+    fixturePath: join(import.meta.dirname, 'fixtures/tests-ts-10'),
   },
   {
     name: 'typescript + minimal',
     flags: ['--typescript', '--minimal'],
-    fixturePath: join(import.meta.dirname, 'fixture-gts-only'),
+    fixturePath: join(import.meta.dirname, 'fixtures/tests-ts-10'),
   },
 ];
 
 describe('basic functionality', function () {
-  for (let { name, flags, packageJson, fixturePath } of SCENARIOS) {
+  for (let { name, flags, fixturePath } of SCENARIOS) {
     describe(name, function () {
-      let project = newProjectWithFixtures({
-        fixturePath,
-        flags,
-        packageJson,
+      let app;
+      beforeAll(async function () {
+        app = await generateApp({
+          flags,
+          skipNpm: false,
+        });
+
+        fixturify.writeSync(app.dir, fixturify.readSync(fixturePath));
       });
 
       it('verify files', async function () {
         expect(
-          !existsSync(join(project.dir(), 'app/index.html')),
+          !existsSync(join(app.dir, 'app/index.html')),
           'the app index.html has been removed',
         );
         expect(
-          existsSync(join(project.dir(), 'index.html')),
+          existsSync(join(app.dir, 'index.html')),
           'the root index.html has been added',
         );
       });
 
       it('successfully lints', async function () {
-        let result = await project.execa('pnpm', ['lint']);
+        let result = await app.execa('pnpm', ['lint']);
 
         console.log(result.stdout);
       });
 
       it('successfully builds', async function () {
-        let result = await project.execa('pnpm', ['build']);
+        let result = await app.execa('pnpm', ['build']);
 
         console.log(result.stdout);
       });
@@ -63,7 +69,7 @@ describe('basic functionality', function () {
         let result;
 
         try {
-          result = await project.execa('pnpm', ['test']);
+          result = await app.execa('pnpm', ['test']);
         } catch (err) {
           console.log(err.stdout, err.stderr);
           throw 'Failed to successfully run test';
@@ -82,13 +88,13 @@ describe('basic functionality', function () {
       });
 
       it('successfully runs tests in dev mode', async function () {
-        await project.$`pnpm install --save-dev testem http-proxy`;
+        await app.execa('pnpm', ['install', '--save-dev', 'testem', 'http-proxy']);
         let appURL;
 
         let server;
 
         try {
-          server = project.execa('pnpm', ['start']);
+          server = app.execa('pnpm', ['start']);
 
           await new Promise((resolve) => {
             server.stdout.on('data', (line) => {
@@ -132,7 +138,7 @@ describe('basic functionality', function () {
 `,
           );
 
-          let testResult = await project.execa('pnpm', [
+          let testResult = await app.execa('pnpm', [
             'testem',
             '--file',
             'testem-dev.js',
@@ -145,11 +151,11 @@ describe('basic functionality', function () {
       });
 
       it('successfully optimizes deps', function () {
-        return project.execa('pnpm', ['vite', 'optimize', '--force']);
+        return app.execa('pnpm', ['vite', 'optimize', '--force']);
       });
 
       it('can run generators', function () {
-        return project.execa('pnpm', ['ember', 'g', 'route', 'fancy']);
+        return app.execa('pnpm', ['ember', 'g', 'route', 'fancy']);
       });
     });
   }
