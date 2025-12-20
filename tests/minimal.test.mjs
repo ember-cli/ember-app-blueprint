@@ -10,13 +10,13 @@ const SCENARIOS = [
   {
     name: 'default',
     flags: ['--minimal'],
-    fixturePath: join(import.meta.dirname, 'fixtures/tests-js-10'),
+    fixturePath: join(import.meta.dirname, 'fixtures/tests-js-minimal-10'),
   },
 
   {
     name: 'typescript',
     flags: ['--typescript', '--minimal'],
-    fixturePath: join(import.meta.dirname, 'fixtures/tests-ts-10'),
+    fixturePath: join(import.meta.dirname, 'fixtures/tests-ts-minimal-10'),
   },
 ];
 
