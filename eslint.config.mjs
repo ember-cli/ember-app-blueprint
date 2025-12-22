@@ -26,6 +26,7 @@ export default [
   eslintConfigPrettier,
   {
     ignores: [
+      'my-app/**',
       'tests/fixtures/*',
       'files/vite.config.*',
       'files/ember-cli-build.js',
