@@ -1,29 +1,16 @@
 import { describe, it, expect } from 'vitest';
 import { join } from 'path';
-import { existsSync, writeFileSync } from 'fs';
-import stripAnsi from 'strip-ansi';
+import { existsSync } from 'fs';
 import { generateApp } from './helpers.mjs';
 import fixturify from 'fixturify';
 import { beforeAll } from 'vitest';
 
-const SCENARIOS = [
-  {
-    name: 'default',
-    flags: ['--minimal'],
-    fixturePath: join(import.meta.dirname, 'fixtures/tests-js-minimal-10'),
-  },
-
-  {
-    name: 'typescript',
-    flags: ['--typescript', '--minimal'],
-    fixturePath: join(import.meta.dirname, 'fixtures/tests-ts-minimal-10'),
-  },
-];
-
 describe('--minimal', function () {
   describe('default', function () {
-    let { flags, fixturePath } = SCENARIOS[0];
+    let flags = ['--minimal'];
+    let fixturePath = join(import.meta.dirname, 'fixtures/tests-js-minimal-10');
     let app;
+
     beforeAll(async function () {
       app = await generateApp({
         flags,
@@ -52,8 +39,10 @@ describe('--minimal', function () {
   });
 
   describe('--typescript', function () {
-    let { flags, fixturePath } = SCENARIOS[1];
+    let flags = ['--typescript', '--minimal'];
+    let fixturePath = join(import.meta.dirname, 'fixtures/tests-ts-minimal-10');
     let app;
+
     beforeAll(async function () {
       app = await generateApp({
         flags,

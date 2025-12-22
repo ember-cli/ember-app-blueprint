@@ -1,7 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { join } from 'path';
-import { existsSync, writeFileSync } from 'fs';
-import stripAnsi from 'strip-ansi';
+import { existsSync } from 'fs';
 import { generateApp } from './helpers.mjs';
 import fixturify from 'fixturify';
 import { beforeAll } from 'vitest';
@@ -11,23 +10,10 @@ import { beforeAll } from 'vitest';
  *
  * The minimal tests don't need to use pnpm because we don't use ember-load-initializers
  */
-const SCENARIOS = [
-  {
-    name: 'default',
-    flags: ['--no-compat', '--pnpm'],
-    fixturePath: join(import.meta.dirname, 'fixtures/tests-js-10'),
-  },
-
-  {
-    name: 'typescript',
-    flags: ['--typescript', '--no-compat', '--pnpm'],
-    fixturePath: join(import.meta.dirname, 'fixtures/tests-ts-10'),
-  },
-];
-
 describe('--no-compat', function () {
   describe('default', function () {
-    let { flags, fixturePath } = SCENARIOS[0];
+    let flags = ['--no-compat', '--pnpm'];
+    let fixturePath = join(import.meta.dirname, 'fixtures/tests-js-10');
 
     describe('empty project', function () {
       let app;
@@ -97,7 +83,8 @@ describe('--no-compat', function () {
   });
 
   describe('--typescript', function () {
-    let { flags, fixturePath } = SCENARIOS[1];
+    let flags = ['--typescript', '--no-compat', '--pnpm'];
+    let fixturePath = join(import.meta.dirname, 'fixtures/tests-ts-10');
 
     describe('empty project', function () {
       let app;
