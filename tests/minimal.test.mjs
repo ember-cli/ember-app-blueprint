@@ -21,40 +21,71 @@ const SCENARIOS = [
 ];
 
 describe('--minimal', function () {
-  for (let { name, flags, fixturePath } of SCENARIOS) {
-    describe(name, function () {
-      let app;
-      beforeAll(async function () {
-        app = await generateApp({
-          flags,
-          skipNpm: false,
-        });
-
-        fixturify.writeSync(app.dir, fixturify.readSync(fixturePath));
+  describe('default', function () {
+    let { flags, fixturePath } = SCENARIOS[0];
+    let app;
+    beforeAll(async function () {
+      app = await generateApp({
+        flags,
+        skipNpm: false,
       });
 
-      it('verify files', async function () {
-        expect(
-          !existsSync(join(app.dir, 'app/index.html')),
-          'the app index.html has been removed',
-        );
-        expect(
-          existsSync(join(app.dir, 'index.html')),
-          'the root index.html has been added',
-        );
-      });
-
-   
-
-      it('successfully builds', async function () {
-        let result = await app.execa('pnpm', ['build']);
-
-        console.log(result.stdout);
-      });
-
-      it('successfully optimizes deps', function () {
-        return app.execa('pnpm', ['vite', 'optimize', '--force']);
-      });
+      fixturify.writeSync(app.dir, fixturify.readSync(fixturePath));
     });
-  }
+
+    it('verify files', async function () {
+      expect(
+        !existsSync(join(app.dir, 'app/index.html')),
+        'the app index.html has been removed',
+      );
+      expect(
+        existsSync(join(app.dir, 'index.html')),
+        'the root index.html has been added',
+      );
+    });
+
+    it('successfully builds', async function () {
+      let result = await app.execa('pnpm', ['build']);
+
+      console.log(result.stdout);
+    });
+
+    it('successfully optimizes deps', function () {
+      return app.execa('pnpm', ['vite', 'optimize', '--force']);
+    });
+  });
+
+  describe('--typescript', function () {
+    let { flags, fixturePath } = SCENARIOS[1];
+    let app;
+    beforeAll(async function () {
+      app = await generateApp({
+        flags,
+        skipNpm: false,
+      });
+
+      fixturify.writeSync(app.dir, fixturify.readSync(fixturePath));
+    });
+
+    it('verify files', async function () {
+      expect(
+        !existsSync(join(app.dir, 'app/index.html')),
+        'the app index.html has been removed',
+      );
+      expect(
+        existsSync(join(app.dir, 'index.html')),
+        'the root index.html has been added',
+      );
+    });
+
+    it('successfully builds', async function () {
+      let result = await app.execa('pnpm', ['build']);
+
+      console.log(result.stdout);
+    });
+
+    it('successfully optimizes deps', function () {
+      return app.execa('pnpm', ['vite', 'optimize', '--force']);
+    });
+  });
 });
