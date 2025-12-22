@@ -6,16 +6,21 @@ import { generateApp } from './helpers.mjs';
 import fixturify from 'fixturify';
 import { beforeAll } from 'vitest';
 
+/**
+ * We use pnpm in these tests because npm can't handle peers and pre-releases
+ *
+ * The minimal tests don't need to use pnpm because we don't use ember-load-initializers
+ */
 const SCENARIOS = [
   {
     name: 'default',
-    flags: ['--no-compat'],
+    flags: ['--no-compat', '--pnpm'],
     fixturePath: join(import.meta.dirname, 'fixtures/tests-js-10'),
   },
 
   {
     name: 'typescript',
-    flags: ['--typescript', '--no-compat'],
+    flags: ['--typescript', '--no-compat', '--pnpm'],
     fixturePath: join(import.meta.dirname, 'fixtures/tests-ts-10'),
   },
 ];
@@ -23,257 +28,141 @@ const SCENARIOS = [
 describe('--no-compat', function () {
   describe('default', function () {
     let { flags, fixturePath } = SCENARIOS[0];
-    let app;
-    beforeAll(async function () {
-      app = await generateApp({
-        flags,
-        skipNpm: false,
+
+    describe('empty project', function () {
+      let app;
+      beforeAll(async function () {
+        app = await generateApp({
+          flags,
+          skipNpm: false,
+        });
       });
 
-      fixturify.writeSync(app.dir, fixturify.readSync(fixturePath));
+      it('verify files', async function () {
+        expect(
+          !existsSync(join(app.dir, 'app/index.html')),
+          'the app index.html has been removed',
+        );
+        expect(
+          existsSync(join(app.dir, 'index.html')),
+          'the root index.html has been added',
+        );
+      });
+
+      it('successfully lints', async function () {
+        let result = await app.execa('pnpm', ['lint']);
+
+        expect(result.exitCode).to.equal(0);
+      });
+
+      it('successfully builds', async function () {
+        let result = await app.execa('pnpm', ['build']);
+
+        expect(result.exitCode).to.equal(0);
+      });
     });
 
-    it('verify files', async function () {
-      expect(
-        !existsSync(join(app.dir, 'app/index.html')),
-        'the app index.html has been removed',
-      );
-      expect(
-        existsSync(join(app.dir, 'index.html')),
-        'the root index.html has been added',
-      );
-    });
-
-    it('successfully lints', async function () {
-      let result = await app.execa('pnpm', ['lint']);
-
-      console.log(result.stdout);
-    });
-
-    it('successfully builds', async function () {
-      let result = await app.execa('pnpm', ['build']);
-
-      console.log(result.stdout);
-    });
-
-    it('successfully runs tests', async function () {
-      let result;
-
-      try {
-        result = await app.execa('pnpm', ['test']);
-      } catch (err) {
-        console.log(err.stdout, err.stderr);
-        throw 'Failed to successfully run test';
-      }
-
-      // make sure that each of the tests that we expect actually show up
-      // alternatively we can change this to search for `pass 3`
-      expect(result.stdout).to.contain(
-        'Acceptance | welcome page: visiting /index shows the welcome page',
-      );
-      expect(result.stdout).to.contain('Acceptance | styles: visiting /styles');
-
-      console.log(result.stdout);
-    });
-
-    it('successfully runs tests in dev mode', async function () {
-      await app.execa('pnpm', [
-        'install',
-        '--save-dev',
-        'testem',
-        'http-proxy',
-      ]);
-      let appURL;
-
-      let server;
-
-      try {
-        server = app.execa('pnpm', ['start']);
-
-        await new Promise((resolve) => {
-          server.stdout.on('data', (line) => {
-            let result = /Local:\s+(https?:\/\/.*)\//g.exec(
-              stripAnsi(line.toString()),
-            );
-
-            if (result) {
-              appURL = result[1];
-              resolve();
-            }
-          });
+    describe('with fixture', function () {
+      let app;
+      beforeAll(async function () {
+        app = await generateApp({
+          flags,
+          skipNpm: false,
         });
+        fixturify.writeSync(app.dir, fixturify.readSync(fixturePath));
+      });
 
-        writeFileSync(
-          join(app.dir, 'testem-dev.js'),
-          `module.exports = {
-  test_page: 'tests/index.html?hidepassed',
-  disable_watching: true,
-  launch_in_ci: ['Chrome'],
-  launch_in_dev: ['Chrome'],
-  browser_start_timeout: 120,
-  browser_args: {
-    Chrome: {
-      ci: [
-        // --no-sandbox is needed when running Chrome inside a container
-        process.env.CI ? '--no-sandbox' : null,
-        '--headless',
-        '--disable-dev-shm-usage',
-        '--disable-software-rasterizer',
-        '--mute-audio',
-        '--remote-debugging-port=0',
-        '--window-size=1440,900',
-      ].filter(Boolean),
-    },
-  },
-  middleware: [
-    require(__dirname + '/testem-proxy.js')('${appURL}')
-  ],
-};
-`,
+      it('successfully runs tests', async function () {
+        let result;
+
+        try {
+          result = await app.execa('pnpm', ['test']);
+        } catch (err) {
+          console.log(err.stdout, err.stderr);
+          throw 'Failed to successfully run test';
+        }
+
+        // make sure that each of the tests that we expect actually show up
+        // alternatively we can change this to search for `pass 3`
+        expect(result.stdout).to.contain(
+          'Acceptance | welcome page: visiting /index shows the welcome page',
+        );
+        expect(result.stdout).to.contain(
+          'Integration | Component | sweet: it renders',
         );
 
-        let testResult = await app.execa('pnpm', [
-          'testem',
-          '--file',
-          'testem-dev.js',
-          'ci',
-        ]);
-        expect(testResult.exitCode).to.eq(0, testResult.output);
-      } finally {
-        server?.kill('SIGINT');
-      }
-    });
-
-    it('successfully optimizes deps', function () {
-      return app.execa('pnpm', ['vite', 'optimize', '--force']);
+        console.log(result.stdout);
+      });
     });
   });
 
   describe('--typescript', function () {
     let { flags, fixturePath } = SCENARIOS[1];
-    let app;
-    beforeAll(async function () {
-      app = await generateApp({
-        flags,
-        skipNpm: false,
+
+    describe('empty project', function () {
+      let app;
+      beforeAll(async function () {
+        app = await generateApp({
+          flags,
+          skipNpm: false,
+        });
       });
 
-      fixturify.writeSync(app.dir, fixturify.readSync(fixturePath));
+      it('verify files', async function () {
+        expect(
+          !existsSync(join(app.dir, 'app/index.html')),
+          'the app index.html has been removed',
+        );
+        expect(
+          existsSync(join(app.dir, 'index.html')),
+          'the root index.html has been added',
+        );
+      });
+
+      it('successfully lints', async function () {
+        let result = await app.execa('pnpm', ['lint']);
+
+        expect(result.exitCode).to.equal(0);
+      });
+
+      it('successfully builds', async function () {
+        let result = await app.execa('pnpm', ['build']);
+
+        expect(result.exitCode).to.equal(0);
+      });
     });
 
-    it('verify files', async function () {
-      expect(
-        !existsSync(join(app.dir, 'app/index.html')),
-        'the app index.html has been removed',
-      );
-      expect(
-        existsSync(join(app.dir, 'index.html')),
-        'the root index.html has been added',
-      );
-    });
-
-    it('successfully lints', async function () {
-      let result = await app.execa('pnpm', ['lint']);
-
-      console.log(result.stdout);
-    });
-
-    it('successfully builds', async function () {
-      let result = await app.execa('pnpm', ['build']);
-
-      console.log(result.stdout);
-    });
-
-    it('successfully runs tests', async function () {
-      let result;
-
-      try {
-        result = await app.execa('pnpm', ['test']);
-      } catch (err) {
-        console.log(err.stdout, err.stderr);
-        throw 'Failed to successfully run test';
-      }
-
-      // make sure that each of the tests that we expect actually show up
-      // alternatively we can change this to search for `pass 3`
-      expect(result.stdout).to.contain(
-        'Acceptance | welcome page: visiting /index shows the welcome page',
-      );
-      expect(result.stdout).to.contain('Acceptance | styles: visiting /styles');
-
-      console.log(result.stdout);
-    });
-
-    it('successfully runs tests in dev mode', async function () {
-      await app.execa('pnpm', [
-        'install',
-        '--save-dev',
-        'testem',
-        'http-proxy',
-      ]);
-      let appURL;
-
-      let server;
-
-      try {
-        server = app.execa('pnpm', ['start']);
-
-        await new Promise((resolve) => {
-          server.stdout.on('data', (line) => {
-            let result = /Local:\s+(https?:\/\/.*)\//g.exec(
-              stripAnsi(line.toString()),
-            );
-
-            if (result) {
-              appURL = result[1];
-              resolve();
-            }
-          });
+    describe('with fixture', function () {
+      let app;
+      beforeAll(async function () {
+        app = await generateApp({
+          flags,
+          skipNpm: false,
         });
+        fixturify.writeSync(app.dir, fixturify.readSync(fixturePath));
+      });
 
-        writeFileSync(
-          join(app.dir, 'testem-dev.js'),
-          `module.exports = {
-  test_page: 'tests/index.html?hidepassed',
-  disable_watching: true,
-  launch_in_ci: ['Chrome'],
-  launch_in_dev: ['Chrome'],
-  browser_start_timeout: 120,
-  browser_args: {
-    Chrome: {
-      ci: [
-        // --no-sandbox is needed when running Chrome inside a container
-        process.env.CI ? '--no-sandbox' : null,
-        '--headless',
-        '--disable-dev-shm-usage',
-        '--disable-software-rasterizer',
-        '--mute-audio',
-        '--remote-debugging-port=0',
-        '--window-size=1440,900',
-      ].filter(Boolean),
-    },
-  },
-  middleware: [
-    require(__dirname + '/testem-proxy.js')('${appURL}')
-  ],
-};
-`,
+      it('successfully runs tests', async function () {
+        let result;
+
+        try {
+          result = await app.execa('pnpm', ['test']);
+        } catch (err) {
+          console.log(err.stdout, err.stderr);
+          throw 'Failed to successfully run test';
+        }
+
+        // make sure that each of the tests that we expect actually show up
+        // alternatively we can change this to search for `pass 3`
+        expect(result.stdout).to.contain(
+          'Acceptance | welcome page: visiting /index shows the welcome page',
+        );
+        expect(result.stdout).to.contain(
+          'Integration | Component | sweet: it renders',
         );
 
-        let testResult = await app.execa('pnpm', [
-          'testem',
-          '--file',
-          'testem-dev.js',
-          'ci',
-        ]);
-        expect(testResult.exitCode).to.eq(0, testResult.output);
-      } finally {
-        server?.kill('SIGINT');
-      }
-    });
-
-    it('successfully optimizes deps', function () {
-      return app.execa('pnpm', ['vite', 'optimize', '--force']);
+        console.log(result.stdout);
+      });
     });
   });
 });

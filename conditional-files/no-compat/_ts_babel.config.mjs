@@ -18,7 +18,7 @@ export default {
       'babel-plugin-ember-template-compilation',
       {
         compilerPath: 'ember-source/dist/ember-template-compiler.js',
-        transforms: [...macros.templateMacros()],
+        transforms: [...macros.templateMacros],
       },
     ],
     [
@@ -37,7 +37,7 @@ export default {
         regenerator: false,
       },
     ],
-    ...macros.babelMacros(),
+    ...macros.babelMacros,
   ],
 
   generatorOpts: {

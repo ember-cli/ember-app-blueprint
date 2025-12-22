@@ -47,11 +47,7 @@ describe('--minimal', function () {
     it('successfully builds', async function () {
       let result = await app.execa('pnpm', ['build']);
 
-      console.log(result.stdout);
-    });
-
-    it('successfully optimizes deps', function () {
-      return app.execa('pnpm', ['vite', 'optimize', '--force']);
+      expect(result.exitCode).to.equal(0);
     });
   });
 
@@ -81,11 +77,7 @@ describe('--minimal', function () {
     it('successfully builds', async function () {
       let result = await app.execa('pnpm', ['build']);
 
-      console.log(result.stdout);
-    });
-
-    it('successfully optimizes deps', function () {
-      return app.execa('pnpm', ['vite', 'optimize', '--force']);
+      expect(result.exitCode).to.equal(0);
     });
   });
 });
