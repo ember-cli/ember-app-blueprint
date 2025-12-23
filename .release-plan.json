@@ -2,21 +2,17 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "patch",
-      "oldVersion": "6.9.0-beta.1",
-      "newVersion": "6.9.0-beta.2",
-      "tagName": "beta",
+      "oldVersion": "6.9.0",
+      "newVersion": "6.9.1",
+      "tagName": "latest",
       "constraints": [
         {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-11-06)\n\n* @ember/app-blueprint 6.9.0-beta.2 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#126](https://github.com/ember-cli/ember-app-blueprint/pull/126) [bugfix release] Add eslint parser option `project: true` ([@mkszepp](https://github.com/mkszepp))\n  * [#120](https://github.com/ember-cli/ember-app-blueprint/pull/120) [bugfix release] set node version in engines to >= 20 ([@aklkv](https://github.com/aklkv))\n  * [#116](https://github.com/ember-cli/ember-app-blueprint/pull/116) [bugfix release] update ember-cli version to latest stable ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#122](https://github.com/ember-cli/ember-app-blueprint/pull/122) Merge release into beta ([@mansona](https://github.com/mansona))\n  * [#127](https://github.com/ember-cli/ember-app-blueprint/pull/127) Prepare Stable Release v6.8.3 ([@github-actions[bot]](https://github.com/apps/github-actions))\n  * [#121](https://github.com/ember-cli/ember-app-blueprint/pull/121) Prepare Stable Release v6.8.2 ([@github-actions[bot]](https://github.com/apps/github-actions))\n  * [#117](https://github.com/ember-cli/ember-app-blueprint/pull/117) Prepare Stable Release v6.8.1 ([@github-actions[bot]](https://github.com/apps/github-actions))\n\n#### Committers: 4\n- Alexey Kulakov ([@aklkv](https://github.com/aklkv))\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Markus Sanin ([@mkszepp](https://github.com/mkszepp))\n- [@github-actions[bot]](https://github.com/apps/github-actions)\n"
+  "description": "## Release (2025-12-23)\n\n* @ember/app-blueprint 6.9.1 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#161](https://github.com/ember-cli/ember-app-blueprint/pull/161) Bump ember-cli to 6.9 in the 6.9 release ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
