@@ -168,7 +168,7 @@ module.exports = {
     }
 
     if (!minimal) {
-      if (options.noCompat) {
+      if (options.noCompat || options.compat === false) {
         compat = false;
       }
     }

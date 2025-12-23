@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { join } from 'path';
-import { existsSync } from 'fs';
+import { existsSync, readFileSync } from 'fs';
 import { generateApp } from './helpers.mjs';
 import fixturify from 'fixturify';
 import { beforeAll } from 'vitest';
@@ -29,6 +29,31 @@ describe('--minimal', function () {
         existsSync(join(app.dir, 'index.html')),
         'the root index.html has been added',
       );
+
+      expect(
+        !existsSync(join(app.dir, 'ember-cli-build.js')),
+        'the ember-cli-build.js is no longer needed',
+      );
+
+      expect(
+        !existsSync(join(app.dir, 'eslint.config.mjs')),
+        'the eslint config is not present',
+      );
+
+      let manifest = readFileSync(join(app.dir, 'package.json'));
+      let json = JSON.parse(manifest);
+
+      expect(json.devDependencies['eslint']).to.equal(undefined);
+      expect(json.devDependencies['prettier']).to.equal(undefined);
+      expect(json.devDependencies['ember-cli']).to.equal(undefined);
+      expect(json.devDependencies['ember-cli-babel']).to.equal(undefined);
+      expect(json.devDependencies['ember-load-initializers']).to.equal(
+        undefined,
+      );
+      expect(json.devDependencies['@ember/optional-features']).to.equal(
+        undefined,
+      );
+      expect(json.devDependencies['@embroider/compat']).to.equal(undefined);
     });
 
     it('successfully builds', async function () {
