@@ -69,7 +69,9 @@ describe('--minimal', function () {
     });
 
     it('verify files', async function () {
-      expect(readFileSync(join(app.dir, 'babel.config.mjs')).toString()).to.include(
+      expect(
+        readFileSync(join(app.dir, 'babel.config.mjs')).toString(),
+      ).to.include(
         'setConfig',
         'Babel config contains the required warp-drive configuration',
       );

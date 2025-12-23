@@ -386,7 +386,8 @@ module.exports = {
       };
 
       if (contents.scripts.test) {
-        contents.scripts.test = 'vite build --mode development && testem ci --port 0'
+        contents.scripts.test =
+          'vite build --mode development && testem ci --port 0';
         contents.devDependencies['testem'] = '^3.17.0';
       }
     }
