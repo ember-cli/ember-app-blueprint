@@ -15,7 +15,9 @@
 
     {{content-for "head-footer"}}
     {{content-for "test-head-footer"}}
- <% } %> </head>
+<% } else { %>
+    <link rel="stylesheet" href="/app/styles/app.css">      
+<% } %>  </head>
   <body>
 <% if (compat) { %>
     {{content-for "body"}}

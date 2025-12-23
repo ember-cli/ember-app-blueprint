@@ -12,6 +12,8 @@
     <link integrity="" rel="stylesheet" href="/@embroider/virtual/app.css">
 
     {{content-for "head-footer"}}
+<% } else { %>
+    <link rel="stylesheet" href="/app/styles/app.css">  
 <% } %></head>
   <body>
 <% if (compat) { %>{{content-for "body"}}

@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
   configure: (config) => {
     setConfig(config, {
       // for universal apps this MUST be at least 5.6
-      compatWith: '5.6'
+      compatWith: '5.6',
     });
   },
 });

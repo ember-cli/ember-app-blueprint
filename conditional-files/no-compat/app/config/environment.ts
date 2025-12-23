@@ -1,9 +1,7 @@
-<% if (notMinimal) { %>
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+<% if (notMinimal) { %><% if (typescript) { %>// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
-import { getGlobalConfig } from '@embroider/macros/src/addon/runtime';
+<% } %>import { getGlobalConfig } from '@embroider/macros/src/addon/runtime';
 <% } %>
-
 interface Config {
   isTesting?: boolean;
   environment: string;
@@ -25,17 +23,16 @@ const ENV: Config = {
 };
 
 export default ENV;
-
 <% if (notMinimal) { %>
 export function enterTestMode() {
   ENV.locationType = 'none';
   ENV.APP.rootElement = '#ember-testing';
   ENV.APP.autoboot = false;
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-  const config = getGlobalConfig()['@embroider/macros'];
+  <% if (typescript) { %>// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
+  <% } %>const config = getGlobalConfig()['@embroider/macros'];
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-  if (config) config.isTesting = true;
+  <% if (typescript) { %>// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+  <% } %>if (config) config.isTesting = true;
 }
 <% } %>

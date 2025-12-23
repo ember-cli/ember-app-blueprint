@@ -246,7 +246,7 @@ module.exports = {
           !file.includes('config/environment.js') &&
           !file.includes('config/optional-features') &&
           !file.includes('config/targets') &&
-          !file.includes('helpers/')
+          !file.includes('app/helpers/')
         );
       });
     }
@@ -384,6 +384,11 @@ module.exports = {
         '#config': './app/config/environment',
         '#components/*': './app/components/*',
       };
+
+      if (contents.scripts.test) {
+        contents.scripts.test = 'vite build --mode development && testem ci --port 0'
+        contents.devDependencies['testem'] = '^3.17.0';
+      }
     }
 
     return stringifyAndNormalize(sortPackageJson(contents));

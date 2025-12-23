@@ -2,13 +2,11 @@ import { describe, it, expect } from 'vitest';
 import { join } from 'path';
 import { existsSync, readFileSync } from 'fs';
 import { generateApp } from './helpers.mjs';
-import fixturify from 'fixturify';
 import { beforeAll } from 'vitest';
 
 describe('--minimal', function () {
   describe('default', function () {
     let flags = ['--minimal'];
-    let fixturePath = join(import.meta.dirname, 'fixtures/tests-js-minimal-10');
     let app;
 
     beforeAll(async function () {
@@ -16,8 +14,6 @@ describe('--minimal', function () {
         flags,
         skipNpm: false,
       });
-
-      fixturify.writeSync(app.dir, fixturify.readSync(fixturePath));
     });
 
     it('verify files', async function () {
@@ -43,17 +39,45 @@ describe('--minimal', function () {
       let manifest = readFileSync(join(app.dir, 'package.json'));
       let json = JSON.parse(manifest);
 
-      expect(json.devDependencies['eslint']).to.equal(undefined);
-      expect(json.devDependencies['prettier']).to.equal(undefined);
-      expect(json.devDependencies['ember-cli']).to.equal(undefined);
-      expect(json.devDependencies['ember-cli-babel']).to.equal(undefined);
-      expect(json.devDependencies['ember-load-initializers']).to.equal(
-        undefined,
+      expect(json.devDependencies['@warp-drive/core']).toBeFalsy();
+      expect(json.devDependencies['eslint']).toBeFalsy();
+      expect(json.devDependencies['prettier']).toBeFalsy();
+      expect(json.devDependencies['ember-cli']).toBeFalsy();
+      expect(json.devDependencies['ember-cli-babel']).toBeFalsy();
+
+      expect(json.devDependencies['ember-load-initializers']).toBeFalsy();
+      expect(json.devDependencies['@ember/optional-features']).toBeFalsy();
+      expect(json.devDependencies['@embroider/compat']).toBeFalsy();
+    });
+
+    it('successfully builds', async function () {
+      let result = await app.execa('pnpm', ['build']);
+
+      expect(result.exitCode).to.equal(0);
+    });
+  });
+
+  describe('--warp-drive', function () {
+    let flags = ['--minimal', '--warp-drive'];
+    let app;
+
+    beforeAll(async function () {
+      app = await generateApp({
+        flags,
+        skipNpm: false,
+      });
+    });
+
+    it('verify files', async function () {
+      expect(readFileSync(join(app.dir, 'babel.config.mjs')).toString()).to.include(
+        'setConfig',
+        'Babel config contains the required warp-drive configuration',
       );
-      expect(json.devDependencies['@ember/optional-features']).to.equal(
-        undefined,
-      );
-      expect(json.devDependencies['@embroider/compat']).to.equal(undefined);
+
+      let manifest = readFileSync(join(app.dir, 'package.json'));
+      let json = JSON.parse(manifest);
+
+      expect(json.devDependencies['@warp-drive/core']).toBeTruthy();
     });
 
     it('successfully builds', async function () {
@@ -65,7 +89,6 @@ describe('--minimal', function () {
 
   describe('--typescript', function () {
     let flags = ['--typescript', '--minimal'];
-    let fixturePath = join(import.meta.dirname, 'fixtures/tests-ts-minimal-10');
     let app;
 
     beforeAll(async function () {
@@ -73,8 +96,6 @@ describe('--minimal', function () {
         flags,
         skipNpm: false,
       });
-
-      fixturify.writeSync(app.dir, fixturify.readSync(fixturePath));
     });
 
     it('verify files', async function () {

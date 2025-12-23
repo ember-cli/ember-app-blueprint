@@ -13,7 +13,7 @@ import { beforeAll } from 'vitest';
 describe('--no-compat', function () {
   describe('default', function () {
     let flags = ['--no-compat', '--pnpm'];
-    let fixturePath = join(import.meta.dirname, 'fixtures/tests-js-10');
+    let fixturePath = join(import.meta.dirname, 'fixtures/tests-js-no-compat-10');
 
     describe('empty project', function () {
       let app;
@@ -92,11 +92,6 @@ describe('--no-compat', function () {
           throw 'Failed to successfully run test';
         }
 
-        // make sure that each of the tests that we expect actually show up
-        // alternatively we can change this to search for `pass 3`
-        expect(result.stdout).to.contain(
-          'Acceptance | welcome page: visiting /index shows the welcome page',
-        );
         expect(result.stdout).to.contain(
           'Integration | Component | sweet: it renders',
         );
@@ -108,7 +103,7 @@ describe('--no-compat', function () {
 
   describe('--typescript', function () {
     let flags = ['--typescript', '--no-compat', '--pnpm'];
-    let fixturePath = join(import.meta.dirname, 'fixtures/tests-ts-10');
+    let fixturePath = join(import.meta.dirname, 'fixtures/tests-ts-no-compat-10');
 
     describe('empty project', function () {
       let app;
@@ -169,11 +164,6 @@ describe('--no-compat', function () {
           throw 'Failed to successfully run test';
         }
 
-        // make sure that each of the tests that we expect actually show up
-        // alternatively we can change this to search for `pass 3`
-        expect(result.stdout).to.contain(
-          'Acceptance | welcome page: visiting /index shows the welcome page',
-        );
         expect(result.stdout).to.contain(
           'Integration | Component | sweet: it renders',
         );
