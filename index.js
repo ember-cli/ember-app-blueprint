@@ -25,7 +25,11 @@ function stringifyAndNormalize(contents) {
  */
 const replacers = {
   'app/app.ts'(locals, contents) {
-    if (locals.noCompat) {
+    if (locals.minimal) {
+      let filePath = join(CONDITIONAL_FILES, 'minimal', 'app/app.ts');
+      let raw = readFileSync(filePath).toString();
+      return ejs.render(raw, locals);
+    } else if (locals.noCompat) {
       let filePath = join(CONDITIONAL_FILES, 'no-compat', 'app/app.ts');
       let raw = readFileSync(filePath).toString();
       return ejs.render(raw, locals);
@@ -351,11 +355,14 @@ module.exports = {
         delete contents.devDependencies['ember-page-title'];
         delete contents.devDependencies['ember-modifier'];
         delete contents.devDependencies['ember-cli-deprecation-workflow'];
+        delete contents.devDependencies['ember-resolver'];
       }
       // common-in-the-vite-ecosystem alias
       {
         contents.scripts.dev = contents.scripts.start;
       }
+
+      contents.devDependencies['ember-strict-application-resolver'] = '^0.1.0';
     }
     if (options.noCompat) {
       contents.type = 'module';
@@ -365,7 +372,6 @@ module.exports = {
       delete contents.devDependencies['@ember/optional-features'];
       delete contents.devDependencies['@embroider/compat'];
       delete contents.devDependencies['@embroider/config-meta-loader'];
-      delete contents.devDependencies['ember-resolver'];
       // Users should use npx ember-cli instead
       delete contents.devDependencies['ember-cli'];
       delete contents.devDependencies['ember-cli-babel'];
@@ -378,8 +384,6 @@ module.exports = {
         '#config': './app/config/environment',
         '#components/*': './app/components/*',
       };
-
-      contents.devDependencies['ember-strict-application-resolver'] = '^0.1.0';
     }
 
     return stringifyAndNormalize(sortPackageJson(contents));
