@@ -88,8 +88,7 @@
     "qunit-dom": "^3.5.0",
     "stylelint": "^16.26.1",
     "stylelint-config-standard": "^38.0.0",
-    "testem": "^3.17.0",
-    "tracked-built-ins": "^4.1.0<% if (typescript) { %>",
+    "testem": "^3.17.0<% if (typescript) { %>",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.50.1<% } %>",
     "vite": "^7.3.0"
