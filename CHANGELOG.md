@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-12-24)
+
+* @ember/app-blueprint 6.10.0-alpha.8 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#49](https://github.com/ember-cli/ember-app-blueprint/pull/49) Add `--minimal` and  `--no-compat` ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-12-09)
 
 * @ember/app-blueprint 6.10.0-alpha.7 (patch)
