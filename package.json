@@ -18,8 +18,11 @@
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier . --check",
     "format": "prettier . --write",
-    "test": "vitest",
-    "new:app": "pnpm dlx ember-cli@latest new my-app --blueprint ."
+    "new:app": "pnpm dlx ember-cli@latest new my-app --blueprint .",
+    "update:all": "pnpm dlx update-blueprint-deps --filter . ./files/package.json",
+    "update:alpha": "pnpm dlx update-blueprint-deps --ember-source alpha --ember-cli alpha --ember-data alpha ./files/package.json",
+    "update:beta": "pnpm dlx update-blueprint-deps --ember-source beta --ember-cli beta --ember-data beta ./files/package.json",
+    "test": "vitest"
   },
   "release-plan": {
     "semverIncrementAs": {
