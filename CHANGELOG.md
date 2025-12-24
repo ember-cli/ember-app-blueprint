@@ -2,6 +2,18 @@
 
 ## Release (2025-12-24)
 
+* @ember/app-blueprint 6.10.0-alpha.9 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#160](https://github.com/ember-cli/ember-app-blueprint/pull/160) Remove tracked-built-ins (it's built in (ish)) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#163](https://github.com/ember-cli/ember-app-blueprint/pull/163) Update package.json via `update-blueprint-deps` ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
+## Release (2025-12-24)
+
 * @ember/app-blueprint 6.10.0-alpha.8 (minor)
 
 #### :rocket: Enhancement
