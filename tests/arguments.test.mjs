@@ -108,15 +108,31 @@ describe('Blueprint Arguments', function () {
     it('installs ember-data by default', async function () {
       const { files } = await generateApp();
 
-      expect(parse(files['package.json']).devDependencies['ember-data']).to.not
-        .be.undefined;
+      expect(parse(files['package.json']).devDependencies['@warp-drive/core'])
+        .to.not.be.undefined;
     });
 
     it('does not add ember-data if you pass --no-ember-data', async function () {
       const { files } = await generateApp({ flags: ['--no-ember-data'] });
 
-      expect(parse(files['package.json']).devDependencies['ember-data']).to.be
-        .undefined;
+      expect(parse(files['package.json']).devDependencies['@warp-drive/core'])
+        .to.be.undefined;
+    });
+  });
+
+  describe('--no-warp-drive', async function () {
+    it('installs warp-drive by default', async function () {
+      const { files } = await generateApp();
+
+      expect(parse(files['package.json']).devDependencies['@warp-drive/core'])
+        .to.not.be.undefined;
+    });
+
+    it('does not add warp-drive if you pass --no-warp-drive', async function () {
+      const { files } = await generateApp({ flags: ['--no-warp-drive'] });
+
+      expect(parse(files['package.json']).devDependencies['@warp-drive/core'])
+        .to.be.undefined;
     });
   });
 
@@ -138,7 +154,7 @@ describe('Blueprint Arguments', function () {
       expect(parse(files['package.json']).devDependencies['ember-welcome-page'])
         .to.not.be.undefined;
       expect(files.app.templates['application.gjs']).to.contain(
-        '<WelcomePage />',
+        '<WelcomePage @extension="gjs" />',
       );
     });
 
@@ -148,7 +164,7 @@ describe('Blueprint Arguments', function () {
       expect(parse(files['package.json']).devDependencies['ember-welcome-page'])
         .to.be.undefined;
       expect(files.app.templates['application.gjs']).not.to.contain(
-        '<WelcomePage />',
+        '<WelcomePage @extension="gjs" />',
       );
     });
   });

@@ -8,7 +8,7 @@ import { LinkTo } from '@ember/routing';
   {{outlet}}
 
   {{! The following component displays Ember's default welcome message. }}
-  <WelcomePage />
+  <WelcomePage @extension="gjs" />
   {{! Feel free to remove this! }}
 
   <LinkTo @route="fancy" data-test-a>Fancy</LinkTo>
