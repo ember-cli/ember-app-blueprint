@@ -2,17 +2,25 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "6.10.0-alpha.8",
-      "newVersion": "6.10.0-alpha.9",
+      "oldVersion": "6.11.0-alpha.0",
+      "newVersion": "6.11.0-alpha.1",
       "tagName": "alpha",
       "constraints": [
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-12-24)\n\n* @ember/app-blueprint 6.10.0-alpha.9 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#160](https://github.com/ember-cli/ember-app-blueprint/pull/160) Remove tracked-built-ins (it's built in (ish)) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#163](https://github.com/ember-cli/ember-app-blueprint/pull/163) Update package.json via `update-blueprint-deps` ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2026-01-06)\n\n* @ember/app-blueprint 6.11.0-alpha.1 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#173](https://github.com/ember-cli/ember-app-blueprint/pull/173) Prepare 6.11-alpha ([@mansona](https://github.com/mansona))\n  * [#152](https://github.com/ember-cli/ember-app-blueprint/pull/152) Update all dependencies for 6.9 release ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#161](https://github.com/ember-cli/ember-app-blueprint/pull/161) Bump ember-cli to 6.9 in the 6.9 release ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#154](https://github.com/ember-cli/ember-app-blueprint/pull/154) [bugfix beta] remove project: true from eslint config in TS projects ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#170](https://github.com/ember-cli/ember-app-blueprint/pull/170) Prepare Beta Release v6.10.0-beta.1 ([@github-actions[bot]](https://github.com/apps/github-actions))\n  * [#169](https://github.com/ember-cli/ember-app-blueprint/pull/169) Prepare 6.10-beta ([@mansona](https://github.com/mansona))\n\n#### Committers: 3\n- Chris Manson ([@mansona](https://github.com/mansona))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n- [@github-actions[bot]](https://github.com/apps/github-actions)\n"
 }

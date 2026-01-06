@@ -2,6 +2,30 @@
 
 ## Release (2026-01-06)
 
+* @ember/app-blueprint 6.11.0-alpha.1 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#173](https://github.com/ember-cli/ember-app-blueprint/pull/173) Prepare 6.11-alpha ([@mansona](https://github.com/mansona))
+  * [#152](https://github.com/ember-cli/ember-app-blueprint/pull/152) Update all dependencies for 6.9 release ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#161](https://github.com/ember-cli/ember-app-blueprint/pull/161) Bump ember-cli to 6.9 in the 6.9 release ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#154](https://github.com/ember-cli/ember-app-blueprint/pull/154) [bugfix beta] remove project: true from eslint config in TS projects ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#170](https://github.com/ember-cli/ember-app-blueprint/pull/170) Prepare Beta Release v6.10.0-beta.1 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#169](https://github.com/ember-cli/ember-app-blueprint/pull/169) Prepare 6.10-beta ([@mansona](https://github.com/mansona))
+
+#### Committers: 3
+- Chris Manson ([@mansona](https://github.com/mansona))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+- [@github-actions[bot]](https://github.com/apps/github-actions)
+
+## Release (2026-01-06)
+
 * @ember/app-blueprint 6.10.0-beta.1 (minor)
 
 #### :rocket: Enhancement
