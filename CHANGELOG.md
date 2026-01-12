@@ -2,6 +2,17 @@
 
 ## Release (2026-01-12)
 
+* @ember/app-blueprint 6.10.0-beta.3 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#180](https://github.com/ember-cli/ember-app-blueprint/pull/180) [bugfix beta] don't turn warp-drive linksMode on by default for now ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-01-12)
+
 * @ember/app-blueprint 6.10.0-beta.2 (patch)
 
 #### :bug: Bug Fix
