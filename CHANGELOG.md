@@ -1,5 +1,20 @@
 # Changelog
 
+## Release (2026-01-12)
+
+* @ember/app-blueprint 6.11.0-alpha.2 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#176](https://github.com/ember-cli/ember-app-blueprint/pull/176) [bugfix beta] fix warp-drive dependencies to use a tilde `~` ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#178](https://github.com/ember-cli/ember-app-blueprint/pull/178) Merge beta into main ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2026-01-06)
 
 * @ember/app-blueprint 6.11.0-alpha.1 (minor)
