@@ -156,7 +156,7 @@ module.exports = {
     /**
      * --minimal overrides compat/no-compat
      */
-    if (options.minimal) {
+    if (options['experimental-minimal']) {
       minimal = true;
       compat = false;
 
@@ -172,7 +172,10 @@ module.exports = {
     }
 
     if (!minimal) {
-      if (options.noCompat || options.compat === false) {
+      if (
+        options['experimental-no-compat'] ||
+        options['experimental-compat'] === false
+      ) {
         compat = false;
       }
     }
@@ -237,7 +240,7 @@ module.exports = {
       files = files.filter((file) => !file.includes('services/.gitkeep'));
     }
 
-    if (options.noCompat) {
+    if (options['experimental-no-compat']) {
       files = files.filter((file) => {
         return (
           !file.includes('ember-cli') &&
@@ -251,7 +254,7 @@ module.exports = {
       });
     }
 
-    if (options.minimal) {
+    if (options['experimental-minimal']) {
       files = files.filter((file) => {
         return (
           !file.includes('.github/') &&
@@ -306,7 +309,7 @@ module.exports = {
   updatePackageJson(options, content) {
     let contents = JSON.parse(content);
 
-    if (options.minimal) {
+    if (options['experimental-minimal']) {
       // Remove linting
       {
         delete contents.scripts['format'];
@@ -364,7 +367,7 @@ module.exports = {
 
       contents.devDependencies['ember-strict-application-resolver'] = '^0.1.0';
     }
-    if (options.noCompat) {
+    if (options['experimental-no-compat']) {
       contents.type = 'module';
       contents.engines.node = '>= 24';
       delete contents.directories;
