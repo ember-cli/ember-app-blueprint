@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2026-01-13)
+
+* @ember/app-blueprint 6.10.0-beta.4 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#187](https://github.com/ember-cli/ember-app-blueprint/pull/187) [bugfix beta] Revert "Add --minimal and --no-compat" ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2026-01-12)
 
 * @ember/app-blueprint 6.10.0-beta.3 (patch)
