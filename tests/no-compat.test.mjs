@@ -12,7 +12,7 @@ import { beforeAll } from 'vitest';
  */
 describe('--no-compat', function () {
   describe('default', function () {
-    let flags = ['--no-compat', '--pnpm'];
+    let flags = ['--experimental-no-compat', '--pnpm'];
     let fixturePath = join(
       import.meta.dirname,
       'fixtures/tests-js-no-compat-10',
@@ -105,7 +105,7 @@ describe('--no-compat', function () {
   });
 
   describe('--typescript', function () {
-    let flags = ['--typescript', '--no-compat', '--pnpm'];
+    let flags = ['--typescript', '--experimental-no-compat', '--pnpm'];
     let fixturePath = join(
       import.meta.dirname,
       'fixtures/tests-ts-no-compat-10',

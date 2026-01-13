@@ -6,7 +6,7 @@ import { beforeAll } from 'vitest';
 
 describe('--minimal', function () {
   describe('default', function () {
-    let flags = ['--minimal'];
+    let flags = ['--experimental-minimal'];
     let app;
 
     beforeAll(async function () {

@@ -12,7 +12,7 @@ pnpm dlx ember-cli@latest new my-app-name -b @ember/app-blueprint --pnpm
 
 ## Options
 
-### `--no-compat`
+### `--experimental-no-compat`
 
 ```
 pnpm dlx ember-cli@latest new my-app-name \
@@ -45,7 +45,7 @@ pnpm dlx ember-cli@latest new my-app-name \
 ```
 
 Does the following
-- everything listed under `--no-compat`
+- everything listed under `--experimental-no-compat`
 - Removes all linting, formatting, and testing support
   - leaves you with a minimal app that you can use for demos, and PRing to other repositories that have multi-framework support (and probably use other testing tools for that multi-framework support)
 - different defaults:
