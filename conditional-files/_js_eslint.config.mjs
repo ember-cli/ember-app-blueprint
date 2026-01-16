@@ -69,7 +69,7 @@ export default defineConfig([
    * CJS node files
    */
   {
-    files: ['**/*.cjs', 'config/**/*.js', 'ember-cli-build.js'],
+    files: ['**/*.cjs', 'config/**/*.js'],
     plugins: {
       n,
     },

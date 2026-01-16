@@ -29,7 +29,7 @@ export default [
       'my-app/**',
       'tests/fixtures/*',
       'files/vite.config.*',
-      'files/ember-cli-build.js',
+      'files/ember-cli-build.mjs',
       'files/testem.cjs',
       'conditional-files/_js_*',
       'conditional-files/_ts_*',
