@@ -18,10 +18,12 @@
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier . --check",
     "format": "prettier . --write",
-    "test": "vitest"
+    "test": "vitest",
+    "new:app": "pnpm dlx ember-cli@latest new my-app --blueprint ."
   },
   "dependencies": {
     "chalk": "^4.1.2",
+    "ejs": "^3.1.10",
     "ember-cli-string-utils": "^1.1.0",
     "lodash": "^4.17.21",
     "walk-sync": "^3.0.0"
@@ -43,5 +45,5 @@
     "tmp-promise": "^3.0.3",
     "vitest": "^4.0.0-beta.17"
   },
-  "packageManager": "pnpm@10.7.0"
+  "packageManager": "pnpm@10.20.0"
 }

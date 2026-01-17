@@ -3,6 +3,47 @@
 const stringUtil = require('ember-cli-string-utils');
 const chalk = require('chalk');
 const directoryForPackageName = require('./lib/directory-for-package-name');
+const { sortPackageJson } = require('sort-package-json');
+const { join } = require('path');
+const { readFileSync } = require('fs');
+const ejs = require('ejs');
+
+const CONDITIONAL_FILES = join(__dirname, 'conditional-files');
+
+function stringifyAndNormalize(contents) {
+  return `${JSON.stringify(contents, null, 2)}\n`;
+}
+
+/**
+ * This overrides ember-cli's default replace function,
+ * which is a call to ejs with the template locals.
+ *
+ * If we want to continue using ejs in any of these,
+ * we _may_ need to call ejs ourselves
+ * (in the case where we ignore the "contents" passed to these functions)
+ * (see `conditional-files`)
+ */
+const replacers = {
+  'package.json'(...args) {
+    return this.updatePackageJson(...args);
+  },
+  'eslint.config.mjs'(locals) {
+    let prefix = locals.typescript ? '_ts_' : '_js_';
+    let filePath = join(CONDITIONAL_FILES, prefix + 'eslint.config.mjs');
+
+    let raw = readFileSync(filePath).toString();
+
+    return ejs.render(raw, locals);
+  },
+  'babel.config.mjs'(locals) {
+    let prefix = locals.typescript ? '_ts_' : '_js_';
+    let filePath = join(CONDITIONAL_FILES, prefix + 'babel.config.mjs');
+
+    let raw = readFileSync(filePath).toString();
+
+    return ejs.render(raw, locals);
+  },
+};
 
 module.exports = {
   description: 'The default blueprint for ember-cli projects.',
@@ -40,6 +81,7 @@ module.exports = {
           options.ciProvider && `"--ci-provider=${options.ciProvider}"`,
           options.typescript && `"--typescript"`,
           !options.emberData && `"--no-ember-data"`,
+          !options.warpDrive && `"--no-warp-drive"`,
         ]
           .filter(Boolean)
           .join(',\n            ') +
@@ -75,7 +117,7 @@ module.exports = {
       blueprint: 'app',
       blueprintOptions,
       lang: options.lang,
-      emberData: options.emberData,
+      warpDrive: options.warpDrive ?? options.emberData,
       ciProvider: options.ciProvider,
       typescript: options.typescript,
       packageManager: options.packageManager ?? 'npm',
@@ -101,9 +143,11 @@ module.exports = {
       );
     }
 
-    if (!options.emberData) {
-      files = files.filter((file) => !file.includes('models/'));
-      files = files.filter((file) => !file.includes('ember-data/'));
+    const warpDrive = options.warpDrive || options.emberData;
+    if (!warpDrive) {
+      files = files.filter((file) => !file.includes('services/store.ts'));
+    } else {
+      files = files.filter((file) => !file.includes('services/.gitkeep'));
     }
 
     this._files = files;
@@ -124,44 +168,20 @@ module.exports = {
 
   /**
    * @override
-   *
-   * This modification of buildFileInfo allows our differing
-   * input files to output to a single file, depending on the options.
-   * For example:
-   *
-   *   for javascript,
-   *     _ts_eslint.config.mjs is deleted
-   *     _js_eslint.config.mjs is renamed to eslint.config.mjs
-   *
-   *   for typescript,
-   *     _js_eslint.config.mjs is deleted
-   *     _ts_eslint.config.mjs is renamed to eslint.config.mjs
    */
-  buildFileInfo(intoDir, templateVariables, file, options) {
+  buildFileInfo(intoDir, templateVariables, file) {
     let fileInfo = this._super.buildFileInfo.apply(this, arguments);
 
-    if (file.includes('_js_')) {
-      if (options.typescript) {
-        return null;
-      }
-
-      fileInfo.outputBasePath = fileInfo.outputPath.replace('_js_', '');
-      fileInfo.outputPath = fileInfo.outputPath.replace('_js_', '');
-      fileInfo.displayPath = fileInfo.outputPath.replace('_js_', '');
-      return fileInfo;
-    }
-
-    if (file.includes('_ts_')) {
-      if (!options.typescript) {
-        return null;
-      }
-
-      fileInfo.outputBasePath = fileInfo.outputPath.replace('_ts_', '');
-      fileInfo.outputPath = fileInfo.outputPath.replace('_ts_', '');
-      fileInfo.displayPath = fileInfo.outputPath.replace('_ts_', '');
-      return fileInfo;
+    if (file in replacers) {
+      fileInfo.replacer = replacers[file].bind(this, templateVariables);
     }
 
     return fileInfo;
+  },
+
+  updatePackageJson(options, content) {
+    let contents = JSON.parse(content);
+
+    return stringifyAndNormalize(sortPackageJson(contents));
   },
 };
