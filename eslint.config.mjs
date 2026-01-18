@@ -25,6 +25,11 @@ export default [
   pluginJs.configs.recommended,
   eslintConfigPrettier,
   {
-    ignores: ['tests/fixtures/*', 'files/ember-cli-build.js'],
+    ignores: [
+      'tests/fixtures/*',
+      'files/ember-cli-build.js',
+      'conditional-files/_js_*',
+      'conditional-files/_ts_*',
+    ],
   },
 ];

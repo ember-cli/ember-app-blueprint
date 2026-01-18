@@ -1,6 +1,68 @@
-import { beforeAll, describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeAll } from 'vitest';
+import fixturify from 'fixturify';
 
 import { generateApp } from './helpers.mjs';
+
+it('Slow(JavaScript): Runs tests', async function () {
+  let app = await generateApp({
+    flags: ['--pnpm', '--typescript'],
+    skipNpm: false,
+  });
+
+  fixturify.writeSync(
+    app.dir,
+    fixturify.readSync('./tests/fixtures/warpdrive-js'),
+  );
+
+  let { stdout: stdout2, exitCode: exitCode2 } = await app.execa('pnpm', [
+    'test',
+  ]);
+
+  if (!process.env.CI) {
+    console.log(stdout2);
+  }
+
+  expect(stdout2).to.match(/ok .* Application \| index/);
+  expect(stdout2).to.match(/ok .* Ember.onerror/);
+
+  expect(stdout2).to.contain('# tests 2');
+  expect(stdout2).to.contain('# pass  2');
+  expect(stdout2).to.contain('# skip  0');
+  expect(stdout2).to.contain('# todo  0');
+  expect(stdout2).to.contain('# ok');
+
+  expect(exitCode2).to.equal(0);
+});
+
+it('Slow(TypeScript): Runs tests', async function () {
+  let app = await generateApp({
+    flags: ['--pnpm', '--typescript'],
+    skipNpm: false,
+  });
+
+  fixturify.writeSync(
+    app.dir,
+    fixturify.readSync('./tests/fixtures/warpdrive-ts'),
+  );
+
+  let { stdout: stdout2, exitCode: exitCode2 } = await app.execa('pnpm', [
+    'test',
+  ]);
+
+  if (!process.env.CI) {
+    console.log(stdout2);
+  }
+
+  expect(stdout2).to.match(/ok .* Application \| index/);
+  expect(stdout2).to.match(/ok .* Ember.onerror/);
+
+  expect(stdout2).to.contain('# tests 2');
+  expect(stdout2).to.contain('# pass  2');
+  expect(stdout2).to.contain('# skip  0');
+  expect(stdout2).to.contain('# todo  0');
+  expect(stdout2).to.contain('# ok');
+  expect(exitCode2).to.equal(0);
+});
 
 describe('linting & formatting', function () {
   describe('JavaScript', function () {
@@ -12,6 +74,10 @@ describe('linting & formatting', function () {
        * we don't need to worry about the differences between pnpm and npm at this level
        */
       app = await generateApp({ flags: ['--pnpm'], skipNpm: false });
+      fixturify.writeSync(
+        app.dir,
+        fixturify.readSync('./tests/fixtures/warpdrive-js'),
+      );
     });
 
     it('yields output without errors', async function (context) {
@@ -39,6 +105,10 @@ describe('linting & formatting', function () {
         flags: ['--typescript', '--pnpm'],
         skipNpm: false,
       });
+      fixturify.writeSync(
+        app.dir,
+        fixturify.readSync('./tests/fixtures/warpdrive-js'),
+      );
     });
 
     it('yields output without errors', async function (context) {
