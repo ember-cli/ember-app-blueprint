@@ -1,5 +1,52 @@
 # Changelog
 
+## Release (2026-01-18)
+
+* @ember/app-blueprint 6.10.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#190](https://github.com/ember-cli/ember-app-blueprint/pull/190) Promote Beta and update all dependencies for 6.10 release ([@mansona](https://github.com/mansona))
+  * [#160](https://github.com/ember-cli/ember-app-blueprint/pull/160) Remove tracked-built-ins as it is now properly built-in  ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#163](https://github.com/ember-cli/ember-app-blueprint/pull/163) Update package.json via `update-blueprint-deps` ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#145](https://github.com/ember-cli/ember-app-blueprint/pull/145) Update dependencies in generated workflow files ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#140](https://github.com/ember-cli/ember-app-blueprint/pull/140) Use an `.mjs` file for configuring Stylelint ([@bertdeblock](https://github.com/bertdeblock))
+  * [#142](https://github.com/ember-cli/ember-app-blueprint/pull/142) Use pnpm v10 for projects generated with `--pnpm` ([@bertdeblock](https://github.com/bertdeblock))
+  * [#138](https://github.com/ember-cli/ember-app-blueprint/pull/138) Update generated ESLint config ([@bertdeblock](https://github.com/bertdeblock))
+  * [#44](https://github.com/ember-cli/ember-app-blueprint/pull/44) Use ESM for the babel config (.mjs) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#125](https://github.com/ember-cli/ember-app-blueprint/pull/125) Update to Glint 2 (for `--typescript` projects) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#124](https://github.com/ember-cli/ember-app-blueprint/pull/124) Use modern EmberData/WarpDrive ([@runspired](https://github.com/runspired))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#180](https://github.com/ember-cli/ember-app-blueprint/pull/180) [bugfix beta] don't turn warp-drive linksMode on by default for now ([@mansona](https://github.com/mansona))
+  * [#176](https://github.com/ember-cli/ember-app-blueprint/pull/176) [bugfix beta] fix warp-drive dependencies to use a tilde `~` ([@mansona](https://github.com/mansona))
+  * [#153](https://github.com/ember-cli/ember-app-blueprint/pull/153) Show proper extension on WelcomePage component ([@evoactivity](https://github.com/evoactivity))
+  * [#149](https://github.com/ember-cli/ember-app-blueprint/pull/149) Fix the full path display during project generation ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#148](https://github.com/ember-cli/ember-app-blueprint/pull/148) Sort the package.json, using the replacers strategy ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#139](https://github.com/ember-cli/ember-app-blueprint/pull/139) Remove `/declarations/` entry in `.gitignore` file ([@bertdeblock](https://github.com/bertdeblock))
+  * [#133](https://github.com/ember-cli/ember-app-blueprint/pull/133) remove ember-auto-import from newly generated app ([@mansona](https://github.com/mansona))
+  * [#134](https://github.com/ember-cli/ember-app-blueprint/pull/134) Upgrade babel-plugin-ember-template-compilation to v3.x ([@ef4](https://github.com/ef4))
+
+#### :memo: Documentation
+* `@ember/app-blueprint`
+  * [#141](https://github.com/ember-cli/ember-app-blueprint/pull/141) Update some links to use https ([@bertdeblock](https://github.com/bertdeblock))
+  * [#114](https://github.com/ember-cli/ember-app-blueprint/pull/114) update RELEASE.md with notes for after ember-cli release ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#159](https://github.com/ember-cli/ember-app-blueprint/pull/159) don't run CI when you only change markdown files ([@mansona](https://github.com/mansona))
+  * [#146](https://github.com/ember-cli/ember-app-blueprint/pull/146) Test against our supported node versions (and fix the babel config for the maintenance-node version (20)) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#131](https://github.com/ember-cli/ember-app-blueprint/pull/131) fix warpdrive lint tests ([@mansona](https://github.com/mansona))
+
+#### Committers: 6
+- Bert De Block ([@bertdeblock](https://github.com/bertdeblock))
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Chris Thoburn ([@runspired](https://github.com/runspired))
+- Edward Faulkner ([@ef4](https://github.com/ef4))
+- Liam Potter ([@evoactivity](https://github.com/evoactivity))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-12-23)
 
 * @ember/app-blueprint 6.9.1 (patch)
