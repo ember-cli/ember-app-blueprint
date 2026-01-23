@@ -1,14 +1,22 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "patch",
-      "oldVersion": "6.11.0-alpha.2",
-      "newVersion": "6.11.0-alpha.3",
-      "tagName": "alpha",
+      "impact": "minor",
+      "oldVersion": "6.12.0-alpha.0",
+      "newVersion": "6.12.0-beta.0",
+      "tagName": "beta",
       "constraints": [
+        {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
         {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :memo: Documentation"
         },
         {
           "impact": "patch",
@@ -18,5 +26,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-01-12)\n\n* @ember/app-blueprint 6.11.0-alpha.3 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#180](https://github.com/ember-cli/ember-app-blueprint/pull/180) [bugfix beta] don't turn warp-drive linksMode on by default for now ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#182](https://github.com/ember-cli/ember-app-blueprint/pull/182) Merge beta into main ([@mansona](https://github.com/mansona))\n  * [#177](https://github.com/ember-cli/ember-app-blueprint/pull/177) Prepare Beta Release v6.10.0-beta.2 ([@github-actions[bot]](https://github.com/apps/github-actions))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- [@github-actions[bot]](https://github.com/apps/github-actions)\n"
+  "description": "## Release (2026-01-23)\n\n* @ember/app-blueprint 6.12.0-beta.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#190](https://github.com/ember-cli/ember-app-blueprint/pull/190) Promote Beta and update all dependencies for 6.10 release ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#197](https://github.com/ember-cli/ember-app-blueprint/pull/197) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))\n  * [#195](https://github.com/ember-cli/ember-app-blueprint/pull/195) add sort-package-json as a dependency ([@mansona](https://github.com/mansona))\n  * [#187](https://github.com/ember-cli/ember-app-blueprint/pull/187) [bugfix beta] Revert \"Add --minimal and --no-compat\" ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :memo: Documentation\n* `@ember/app-blueprint`\n  * [#158](https://github.com/ember-cli/ember-app-blueprint/pull/158) update RELEASE.md ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#202](https://github.com/ember-cli/ember-app-blueprint/pull/202) Prepare 6.12-alpha ([@mansona](https://github.com/mansona))\n  * [#200](https://github.com/ember-cli/ember-app-blueprint/pull/200) Prepare Beta Release v6.11.0-beta.1 ([@github-actions[bot]](https://github.com/apps/github-actions))\n  * [#199](https://github.com/ember-cli/ember-app-blueprint/pull/199) Prepare 6.11 Beta ([@mansona](https://github.com/mansona))\n\n#### Committers: 3\n- Chris Manson ([@mansona](https://github.com/mansona))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n- [@github-actions[bot]](https://github.com/apps/github-actions)\n"
 }
