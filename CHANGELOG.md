@@ -2,6 +2,17 @@
 
 ## Release (2026-01-23)
 
+* @ember/app-blueprint 6.10.3 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#205](https://github.com/ember-cli/ember-app-blueprint/pull/205) [bugfix release] Auto-choose correct compilerPath ([@ef4](https://github.com/ef4))
+
+#### Committers: 1
+- Edward Faulkner ([@ef4](https://github.com/ef4))
+
+## Release (2026-01-23)
+
 * @ember/app-blueprint 6.10.2 (patch)
 
 #### :bug: Bug Fix
