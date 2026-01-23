@@ -26,6 +26,7 @@
     "ejs": "^3.1.10",
     "ember-cli-string-utils": "^1.1.0",
     "lodash": "^4.17.21",
+    "sort-package-json": "^3.6.0",
     "walk-sync": "^3.0.0"
   },
   "devDependencies": {
