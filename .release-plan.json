@@ -2,8 +2,8 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "patch",
-      "oldVersion": "6.10.0",
-      "newVersion": "6.10.1",
+      "oldVersion": "6.10.1",
+      "newVersion": "6.10.2",
       "tagName": "latest",
       "constraints": [
         {
@@ -14,5 +14,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-01-23)\n\n* @ember/app-blueprint 6.10.1 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#195](https://github.com/ember-cli/ember-app-blueprint/pull/195) add sort-package-json as a dependency ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2026-01-23)\n\n* @ember/app-blueprint 6.10.2 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#197](https://github.com/ember-cli/ember-app-blueprint/pull/197) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
