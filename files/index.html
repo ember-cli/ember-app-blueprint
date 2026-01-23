@@ -5,28 +5,25 @@
     <title><%= namespace %></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<% if (compat) { %>
 
     {{content-for "head"}}
+
     <link integrity="" rel="stylesheet" href="/@embroider/virtual/vendor.css">
     <link integrity="" rel="stylesheet" href="/@embroider/virtual/app.css">
 
     {{content-for "head-footer"}}
-<% } else { %>
-    <link rel="stylesheet" href="/app/styles/app.css">  
-<% } %></head>
+  </head>
   <body>
-<% if (compat) { %>{{content-for "body"}}
+    {{content-for "body"}}
 
     <script src="/@embroider/virtual/vendor.js"></script>
-<% } %>  <script type="module">
+    <script type="module">
       import Application from './app/app';
       import environment from './app/config/environment';
 
       Application.create(environment.APP);
     </script>
-<% if (compat) { %>{{content-for "body"}}
 
     {{content-for "body-footer"}}
-<% } %> </body>
+  </body>
 </html>
