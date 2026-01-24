@@ -1,5 +1,23 @@
 # Changelog
 
+## Release (2026-01-24)
+
+* @ember/app-blueprint 6.11.0-beta.2 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#205](https://github.com/ember-cli/ember-app-blueprint/pull/205) [bugfix release] Auto-choose correct compilerPath ([@ef4](https://github.com/ef4))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#206](https://github.com/ember-cli/ember-app-blueprint/pull/206) Merge release into beta ([@mansona](https://github.com/mansona))
+  * [#201](https://github.com/ember-cli/ember-app-blueprint/pull/201) Prepare Stable Release v6.10.3 ([@github-actions[bot]](https://github.com/apps/github-actions))
+
+#### Committers: 3
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Edward Faulkner ([@ef4](https://github.com/ef4))
+- [@github-actions[bot]](https://github.com/apps/github-actions)
+
 ## Release (2026-01-23)
 
 * @ember/app-blueprint 6.11.0-beta.1 (minor)

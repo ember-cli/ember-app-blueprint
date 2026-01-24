@@ -1,22 +1,14 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "6.11.0-beta.0",
-      "newVersion": "6.11.0-beta.1",
+      "impact": "patch",
+      "oldVersion": "6.11.0-beta.1",
+      "newVersion": "6.11.0-beta.2",
       "tagName": "beta",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
-        },
-        {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :memo: Documentation"
         },
         {
           "impact": "patch",
@@ -26,5 +18,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-01-23)\n\n* @ember/app-blueprint 6.11.0-beta.1 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#190](https://github.com/ember-cli/ember-app-blueprint/pull/190) Promote Beta and update all dependencies for 6.10 release ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#197](https://github.com/ember-cli/ember-app-blueprint/pull/197) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))\n  * [#195](https://github.com/ember-cli/ember-app-blueprint/pull/195) add sort-package-json as a dependency ([@mansona](https://github.com/mansona))\n\n#### :memo: Documentation\n* `@ember/app-blueprint`\n  * [#158](https://github.com/ember-cli/ember-app-blueprint/pull/158) update RELEASE.md ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#199](https://github.com/ember-cli/ember-app-blueprint/pull/199) Prepare 6.11 Beta ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2026-01-24)\n\n* @ember/app-blueprint 6.11.0-beta.2 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#205](https://github.com/ember-cli/ember-app-blueprint/pull/205) [bugfix release] Auto-choose correct compilerPath ([@ef4](https://github.com/ef4))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#206](https://github.com/ember-cli/ember-app-blueprint/pull/206) Merge release into beta ([@mansona](https://github.com/mansona))\n  * [#201](https://github.com/ember-cli/ember-app-blueprint/pull/201) Prepare Stable Release v6.10.3 ([@github-actions[bot]](https://github.com/apps/github-actions))\n\n#### Committers: 3\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Edward Faulkner ([@ef4](https://github.com/ef4))\n- [@github-actions[bot]](https://github.com/apps/github-actions)\n"
 }
