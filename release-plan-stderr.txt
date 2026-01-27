@@ -1,0 +1,7 @@
+# Unlabeled Changes
+
+* `@ember/app-blueprint`
+  * [#209](https://github.com/ember-cli/ember-app-blueprint/pull/209) Remove unnecessary empty lines when `--no-warp-drive` was passed ([@mkszepp](https://github.com/mkszepp))
+
+
+*Cannot plan release until the above changes are labeled*.
