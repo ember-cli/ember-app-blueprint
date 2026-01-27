@@ -76,6 +76,9 @@ export default defineConfig([
     languageOptions: {
       parser: ember.parser,
       parserOptions: parserOptions.esm.ts,
+      globals: {
+        ...globals.browser,
+      },
     },
     extends: [...ts.configs.recommendedTypeChecked, ember.configs.gts],
   },
