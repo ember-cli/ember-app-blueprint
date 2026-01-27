@@ -12,6 +12,9 @@
  *     npx eslint --inspect-config
  *
  */
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
 import globals from 'globals';
 import js from '@eslint/js';
 import { defineConfig, globalIgnores } from 'eslint/config';
@@ -35,7 +38,7 @@ const parserOptions = {
     },
     ts: {
       projectService: true,
-      tsconfigRootDir: import.meta.dirname,
+      tsconfigRootDir: dirname(fileURLToPath(import.meta.url)),
     },
   },
 };
@@ -83,6 +86,7 @@ export default defineConfig([
     extends: [...ts.configs.recommendedTypeChecked, ember.configs.gts],
   },
   {
+    ...qunit.configs.recommended,
     files: ['tests/**/*-test.{js,gjs,ts,gts}'],
     plugins: {
       qunit,
@@ -92,6 +96,7 @@ export default defineConfig([
    * CJS node files
    */
   {
+    ...n.configs['flat/recommended-script'],
     files: ['**/*.cjs', 'config/**/*.js', 'ember-cli-build.js'],
     plugins: {
       n,
@@ -109,6 +114,7 @@ export default defineConfig([
    * ESM node files
    */
   {
+    ...n.configs['flat/recommended-module'],
     files: ['**/*.mjs'],
     plugins: {
       n,
