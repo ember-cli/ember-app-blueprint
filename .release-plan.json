@@ -2,21 +2,17 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "patch",
-      "oldVersion": "6.12.0-alpha.0",
-      "newVersion": "6.12.0-alpha.1",
+      "oldVersion": "6.12.0-alpha.1",
+      "newVersion": "6.12.0-alpha.2",
       "tagName": "alpha",
       "constraints": [
         {
           "impact": "patch",
-          "reason": "Appears in changelog section :memo: Documentation"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-01-25)\n\n* @ember/app-blueprint 6.12.0-alpha.1 (patch)\n\n#### :memo: Documentation\n* `@ember/app-blueprint`\n  * [#204](https://github.com/ember-cli/ember-app-blueprint/pull/204) Update Release.md ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#211](https://github.com/ember-cli/ember-app-blueprint/pull/211) fix release-plan alpha tag ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2026-02-08)\n\n* @ember/app-blueprint 6.12.0-alpha.2 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#119](https://github.com/ember-cli/ember-app-blueprint/pull/119) fix: align linters with recent changes in classic app blueprint ([@aklkv](https://github.com/aklkv))\n  * [#208](https://github.com/ember-cli/ember-app-blueprint/pull/208) [Bugfix release] Add `globals.browser` to eslint config for TS files ([@mkszepp](https://github.com/mkszepp))\n\n#### Committers: 2\n- Alexey Kulakov ([@aklkv](https://github.com/aklkv))\n- Markus Sanin ([@mkszepp](https://github.com/mkszepp))\n"
 }

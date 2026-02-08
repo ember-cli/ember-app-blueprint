@@ -1,5 +1,18 @@
 # Changelog
 
+## Release (2026-02-08)
+
+* @ember/app-blueprint 6.12.0-alpha.2 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#119](https://github.com/ember-cli/ember-app-blueprint/pull/119) fix: align linters with recent changes in classic app blueprint ([@aklkv](https://github.com/aklkv))
+  * [#208](https://github.com/ember-cli/ember-app-blueprint/pull/208) [Bugfix release] Add `globals.browser` to eslint config for TS files ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 2
+- Alexey Kulakov ([@aklkv](https://github.com/aklkv))
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+
 ## Release (2026-01-25)
 
 * @ember/app-blueprint 6.12.0-alpha.1 (patch)
