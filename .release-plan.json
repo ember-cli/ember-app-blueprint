@@ -1,18 +1,18 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "patch",
-      "oldVersion": "6.12.0-alpha.1",
-      "newVersion": "6.12.0-alpha.2",
+      "impact": "minor",
+      "oldVersion": "6.12.0-alpha.2",
+      "newVersion": "6.12.0-alpha.3",
       "tagName": "alpha",
       "constraints": [
         {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-02-08)\n\n* @ember/app-blueprint 6.12.0-alpha.2 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#119](https://github.com/ember-cli/ember-app-blueprint/pull/119) fix: align linters with recent changes in classic app blueprint ([@aklkv](https://github.com/aklkv))\n  * [#208](https://github.com/ember-cli/ember-app-blueprint/pull/208) [Bugfix release] Add `globals.browser` to eslint config for TS files ([@mkszepp](https://github.com/mkszepp))\n\n#### Committers: 2\n- Alexey Kulakov ([@aklkv](https://github.com/aklkv))\n- Markus Sanin ([@mkszepp](https://github.com/mkszepp))\n"
+  "description": "## Release (2026-02-08)\n\n* @ember/app-blueprint 6.12.0-alpha.3 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#144](https://github.com/ember-cli/ember-app-blueprint/pull/144) feat: move ember-cli-build to `mjs` ([@aklkv](https://github.com/aklkv))\n\n#### Committers: 1\n- Alexey Kulakov ([@aklkv](https://github.com/aklkv))\n"
 }
