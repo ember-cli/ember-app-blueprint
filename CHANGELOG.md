@@ -2,6 +2,17 @@
 
 ## Release (2026-02-08)
 
+* @ember/app-blueprint 6.12.0-alpha.3 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#144](https://github.com/ember-cli/ember-app-blueprint/pull/144) feat: move ember-cli-build to `mjs` ([@aklkv](https://github.com/aklkv))
+
+#### Committers: 1
+- Alexey Kulakov ([@aklkv](https://github.com/aklkv))
+
+## Release (2026-02-08)
+
 * @ember/app-blueprint 6.12.0-alpha.2 (patch)
 
 #### :bug: Bug Fix
