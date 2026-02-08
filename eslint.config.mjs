@@ -27,7 +27,7 @@ export default [
   {
     ignores: [
       'tests/fixtures/*',
-      'files/ember-cli-build.js',
+      'files/ember-cli-build.mjs',
       'conditional-files/_js_*',
       'conditional-files/_ts_*',
     ],
