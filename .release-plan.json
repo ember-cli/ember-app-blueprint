@@ -2,17 +2,21 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "patch",
-      "oldVersion": "6.10.2",
-      "newVersion": "6.10.3",
+      "oldVersion": "6.10.3",
+      "newVersion": "6.10.4",
       "tagName": "latest",
       "constraints": [
         {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-01-23)\n\n* @ember/app-blueprint 6.10.3 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#205](https://github.com/ember-cli/ember-app-blueprint/pull/205) [bugfix release] Auto-choose correct compilerPath ([@ef4](https://github.com/ef4))\n\n#### Committers: 1\n- Edward Faulkner ([@ef4](https://github.com/ef4))\n"
+  "description": "## Release (2026-02-09)\n\n* @ember/app-blueprint 6.10.4 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#209](https://github.com/ember-cli/ember-app-blueprint/pull/209) Remove unnecessary empty lines when `--no-warp-drive` was passed ([@mkszepp](https://github.com/mkszepp))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#217](https://github.com/ember-cli/ember-app-blueprint/pull/217) update release-plan to support OIDC ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Markus Sanin ([@mkszepp](https://github.com/mkszepp))\n"
 }
