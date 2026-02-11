@@ -1,18 +1,22 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "6.12.0-alpha.2",
-      "newVersion": "6.12.0-alpha.3",
+      "impact": "patch",
+      "oldVersion": "6.12.0-alpha.3",
+      "newVersion": "6.12.0-alpha.4",
       "tagName": "alpha",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-02-08)\n\n* @ember/app-blueprint 6.12.0-alpha.3 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#144](https://github.com/ember-cli/ember-app-blueprint/pull/144) feat: move ember-cli-build to `mjs` ([@aklkv](https://github.com/aklkv))\n\n#### Committers: 1\n- Alexey Kulakov ([@aklkv](https://github.com/aklkv))\n"
+  "description": "## Release (2026-02-11)\n\n* @ember/app-blueprint 6.12.0-alpha.4 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#215](https://github.com/ember-cli/ember-app-blueprint/pull/215) upgrade ember/optional-features to clear install deprecation warnings ([@void-mAlex](https://github.com/void-mAlex))\n  * [#209](https://github.com/ember-cli/ember-app-blueprint/pull/209) Remove unnecessary empty lines when `--no-warp-drive` was passed ([@mkszepp](https://github.com/mkszepp))\n  * [#205](https://github.com/ember-cli/ember-app-blueprint/pull/205) [bugfix release] Auto-choose correct compilerPath ([@ef4](https://github.com/ef4))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#220](https://github.com/ember-cli/ember-app-blueprint/pull/220) Merge beta into main ([@mansona](https://github.com/mansona))\n  * [#218](https://github.com/ember-cli/ember-app-blueprint/pull/218) Prepare Stable Release v6.10.4 ([@github-actions[bot]](https://github.com/apps/github-actions))\n  * [#217](https://github.com/ember-cli/ember-app-blueprint/pull/217) update release-plan to support OIDC ([@mansona](https://github.com/mansona))\n  * [#203](https://github.com/ember-cli/ember-app-blueprint/pull/203) Prepare Beta Release v6.11.0-beta.2 ([@github-actions[bot]](https://github.com/apps/github-actions))\n  * [#206](https://github.com/ember-cli/ember-app-blueprint/pull/206) Merge release into beta ([@mansona](https://github.com/mansona))\n  * [#201](https://github.com/ember-cli/ember-app-blueprint/pull/201) Prepare Stable Release v6.10.3 ([@github-actions[bot]](https://github.com/apps/github-actions))\n\n#### Committers: 5\n- Alex ([@void-mAlex](https://github.com/void-mAlex))\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Edward Faulkner ([@ef4](https://github.com/ef4))\n- GitHub Actions [Bot] ([@github-actions](https://github.com/apps/github-actions))\n- Markus Sanin ([@mkszepp](https://github.com/mkszepp))\n"
 }

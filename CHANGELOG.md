@@ -1,5 +1,31 @@
 # Changelog
 
+## Release (2026-02-11)
+
+* @ember/app-blueprint 6.12.0-alpha.4 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#215](https://github.com/ember-cli/ember-app-blueprint/pull/215) upgrade ember/optional-features to clear install deprecation warnings ([@void-mAlex](https://github.com/void-mAlex))
+  * [#209](https://github.com/ember-cli/ember-app-blueprint/pull/209) Remove unnecessary empty lines when `--no-warp-drive` was passed ([@mkszepp](https://github.com/mkszepp))
+  * [#205](https://github.com/ember-cli/ember-app-blueprint/pull/205) [bugfix release] Auto-choose correct compilerPath ([@ef4](https://github.com/ef4))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#220](https://github.com/ember-cli/ember-app-blueprint/pull/220) Merge beta into main ([@mansona](https://github.com/mansona))
+  * [#218](https://github.com/ember-cli/ember-app-blueprint/pull/218) Prepare Stable Release v6.10.4 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#217](https://github.com/ember-cli/ember-app-blueprint/pull/217) update release-plan to support OIDC ([@mansona](https://github.com/mansona))
+  * [#203](https://github.com/ember-cli/ember-app-blueprint/pull/203) Prepare Beta Release v6.11.0-beta.2 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#206](https://github.com/ember-cli/ember-app-blueprint/pull/206) Merge release into beta ([@mansona](https://github.com/mansona))
+  * [#201](https://github.com/ember-cli/ember-app-blueprint/pull/201) Prepare Stable Release v6.10.3 ([@github-actions[bot]](https://github.com/apps/github-actions))
+
+#### Committers: 5
+- Alex ([@void-mAlex](https://github.com/void-mAlex))
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Edward Faulkner ([@ef4](https://github.com/ef4))
+- GitHub Actions [Bot] ([@github-actions](https://github.com/apps/github-actions))
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+
 ## Release (2026-02-08)
 
 * @ember/app-blueprint 6.12.0-alpha.3 (minor)
