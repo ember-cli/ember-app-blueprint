@@ -22,8 +22,8 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 import ts from 'typescript-eslint';
 
 import ember from 'eslint-plugin-ember/recommended';
-<% if (warpDrive) { %>import WarpDrive from 'eslint-plugin-warp-drive/recommended';<% } %>
-
+<% if (warpDrive) { %>import WarpDrive from 'eslint-plugin-warp-drive/recommended';
+<% } %>
 import eslintConfigPrettier from 'eslint-config-prettier';
 import qunit from 'eslint-plugin-qunit';
 import n from 'eslint-plugin-n';
@@ -49,8 +49,8 @@ export default defineConfig([
   ember.configs.base,
   ember.configs.gjs,
   ember.configs.gts,
-  <% if (warpDrive) { %>...WarpDrive,<% } %>
-  eslintConfigPrettier,
+  <% if (warpDrive) { %>...WarpDrive,
+  <% } %>eslintConfigPrettier,
   /**
    * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
    */
