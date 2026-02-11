@@ -1,5 +1,24 @@
 # Changelog
 
+## Release (2026-02-11)
+
+* @ember/app-blueprint 6.11.0-beta.3 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#209](https://github.com/ember-cli/ember-app-blueprint/pull/209) Remove unnecessary empty lines when `--no-warp-drive` was passed ([@mkszepp](https://github.com/mkszepp))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#219](https://github.com/ember-cli/ember-app-blueprint/pull/219) Merge release into beta ([@mansona](https://github.com/mansona))
+  * [#218](https://github.com/ember-cli/ember-app-blueprint/pull/218) Prepare Stable Release v6.10.4 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#217](https://github.com/ember-cli/ember-app-blueprint/pull/217) update release-plan to support OIDC ([@mansona](https://github.com/mansona))
+
+#### Committers: 3
+- Chris Manson ([@mansona](https://github.com/mansona))
+- GitHub Actions [Bot] ([@github-actions](https://github.com/apps/github-actions))
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+
 ## Release (2026-01-24)
 
 * @ember/app-blueprint 6.11.0-beta.2 (patch)
