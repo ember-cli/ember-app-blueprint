@@ -1,5 +1,20 @@
 # Changelog
 
+## Release (2026-02-17)
+
+* @ember/app-blueprint 6.11.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#222](https://github.com/ember-cli/ember-app-blueprint/pull/222) Promote Beta and update all dependencies for 6.11 release ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#158](https://github.com/ember-cli/ember-app-blueprint/pull/158) update RELEASE.md ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2026-02-09)
 
 * @ember/app-blueprint 6.10.4 (patch)
