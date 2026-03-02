@@ -11,6 +11,7 @@ on:
       - master
       - release
       - beta
+      - v-*
     paths:
       - '.release-plan.json'
 
