@@ -9,6 +9,9 @@
     "type": "git",
     "url": "git@github.com:ember-cli/ember-app-blueprint.git"
   },
+  "release-plan": {
+    "publishTag": "v-6-10"
+  },
   "license": "MIT",
   "author": "",
   "main": "index.js",
