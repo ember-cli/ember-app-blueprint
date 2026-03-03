@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2026-03-03)
+
+* @ember/app-blueprint 6.12.0-alpha.5 (patch)
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#228](https://github.com/ember-cli/ember-app-blueprint/pull/228) Enable patch publish ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2026-02-11)
 
 * @ember/app-blueprint 6.12.0-alpha.4 (patch)
