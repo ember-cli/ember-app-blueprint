@@ -1,16 +1,16 @@
-name: Plan Beta Release
+name: Plan v6.10.x Release
 on:
   workflow_dispatch:
   push:
     branches:
-      - beta
+      - v-6-10
   pull_request_target: # This workflow has permissions on the repo, do NOT run code from PRs in this workflow. See https://securitylab.github.com/research/github-actions-preventing-pwn-requests/
     types:
       - labeled
       - unlabeled
 
 concurrency:
-  group: plan-release-beta # only the latest one of these should ever be running
+  group: plan-release # only the latest one of these should ever be running
   cancel-in-progress: true
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: release-plan/actions/should-prepare-release@v1
         with:
-          ref: 'beta'
+          ref: 'v-6-10'
         id: should-prepare
 
   create-prepare-release-pr:
@@ -39,7 +39,7 @@ jobs:
       - uses: release-plan/actions/prepare@v1
         name: Run release-plan prepare
         with:
-          ref: 'beta'
+          ref: 'v-6-10'
         env:
           GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
         id: explanation
@@ -50,8 +50,8 @@ jobs:
           commit-message: "Prepare Release ${{ steps.explanation.outputs.new-version}} using 'release-plan'"
           labels: "internal"
           sign-commits: true
-          branch: release-preview-beta
-          title: Prepare Beta Release ${{ steps.explanation.outputs.new-version }}
+          branch: release-preview-v-6-10
+          title: Prepare Release ${{ steps.explanation.outputs.new-version }}
           body: |
             This PR is a preview of the release that [release-plan](https://github.com/embroider-build/release-plan) has prepared. To release you should just merge this PR 👍
 
