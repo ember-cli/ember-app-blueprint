@@ -51,7 +51,7 @@ jobs:
           labels: "internal"
           sign-commits: true
           branch: release-preview-v-6-10
-          title: Prepare Stable Release ${{ steps.explanation.outputs.new-version }}
+          title: Prepare Release ${{ steps.explanation.outputs.new-version }}
           body: |
             This PR is a preview of the release that [release-plan](https://github.com/embroider-build/release-plan) has prepared. To release you should just merge this PR 👍
 
