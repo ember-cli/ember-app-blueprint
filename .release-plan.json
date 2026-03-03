@@ -2,9 +2,9 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "patch",
-      "oldVersion": "6.10.3",
-      "newVersion": "6.10.4",
-      "tagName": "latest",
+      "oldVersion": "6.10.4",
+      "newVersion": "6.10.5",
+      "tagName": "v-6-10",
       "constraints": [
         {
           "impact": "patch",
@@ -18,5 +18,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-02-09)\n\n* @ember/app-blueprint 6.10.4 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#209](https://github.com/ember-cli/ember-app-blueprint/pull/209) Remove unnecessary empty lines when `--no-warp-drive` was passed ([@mkszepp](https://github.com/mkszepp))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#217](https://github.com/ember-cli/ember-app-blueprint/pull/217) update release-plan to support OIDC ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Markus Sanin ([@mkszepp](https://github.com/mkszepp))\n"
+  "description": "## Release (2026-03-03)\n\n* @ember/app-blueprint 6.10.5 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#229](https://github.com/ember-cli/ember-app-blueprint/pull/229) [v6.10 backport] fix decorator-transforms runtime path in babel.config.mjs ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#230](https://github.com/ember-cli/ember-app-blueprint/pull/230) setup release for v6.10.x branch ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
