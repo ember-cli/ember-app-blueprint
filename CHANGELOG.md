@@ -1,8 +1,45 @@
 # Changelog
 
-## Release (2026-02-11)
+## Release (2026-03-03)
 
-* @ember/app-blueprint 6.11.0-beta.3 (patch)
+* @ember/app-blueprint 6.11.2 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#231](https://github.com/ember-cli/ember-app-blueprint/pull/231) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-03-01)
+
+* @ember/app-blueprint 6.11.1 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#226](https://github.com/ember-cli/ember-app-blueprint/pull/226) fix decorator-transforms runtime path in babel.config.mjs ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-02-17)
+
+* @ember/app-blueprint 6.11.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#222](https://github.com/ember-cli/ember-app-blueprint/pull/222) Promote Beta and update all dependencies for 6.11 release ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#158](https://github.com/ember-cli/ember-app-blueprint/pull/158) update RELEASE.md ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-02-09)
+
+* @ember/app-blueprint 6.10.4 (patch)
 
 #### :bug: Bug Fix
 * `@ember/app-blueprint`
@@ -10,56 +47,22 @@
 
 #### :house: Internal
 * `@ember/app-blueprint`
-  * [#219](https://github.com/ember-cli/ember-app-blueprint/pull/219) Merge release into beta ([@mansona](https://github.com/mansona))
-  * [#218](https://github.com/ember-cli/ember-app-blueprint/pull/218) Prepare Stable Release v6.10.4 ([@github-actions[bot]](https://github.com/apps/github-actions))
   * [#217](https://github.com/ember-cli/ember-app-blueprint/pull/217) update release-plan to support OIDC ([@mansona](https://github.com/mansona))
 
-#### Committers: 3
+#### Committers: 2
 - Chris Manson ([@mansona](https://github.com/mansona))
-- GitHub Actions [Bot] ([@github-actions](https://github.com/apps/github-actions))
 - Markus Sanin ([@mkszepp](https://github.com/mkszepp))
 
-## Release (2026-01-24)
+## Release (2026-01-23)
 
-* @ember/app-blueprint 6.11.0-beta.2 (patch)
+* @ember/app-blueprint 6.10.3 (patch)
 
 #### :bug: Bug Fix
 * `@ember/app-blueprint`
   * [#205](https://github.com/ember-cli/ember-app-blueprint/pull/205) [bugfix release] Auto-choose correct compilerPath ([@ef4](https://github.com/ef4))
 
-#### :house: Internal
-* `@ember/app-blueprint`
-  * [#206](https://github.com/ember-cli/ember-app-blueprint/pull/206) Merge release into beta ([@mansona](https://github.com/mansona))
-  * [#201](https://github.com/ember-cli/ember-app-blueprint/pull/201) Prepare Stable Release v6.10.3 ([@github-actions[bot]](https://github.com/apps/github-actions))
-
-#### Committers: 3
-- Chris Manson ([@mansona](https://github.com/mansona))
-- Edward Faulkner ([@ef4](https://github.com/ef4))
-- [@github-actions[bot]](https://github.com/apps/github-actions)
-
-## Release (2026-01-23)
-
-* @ember/app-blueprint 6.11.0-beta.1 (minor)
-
-#### :rocket: Enhancement
-* `@ember/app-blueprint`
-  * [#190](https://github.com/ember-cli/ember-app-blueprint/pull/190) Promote Beta and update all dependencies for 6.10 release ([@mansona](https://github.com/mansona))
-
-#### :bug: Bug Fix
-* `@ember/app-blueprint`
-  * [#197](https://github.com/ember-cli/ember-app-blueprint/pull/197) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))
-  * [#195](https://github.com/ember-cli/ember-app-blueprint/pull/195) add sort-package-json as a dependency ([@mansona](https://github.com/mansona))
-
-#### :memo: Documentation
-* `@ember/app-blueprint`
-  * [#158](https://github.com/ember-cli/ember-app-blueprint/pull/158) update RELEASE.md ([@mansona](https://github.com/mansona))
-
-#### :house: Internal
-* `@ember/app-blueprint`
-  * [#199](https://github.com/ember-cli/ember-app-blueprint/pull/199) Prepare 6.11 Beta ([@mansona](https://github.com/mansona))
-
 #### Committers: 1
-- Chris Manson ([@mansona](https://github.com/mansona))
+- Edward Faulkner ([@ef4](https://github.com/ef4))
 
 ## Release (2026-01-23)
 
