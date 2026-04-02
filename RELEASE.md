@@ -19,7 +19,8 @@ The release process during release week should look like this:
 - Wait for `ember-source` to be released first
 - Merge any outstanding `Prepare Alpha Release` branches
 - Do an intial stable release from the `release` branch
-- update the dependency on `ember-cli` to point at this release and go through the release process there
+- do the initial stable release on the `ember-cli/ember-cli` repo
+- update the ember-cli dependency on this repo and continue the release process here
 - Merge `release` into `beta`
 - Do a `beta` release
 - Merge `beta` into `main`
@@ -60,6 +61,28 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - Merge the `Prepare Release` branch when you are ready to release
 - Check the `Release Stable` GitHub action to make sure the release succeeded
 
+### Release ember-cli and update that dependency
+
+- Go to the [ember-cli release process](https://github.com/ember-cli/ember-cli/blob/master/RELEASE.md) and complete the initial stable release
+- Make sure that the ember-cli release process is completed and the new stabel release is on npm before continuing here
+- fetch latest from origin `git fetch`
+- create a new branch to update the ember-cli dependency e.g. `git checkout --no-track -b update-ember-cli origin/release`
+- Update ember-cli
+
+  ```
+  pnpm dlx update-blueprint-deps --filter ember-cli --tag latest files/package.json
+  ```
+- commit this update `git commit -am "update ember-cli dependency to latest"`
+- push and open a PR targeting `release` with a PR title like `Update ember-cli to 6.4`
+- mark this PR as a `bug` to make sure it goes out in a patch release
+- check that everything is ok (i.e. that CI has run correctly and that you have the changes you expect)
+- merge the PR
+- check that the `Prepare Release` PR has been correctly opened by `release-plan`
+  - note: if there are a lot of unrelated PRs (e.g. for previous releases) that you don't want in the release notes you can add the `ignore` label to them
+- Merge the `Prepare Release` branch when you are ready to release
+- Check the `Release Stable` GitHub action to make sure the release succeeded
+
+
 ### Beta release from the `beta` branch
 
 - fetch latest from origin `git fetch`
@@ -70,11 +93,13 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
   - **make sure to not update any .github/workflows/publish.yml file** this should still publish a beta release
   - make sure to not update the version in the package.json during this step, that step comes later
   - make sure to not remove the `release-plan` config section of the the `package.json` during this step.
+  - commit this merge
 - merge master into this new branch too e.g. `git merge origin/main --no-ff`
   - **make sure to not update the .release-plan file** this should only ever be changed by the release-plan github scripts
   - **make sure to not update the CHANGELOG.md file** in this step. It should match the changelog on `origin/release` at this stage.
   - update the alpha version in package.json to be a beta i.e. if the incoming merge is `"version": "6.6.0-alpha.3",` update it to `"version": "6.6.0-beta.0",`
   - make sure not to update the `release-plan` config in `package.json`
+  - commit this merge
 - Update blueprint dependencies to beta
 
   ```
@@ -88,6 +113,7 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - merge the `merge-release` branch into `beta` in GitHub
 - check that the `Prepare Beta Release` PR has been correctly opened by `release-plan`
   - note: the release-plan config will automatically make this version a pre-release
+  - note: if there are a lot of PRs for previous releases that you don't want in the release notes you can add the `ignore` label to them
 - Merge the `Prepare Beta Release` when you are ready to release the next beta version
 - Check the `Release Beta` GitHub action to make sure the release succeeded
 
@@ -116,6 +142,8 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - check that everything is ok i.e. CI passes
 - merge the `merge-beta` branch into `main` in GitHub
 - check that the `Prepare Alpha Release` PR has been correctly opened by `release-plan`
+  - note: the release-plan config will automatically make this version a pre-release
+  - note: if there are a lot of PRs for previous releases that you don't want in the release notes you can add the `ignore` label to them
 - Merge the `Prepare Alpha Release` when you are ready to release the next alpha version
 - Check the `Release Alpha` GitHub action to make sure the release succeeded
 
