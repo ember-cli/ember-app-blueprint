@@ -1,58 +1,21 @@
 # Changelog
 
-## Release (2026-02-11)
+## Release (2026-04-02)
 
-* @ember/app-blueprint 6.12.0-alpha.4 (patch)
-
-#### :bug: Bug Fix
-* `@ember/app-blueprint`
-  * [#215](https://github.com/ember-cli/ember-app-blueprint/pull/215) upgrade ember/optional-features to clear install deprecation warnings ([@void-mAlex](https://github.com/void-mAlex))
-  * [#209](https://github.com/ember-cli/ember-app-blueprint/pull/209) Remove unnecessary empty lines when `--no-warp-drive` was passed ([@mkszepp](https://github.com/mkszepp))
-  * [#205](https://github.com/ember-cli/ember-app-blueprint/pull/205) [bugfix release] Auto-choose correct compilerPath ([@ef4](https://github.com/ef4))
-
-#### :house: Internal
-* `@ember/app-blueprint`
-  * [#220](https://github.com/ember-cli/ember-app-blueprint/pull/220) Merge beta into main ([@mansona](https://github.com/mansona))
-  * [#218](https://github.com/ember-cli/ember-app-blueprint/pull/218) Prepare Stable Release v6.10.4 ([@github-actions[bot]](https://github.com/apps/github-actions))
-  * [#217](https://github.com/ember-cli/ember-app-blueprint/pull/217) update release-plan to support OIDC ([@mansona](https://github.com/mansona))
-  * [#203](https://github.com/ember-cli/ember-app-blueprint/pull/203) Prepare Beta Release v6.11.0-beta.2 ([@github-actions[bot]](https://github.com/apps/github-actions))
-  * [#206](https://github.com/ember-cli/ember-app-blueprint/pull/206) Merge release into beta ([@mansona](https://github.com/mansona))
-  * [#201](https://github.com/ember-cli/ember-app-blueprint/pull/201) Prepare Stable Release v6.10.3 ([@github-actions[bot]](https://github.com/apps/github-actions))
-
-#### Committers: 5
-- Alex ([@void-mAlex](https://github.com/void-mAlex))
-- Chris Manson ([@mansona](https://github.com/mansona))
-- Edward Faulkner ([@ef4](https://github.com/ef4))
-- GitHub Actions [Bot] ([@github-actions](https://github.com/apps/github-actions))
-- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
-
-## Release (2026-02-08)
-
-* @ember/app-blueprint 6.12.0-alpha.3 (minor)
+* @ember/app-blueprint 6.12.0-beta.1 (minor)
 
 #### :rocket: Enhancement
 * `@ember/app-blueprint`
+  * [#238](https://github.com/ember-cli/ember-app-blueprint/pull/238) Promote 6.12 to beta and update dependencies ([@mansona](https://github.com/mansona))
   * [#144](https://github.com/ember-cli/ember-app-blueprint/pull/144) feat: move ember-cli-build to `mjs` ([@aklkv](https://github.com/aklkv))
-
-#### Committers: 1
-- Alexey Kulakov ([@aklkv](https://github.com/aklkv))
-
-## Release (2026-02-08)
-
-* @ember/app-blueprint 6.12.0-alpha.2 (patch)
 
 #### :bug: Bug Fix
 * `@ember/app-blueprint`
+  * [#231](https://github.com/ember-cli/ember-app-blueprint/pull/231) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))
+  * [#226](https://github.com/ember-cli/ember-app-blueprint/pull/226) fix decorator-transforms runtime path in babel.config.mjs ([@mansona](https://github.com/mansona))
+  * [#215](https://github.com/ember-cli/ember-app-blueprint/pull/215) upgrade ember/optional-features to clear install deprecation warnings ([@void-mAlex](https://github.com/void-mAlex))
   * [#119](https://github.com/ember-cli/ember-app-blueprint/pull/119) fix: align linters with recent changes in classic app blueprint ([@aklkv](https://github.com/aklkv))
   * [#208](https://github.com/ember-cli/ember-app-blueprint/pull/208) [Bugfix release] Add `globals.browser` to eslint config for TS files ([@mkszepp](https://github.com/mkszepp))
-
-#### Committers: 2
-- Alexey Kulakov ([@aklkv](https://github.com/aklkv))
-- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
-
-## Release (2026-01-25)
-
-* @ember/app-blueprint 6.12.0-alpha.1 (patch)
 
 #### :memo: Documentation
 * `@ember/app-blueprint`
@@ -60,63 +23,78 @@
 
 #### :house: Internal
 * `@ember/app-blueprint`
+  * [#228](https://github.com/ember-cli/ember-app-blueprint/pull/228) Enable patch publish ([@mansona](https://github.com/mansona))
   * [#211](https://github.com/ember-cli/ember-app-blueprint/pull/211) fix release-plan alpha tag ([@mansona](https://github.com/mansona))
 
-#### Committers: 1
+#### Committers: 4
+- Alex ([@void-mAlex](https://github.com/void-mAlex))
+- Alexey Kulakov ([@aklkv](https://github.com/aklkv))
 - Chris Manson ([@mansona](https://github.com/mansona))
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
 
-## Release (2026-01-23)
+## Release (2026-03-03)
 
-* @ember/app-blueprint 6.12.0-beta.0 (minor)
-
-#### :rocket: Enhancement
-* `@ember/app-blueprint`
-  * [#190](https://github.com/ember-cli/ember-app-blueprint/pull/190) Promote Beta and update all dependencies for 6.10 release ([@mansona](https://github.com/mansona))
+* @ember/app-blueprint 6.11.2 (patch)
 
 #### :bug: Bug Fix
 * `@ember/app-blueprint`
-  * [#197](https://github.com/ember-cli/ember-app-blueprint/pull/197) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))
-  * [#195](https://github.com/ember-cli/ember-app-blueprint/pull/195) add sort-package-json as a dependency ([@mansona](https://github.com/mansona))
-  * [#187](https://github.com/ember-cli/ember-app-blueprint/pull/187) [bugfix beta] Revert "Add --minimal and --no-compat" ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
-
-#### :memo: Documentation
-* `@ember/app-blueprint`
-  * [#158](https://github.com/ember-cli/ember-app-blueprint/pull/158) update RELEASE.md ([@mansona](https://github.com/mansona))
-
-#### :house: Internal
-* `@ember/app-blueprint`
-  * [#202](https://github.com/ember-cli/ember-app-blueprint/pull/202) Prepare 6.12-alpha ([@mansona](https://github.com/mansona))
-  * [#200](https://github.com/ember-cli/ember-app-blueprint/pull/200) Prepare Beta Release v6.11.0-beta.1 ([@github-actions[bot]](https://github.com/apps/github-actions))
-  * [#199](https://github.com/ember-cli/ember-app-blueprint/pull/199) Prepare 6.11 Beta ([@mansona](https://github.com/mansona))
-
-#### Committers: 3
-- Chris Manson ([@mansona](https://github.com/mansona))
-- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
-- [@github-actions[bot]](https://github.com/apps/github-actions)
-
-## Release (2026-01-23)
-
-* @ember/app-blueprint 6.11.0-beta.1 (minor)
-
-#### :rocket: Enhancement
-* `@ember/app-blueprint`
-  * [#190](https://github.com/ember-cli/ember-app-blueprint/pull/190) Promote Beta and update all dependencies for 6.10 release ([@mansona](https://github.com/mansona))
-
-#### :bug: Bug Fix
-* `@ember/app-blueprint`
-  * [#197](https://github.com/ember-cli/ember-app-blueprint/pull/197) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))
-  * [#195](https://github.com/ember-cli/ember-app-blueprint/pull/195) add sort-package-json as a dependency ([@mansona](https://github.com/mansona))
-
-#### :memo: Documentation
-* `@ember/app-blueprint`
-  * [#158](https://github.com/ember-cli/ember-app-blueprint/pull/158) update RELEASE.md ([@mansona](https://github.com/mansona))
-
-#### :house: Internal
-* `@ember/app-blueprint`
-  * [#199](https://github.com/ember-cli/ember-app-blueprint/pull/199) Prepare 6.11 Beta ([@mansona](https://github.com/mansona))
+  * [#231](https://github.com/ember-cli/ember-app-blueprint/pull/231) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))
 
 #### Committers: 1
 - Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-03-01)
+
+* @ember/app-blueprint 6.11.1 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#226](https://github.com/ember-cli/ember-app-blueprint/pull/226) fix decorator-transforms runtime path in babel.config.mjs ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-02-17)
+
+* @ember/app-blueprint 6.11.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#222](https://github.com/ember-cli/ember-app-blueprint/pull/222) Promote Beta and update all dependencies for 6.11 release ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#158](https://github.com/ember-cli/ember-app-blueprint/pull/158) update RELEASE.md ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-02-09)
+
+* @ember/app-blueprint 6.10.4 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#209](https://github.com/ember-cli/ember-app-blueprint/pull/209) Remove unnecessary empty lines when `--no-warp-drive` was passed ([@mkszepp](https://github.com/mkszepp))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#217](https://github.com/ember-cli/ember-app-blueprint/pull/217) update release-plan to support OIDC ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+
+## Release (2026-01-23)
+
+* @ember/app-blueprint 6.10.3 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#205](https://github.com/ember-cli/ember-app-blueprint/pull/205) [bugfix release] Auto-choose correct compilerPath ([@ef4](https://github.com/ef4))
+
+#### Committers: 1
+- Edward Faulkner ([@ef4](https://github.com/ef4))
 
 ## Release (2026-01-23)
 
