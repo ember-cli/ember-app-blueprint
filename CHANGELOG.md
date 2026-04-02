@@ -1,5 +1,37 @@
 # Changelog
 
+## Release (2026-04-02)
+
+* @ember/app-blueprint 6.12.0-beta.1 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#238](https://github.com/ember-cli/ember-app-blueprint/pull/238) Promote 6.12 to beta and update dependencies ([@mansona](https://github.com/mansona))
+  * [#144](https://github.com/ember-cli/ember-app-blueprint/pull/144) feat: move ember-cli-build to `mjs` ([@aklkv](https://github.com/aklkv))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#231](https://github.com/ember-cli/ember-app-blueprint/pull/231) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))
+  * [#226](https://github.com/ember-cli/ember-app-blueprint/pull/226) fix decorator-transforms runtime path in babel.config.mjs ([@mansona](https://github.com/mansona))
+  * [#215](https://github.com/ember-cli/ember-app-blueprint/pull/215) upgrade ember/optional-features to clear install deprecation warnings ([@void-mAlex](https://github.com/void-mAlex))
+  * [#119](https://github.com/ember-cli/ember-app-blueprint/pull/119) fix: align linters with recent changes in classic app blueprint ([@aklkv](https://github.com/aklkv))
+  * [#208](https://github.com/ember-cli/ember-app-blueprint/pull/208) [Bugfix release] Add `globals.browser` to eslint config for TS files ([@mkszepp](https://github.com/mkszepp))
+
+#### :memo: Documentation
+* `@ember/app-blueprint`
+  * [#204](https://github.com/ember-cli/ember-app-blueprint/pull/204) Update Release.md ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#228](https://github.com/ember-cli/ember-app-blueprint/pull/228) Enable patch publish ([@mansona](https://github.com/mansona))
+  * [#211](https://github.com/ember-cli/ember-app-blueprint/pull/211) fix release-plan alpha tag ([@mansona](https://github.com/mansona))
+
+#### Committers: 4
+- Alex ([@void-mAlex](https://github.com/void-mAlex))
+- Alexey Kulakov ([@aklkv](https://github.com/aklkv))
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+
 ## Release (2026-03-03)
 
 * @ember/app-blueprint 6.11.2 (patch)
