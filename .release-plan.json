@@ -1,18 +1,30 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "patch",
-      "oldVersion": "6.11.1",
-      "newVersion": "6.11.2",
+      "impact": "minor",
+      "oldVersion": "6.11.2",
+      "newVersion": "6.12.0",
       "tagName": "latest",
       "constraints": [
         {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :memo: Documentation"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-03-03)\n\n* @ember/app-blueprint 6.11.2 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#231](https://github.com/ember-cli/ember-app-blueprint/pull/231) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2026-04-03)\n\n* @ember/app-blueprint 6.12.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#243](https://github.com/ember-cli/ember-app-blueprint/pull/243) Promote Beta and update all dependencies for 6.12 release ([@mansona](https://github.com/mansona))\n  * [#144](https://github.com/ember-cli/ember-app-blueprint/pull/144) feat: move ember-cli-build to `mjs` ([@aklkv](https://github.com/aklkv))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#215](https://github.com/ember-cli/ember-app-blueprint/pull/215) upgrade ember/optional-features to clear install deprecation warnings ([@void-mAlex](https://github.com/void-mAlex))\n  * [#119](https://github.com/ember-cli/ember-app-blueprint/pull/119) fix: align linters with recent changes in classic app blueprint ([@aklkv](https://github.com/aklkv))\n  * [#208](https://github.com/ember-cli/ember-app-blueprint/pull/208) [Bugfix release] Add `globals.browser` to eslint config for TS files ([@mkszepp](https://github.com/mkszepp))\n\n#### :memo: Documentation\n* `@ember/app-blueprint`\n  * [#204](https://github.com/ember-cli/ember-app-blueprint/pull/204) Update Release.md ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#244](https://github.com/ember-cli/ember-app-blueprint/pull/244) split tests into individual matrix jobs ([@mansona](https://github.com/mansona))\n  * [#228](https://github.com/ember-cli/ember-app-blueprint/pull/228) Enable patch publish ([@mansona](https://github.com/mansona))\n  * [#211](https://github.com/ember-cli/ember-app-blueprint/pull/211) fix release-plan alpha tag ([@mansona](https://github.com/mansona))\n\n#### Committers: 4\n- Alex ([@void-mAlex](https://github.com/void-mAlex))\n- Alexey Kulakov ([@aklkv](https://github.com/aklkv))\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Markus Sanin ([@mkszepp](https://github.com/mkszepp))\n"
 }
