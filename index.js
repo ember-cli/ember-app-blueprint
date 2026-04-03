@@ -136,11 +136,20 @@ module.exports = {
     }
 
     if (!options.typescript) {
+      // Exclude TypeScript-only files for JavaScript apps.
+      // Note: app/config/environment.ts is excluded explicitly because
+      // shouldTransformTypeScript strips trailing commas when converting to JS,
+      // causing Prettier failures. We use a separate .js file instead.
       files = files.filter(
         (file) =>
-          !['tsconfig.json', 'app/config/', 'types/'].includes(file) &&
+          file !== 'tsconfig.json' &&
+          file !== 'app/config/environment.ts' &&
+          !file.startsWith('types/') &&
           !file.endsWith('.d.ts'),
       );
+    } else {
+      // For TypeScript apps, exclude the JS version of app/config/environment
+      files = files.filter((file) => file !== 'app/config/environment.js');
     }
 
     const warpDrive = options.warpDrive || options.emberData;

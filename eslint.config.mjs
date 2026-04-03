@@ -9,7 +9,7 @@ export default [
   },
   {
     files: [
-      'files/*/app/**/*.js',
+      'files/app/**/*.js',
       'files-override/**/*.mjs',
       'files-override/*/app/**/*.js',
       'files-override/*/tests/**/*.js',
@@ -27,7 +27,7 @@ export default [
   {
     ignores: [
       'tests/fixtures/*',
-      'files/ember-cli-build.js',
+      'files/ember-cli-build.mjs',
       'conditional-files/_js_*',
       'conditional-files/_ts_*',
     ],
