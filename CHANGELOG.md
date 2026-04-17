@@ -2,6 +2,29 @@
 
 ## Release (2026-04-17)
 
+* @ember/app-blueprint 7.0.0-alpha.2 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#242](https://github.com/ember-cli/ember-app-blueprint/pull/242) Prepare 7.0-alpha ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#231](https://github.com/ember-cli/ember-app-blueprint/pull/231) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))
+  * [#226](https://github.com/ember-cli/ember-app-blueprint/pull/226) fix decorator-transforms runtime path in babel.config.mjs ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#249](https://github.com/ember-cli/ember-app-blueprint/pull/249) fix publish ([@mansona](https://github.com/mansona))
+  * [#234](https://github.com/ember-cli/ember-app-blueprint/pull/234) Prepare Alpha Release v7.0.0-alpha.1 ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#228](https://github.com/ember-cli/ember-app-blueprint/pull/228) Enable patch publish ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- GitHub Actions [Bot] ([@github-actions](https://github.com/apps/github-actions))
+
+## Release (2026-04-17)
+
 * @ember/app-blueprint 7.0.0-alpha.1 (minor)
 
 #### :rocket: Enhancement
