@@ -52,7 +52,8 @@
     "release-plan": "^0.17.2",
     "strip-ansi": "^7.1.0",
     "tmp-promise": "^3.0.3",
-    "vitest": "^4.0.0-beta.17"
+    "vitest": "^4.0.0-beta.17",
+    "vitest-matrix": "^0.2.0"
   },
   "packageManager": "pnpm@10.20.0"
 }
