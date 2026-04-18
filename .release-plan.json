@@ -2,21 +2,13 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "6.12.0-beta.0",
-      "newVersion": "6.12.0-beta.1",
+      "oldVersion": "7.0.0-beta.0",
+      "newVersion": "7.0.0-beta.1",
       "tagName": "beta",
       "constraints": [
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :memo: Documentation"
         },
         {
           "impact": "patch",
@@ -26,5 +18,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-04-02)\n\n* @ember/app-blueprint 6.12.0-beta.1 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#238](https://github.com/ember-cli/ember-app-blueprint/pull/238) Promote 6.12 to beta and update dependencies ([@mansona](https://github.com/mansona))\n  * [#144](https://github.com/ember-cli/ember-app-blueprint/pull/144) feat: move ember-cli-build to `mjs` ([@aklkv](https://github.com/aklkv))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#231](https://github.com/ember-cli/ember-app-blueprint/pull/231) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))\n  * [#226](https://github.com/ember-cli/ember-app-blueprint/pull/226) fix decorator-transforms runtime path in babel.config.mjs ([@mansona](https://github.com/mansona))\n  * [#215](https://github.com/ember-cli/ember-app-blueprint/pull/215) upgrade ember/optional-features to clear install deprecation warnings ([@void-mAlex](https://github.com/void-mAlex))\n  * [#119](https://github.com/ember-cli/ember-app-blueprint/pull/119) fix: align linters with recent changes in classic app blueprint ([@aklkv](https://github.com/aklkv))\n  * [#208](https://github.com/ember-cli/ember-app-blueprint/pull/208) [Bugfix release] Add `globals.browser` to eslint config for TS files ([@mkszepp](https://github.com/mkszepp))\n\n#### :memo: Documentation\n* `@ember/app-blueprint`\n  * [#204](https://github.com/ember-cli/ember-app-blueprint/pull/204) Update Release.md ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#228](https://github.com/ember-cli/ember-app-blueprint/pull/228) Enable patch publish ([@mansona](https://github.com/mansona))\n  * [#211](https://github.com/ember-cli/ember-app-blueprint/pull/211) fix release-plan alpha tag ([@mansona](https://github.com/mansona))\n\n#### Committers: 4\n- Alex ([@void-mAlex](https://github.com/void-mAlex))\n- Alexey Kulakov ([@aklkv](https://github.com/aklkv))\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Markus Sanin ([@mkszepp](https://github.com/mkszepp))\n"
+  "description": "## Release (2026-04-18)\n\n* @ember/app-blueprint 7.0.0-beta.1 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#254](https://github.com/ember-cli/ember-app-blueprint/pull/254) Prepare 7.0 Beta ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#249](https://github.com/ember-cli/ember-app-blueprint/pull/249) fix publish ([@mansona](https://github.com/mansona))\n  * [#247](https://github.com/ember-cli/ember-app-blueprint/pull/247) update node for Publish CI to a version that doesn't need to update npm ([@mansona](https://github.com/mansona))\n  * [#244](https://github.com/ember-cli/ember-app-blueprint/pull/244) split tests into individual matrix jobs ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
