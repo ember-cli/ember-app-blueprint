@@ -103,7 +103,8 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - Update blueprint dependencies to beta
 
   ```
-  pnpm dlx update-blueprint-deps --ember-source beta files/package.json
+  pnpm dlx update-blueprint-deps --filter ember-source --tag beta files/package.json
+  pnpm dlx update-blueprint-deps --filter '.*' ./files/package.json
   ```
 
 - commit this update `git commit -am "update blueprint dependencies to beta"`
@@ -133,7 +134,8 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - Update blueprint dependencies to alpha
 
   ```
-  pnpm dlx update-blueprint-deps --ember-source alpha files/package.json
+  pnpm dlx update-blueprint-deps --filter ember-source --tag alpha files/package.json
+  pnpm dlx update-blueprint-deps --filter '.*' ./files/package.json
   ```
 
 - commit this update `git commit -am "update blueprint dependencies to alpha"`
