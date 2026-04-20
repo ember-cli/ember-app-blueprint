@@ -1,5 +1,21 @@
 # Changelog
 
+## Release (2026-04-20)
+
+* @ember/app-blueprint 7.1.0-alpha.1 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#256](https://github.com/ember-cli/ember-app-blueprint/pull/256) Prepare 7.1 Alpha ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#247](https://github.com/ember-cli/ember-app-blueprint/pull/247) update node for Publish CI to a version that doesn't need to update npm ([@mansona](https://github.com/mansona))
+  * [#244](https://github.com/ember-cli/ember-app-blueprint/pull/244) split tests into individual matrix jobs ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2026-04-18)
 
 * @ember/app-blueprint 7.0.0-beta.1 (minor)
