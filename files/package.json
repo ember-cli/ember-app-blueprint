@@ -91,7 +91,7 @@
     "testem": "^3.20.0<% if (typescript) { %>",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.58.2<% } %>",
-    "vite": "^7.3.2"
+    "vite": "^8.0.9"
   },
   "engines": {
     "node": ">= 20.19.0"
