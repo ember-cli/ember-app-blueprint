@@ -53,7 +53,7 @@
     "@glint/ember-tsc": "^1.5.0",
     "@glint/template": "^1.7.7",
     "@glint/tsserver-plugin": "^2.4.0<% } %>",
-    "@rollup/plugin-babel": "^6.1.0<% if (typescript) { %>",
+    "@rollup/plugin-babel": "^7.0.0<% if (typescript) { %>",
     "@types/qunit": "^2.19.13",
     "@types/rsvp": "^4.0.9<% } %><% if (warpDrive) { %>",
     "@warp-drive/core": "~5.8.2",
