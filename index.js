@@ -1,7 +1,7 @@
 'use strict';
 
 const stringUtil = require('ember-cli-string-utils');
-const chalk = require('chalk');
+const { styleText } = require('node:util');
 const directoryForPackageName = require('./lib/directory-for-package-name');
 const { sortPackageJson } = require('sort-package-json');
 const { join } = require('path');
@@ -170,7 +170,7 @@ module.exports = {
     this.ui.writeLine(
       prependEmoji(
         '✨',
-        `Creating a new Ember app in ${chalk.yellow(process.cwd())}:`,
+        `Creating a new Ember app in ${styleText('yellow', process.cwd())}:`,
       ),
     );
   },

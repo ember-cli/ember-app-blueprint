@@ -30,7 +30,6 @@
     "publishTag": "alpha"
   },
   "dependencies": {
-    "chalk": "^4.1.2",
     "ejs": "^3.1.10",
     "ember-cli-string-utils": "^1.1.0",
     "lodash": "^4.17.21",
