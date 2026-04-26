@@ -2,6 +2,22 @@
 
 ## Release (2026-04-20)
 
+* @ember/app-blueprint 7.1.0-alpha.2 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#260](https://github.com/ember-cli/ember-app-blueprint/pull/260) update stylelint to v17 ([@mansona](https://github.com/mansona))
+  * [#264](https://github.com/ember-cli/ember-app-blueprint/pull/264) update ember-cli-deprecation-workflow to v4 ([@mansona](https://github.com/mansona))
+  * [#263](https://github.com/ember-cli/ember-app-blueprint/pull/263) update vite to v8 ([@mansona](https://github.com/mansona))
+  * [#262](https://github.com/ember-cli/ember-app-blueprint/pull/262) update babel-plugin-ember-template-compilation to v4 ([@mansona](https://github.com/mansona))
+  * [#261](https://github.com/ember-cli/ember-app-blueprint/pull/261) update @rollup/plugin-babel to v7 ([@mansona](https://github.com/mansona))
+  * [#258](https://github.com/ember-cli/ember-app-blueprint/pull/258) update typescript to v6 ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-04-20)
+
 * @ember/app-blueprint 7.1.0-alpha.1 (minor)
 
 #### :rocket: Enhancement
