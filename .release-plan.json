@@ -2,8 +2,8 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "7.1.0-alpha.1",
-      "newVersion": "7.1.0-alpha.2",
+      "oldVersion": "7.1.0-alpha.2",
+      "newVersion": "7.1.0-alpha.3",
       "tagName": "alpha",
       "constraints": [
         {
@@ -14,5 +14,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-04-20)\n\n* @ember/app-blueprint 7.1.0-alpha.2 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#260](https://github.com/ember-cli/ember-app-blueprint/pull/260) update stylelint to v17 ([@mansona](https://github.com/mansona))\n  * [#264](https://github.com/ember-cli/ember-app-blueprint/pull/264) update ember-cli-deprecation-workflow to v4 ([@mansona](https://github.com/mansona))\n  * [#263](https://github.com/ember-cli/ember-app-blueprint/pull/263) update vite to v8 ([@mansona](https://github.com/mansona))\n  * [#262](https://github.com/ember-cli/ember-app-blueprint/pull/262) update babel-plugin-ember-template-compilation to v4 ([@mansona](https://github.com/mansona))\n  * [#261](https://github.com/ember-cli/ember-app-blueprint/pull/261) update @rollup/plugin-babel to v7 ([@mansona](https://github.com/mansona))\n  * [#258](https://github.com/ember-cli/ember-app-blueprint/pull/258) update typescript to v6 ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2026-04-26)\n\n* @ember/app-blueprint 7.1.0-alpha.3 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#266](https://github.com/ember-cli/ember-app-blueprint/pull/266) remove chalk in favour of native styleText ([@mansona](https://github.com/mansona))\n  * [#267](https://github.com/ember-cli/ember-app-blueprint/pull/267) update walk-sync to v4 ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }

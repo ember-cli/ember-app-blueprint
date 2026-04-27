@@ -1,5 +1,17 @@
 # Changelog
 
+## Release (2026-04-26)
+
+* @ember/app-blueprint 7.1.0-alpha.3 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#266](https://github.com/ember-cli/ember-app-blueprint/pull/266) remove chalk in favour of native styleText ([@mansona](https://github.com/mansona))
+  * [#267](https://github.com/ember-cli/ember-app-blueprint/pull/267) update walk-sync to v4 ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2026-04-20)
 
 * @ember/app-blueprint 7.1.0-alpha.2 (minor)
