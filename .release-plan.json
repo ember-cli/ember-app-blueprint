@@ -1,18 +1,22 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "7.1.0-alpha.2",
-      "newVersion": "7.1.0-alpha.3",
+      "impact": "patch",
+      "oldVersion": "7.1.0-alpha.3",
+      "newVersion": "7.1.0-alpha.4",
       "tagName": "alpha",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-04-26)\n\n* @ember/app-blueprint 7.1.0-alpha.3 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#266](https://github.com/ember-cli/ember-app-blueprint/pull/266) remove chalk in favour of native styleText ([@mansona](https://github.com/mansona))\n  * [#267](https://github.com/ember-cli/ember-app-blueprint/pull/267) update walk-sync to v4 ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2026-04-28)\n\n* @ember/app-blueprint 7.1.0-alpha.4 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#272](https://github.com/ember-cli/ember-app-blueprint/pull/272) Fix an issue with the `--no-warp-drive` option ([@Windvis](https://github.com/Windvis))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#253](https://github.com/ember-cli/ember-app-blueprint/pull/253) Update RELEASE.md with notes from the latest release ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Sam Van Campenhout ([@Windvis](https://github.com/Windvis))\n"
 }
