@@ -148,12 +148,14 @@ module.exports = {
         (file) =>
           file !== 'tsconfig.json' &&
           file !== 'app/config/environment.ts' &&
-          !file.startsWith('types/') &&
           !file.endsWith('.d.ts'),
       );
     } else {
       // For TypeScript apps, exclude the JS version of app/config/environment
-      files = files.filter((file) => file !== 'app/config/environment.js');
+      // and the JS-only jsconfig.json.
+      files = files.filter(
+        (file) => file !== 'app/config/environment.js' && file !== 'jsconfig.json',
+      );
     }
 
     const warpDrive = options.warpDrive || options.emberData;
