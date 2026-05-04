@@ -154,7 +154,8 @@ module.exports = {
       // For TypeScript apps, exclude the JS version of app/config/environment
       // and the JS-only jsconfig.json.
       files = files.filter(
-        (file) => file !== 'app/config/environment.js' && file !== 'jsconfig.json',
+        (file) =>
+          file !== 'app/config/environment.js' && file !== 'jsconfig.json',
       );
     }
 
