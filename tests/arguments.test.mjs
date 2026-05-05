@@ -126,6 +126,12 @@ describe('Blueprint Arguments', function () {
 
       expect(parse(files['package.json']).devDependencies['@warp-drive/core'])
         .to.not.be.undefined;
+
+      expect(
+        parse(files.config['ember-cli-update.json'])
+          .packages.at(0)
+          .blueprints.at(0).options,
+      ).to.not.include('--no-warp-drive');
     });
 
     it('does not add warp-drive if you pass --no-warp-drive', async function () {
@@ -133,6 +139,12 @@ describe('Blueprint Arguments', function () {
 
       expect(parse(files['package.json']).devDependencies['@warp-drive/core'])
         .to.be.undefined;
+
+      expect(
+        parse(files.config['ember-cli-update.json'])
+          .packages.at(0)
+          .blueprints.at(0).options,
+      ).to.include('--no-warp-drive');
     });
   });
 
