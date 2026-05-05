@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2026-05-05)
+
+* @ember/app-blueprint 6.12.2 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#274](https://github.com/ember-cli/ember-app-blueprint/pull/274) Fix an issue with the `--no-warp-drive` option ([@Windvis](https://github.com/Windvis))
+
+#### Committers: 1
+- Sam Van Campenhout ([@Windvis](https://github.com/Windvis))
+
 ## Release (2026-04-18)
 
 * @ember/app-blueprint 6.12.1 (patch)
