@@ -1,5 +1,21 @@
 # Changelog
 
+## Release (2026-04-28)
+
+* @ember/app-blueprint 7.1.0-alpha.4 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#272](https://github.com/ember-cli/ember-app-blueprint/pull/272) Fix an issue with the `--no-warp-drive` option ([@Windvis](https://github.com/Windvis))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#253](https://github.com/ember-cli/ember-app-blueprint/pull/253) Update RELEASE.md with notes from the latest release ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Sam Van Campenhout ([@Windvis](https://github.com/Windvis))
+
 ## Release (2026-04-26)
 
 * @ember/app-blueprint 7.1.0-alpha.3 (minor)
