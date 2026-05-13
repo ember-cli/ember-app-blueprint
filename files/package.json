@@ -63,10 +63,22 @@
     "@warp-drive/utilities": "~5.8.2<% } %>",
     "babel-plugin-ember-template-compilation": "^4.0.0",
     "concurrently": "^9.2.1",
+<<<<<<< HEAD
     "decorator-transforms": "^2.3.1",
     "ember-cli": "~6.12.0",
     "ember-cli-babel": "^8.3.1",
     "ember-cli-deprecation-workflow": "^4.0.1",
+||||||| 87dd08b (Merge pull request #49 from ember-cli/nvp/minimal-flag-non-default)
+    "decorator-transforms": "^2.3.0",
+    "ember-cli": "~6.9.0-alpha.1",
+    "ember-cli-babel": "^8.2.0",
+    "ember-cli-deprecation-workflow": "^4.0.0",
+=======
+    "decorator-transforms": "^2.3.0",
+    "ember-cli": "~6.9.0-alpha.1",
+    "ember-cli-babel": "^8.2.0",
+    "ember-cli-deprecation-workflow": "^3.4.0",
+>>>>>>> parent of 87dd08b (Merge pull request #49 from ember-cli/nvp/minimal-flag-non-default)
     "ember-load-initializers": "^3.0.1",
     "ember-modifier": "^4.3.0",
     "ember-page-title": "^9.0.3",
