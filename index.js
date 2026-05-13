@@ -85,7 +85,17 @@ module.exports = {
           options.packageManager === 'pnpm' && '"--pnpm"',
           options.ciProvider && `"--ci-provider=${options.ciProvider}"`,
           options.typescript && `"--typescript"`,
+<<<<<<< HEAD
           warpDrive === false && `"--no-warp-drive"`,
+||||||| 87dd08b (Merge pull request #49 from ember-cli/nvp/minimal-flag-non-default)
+          options.minimal && `"--minimal"`,
+          options.noCompat && `"--no-compat"`,
+          !options.emberData && `"--no-ember-data"`,
+          !options.warpDrive && `"--no-warp-drive"`,
+=======
+          !options.emberData && `"--no-ember-data"`,
+          !options.warpDrive && `"--no-warp-drive"`,
+>>>>>>> parent of 87dd08b (Merge pull request #49 from ember-cli/nvp/minimal-flag-non-default)
         ]
           .filter(Boolean)
           .join(',\n            ') +
@@ -121,7 +131,13 @@ module.exports = {
       blueprint: 'app',
       blueprintOptions,
       lang: options.lang,
+<<<<<<< HEAD
       warpDrive,
+||||||| 87dd08b (Merge pull request #49 from ember-cli/nvp/minimal-flag-non-default)
+      warpDrive: warpDrive,
+=======
+      warpDrive: options.warpDrive ?? options.emberData,
+>>>>>>> parent of 87dd08b (Merge pull request #49 from ember-cli/nvp/minimal-flag-non-default)
       ciProvider: options.ciProvider,
       typescript: options.typescript,
       packageManager: options.packageManager ?? 'npm',

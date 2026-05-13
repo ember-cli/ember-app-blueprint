@@ -27,7 +27,15 @@ export default [
   {
     ignores: [
       'tests/fixtures/*',
+<<<<<<< HEAD
       'files/ember-cli-build.mjs',
+||||||| 87dd08b (Merge pull request #49 from ember-cli/nvp/minimal-flag-non-default)
+      'files/vite.config.*',
+      'files/ember-cli-build.js',
+      'files/testem.cjs',
+=======
+      'files/ember-cli-build.js',
+>>>>>>> parent of 87dd08b (Merge pull request #49 from ember-cli/nvp/minimal-flag-non-default)
       'conditional-files/_js_*',
       'conditional-files/_ts_*',
     ],
