@@ -46,21 +46,24 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
   - **make sure to not update the CHANGELOG.md file** so as not to include the beta or alpha changelogs in the next release
   - make sure to not update the version in the package.json during this step, this will be release-plan's job
   - make sure to not add the `release-plan` config section to the package.json during this step. We are releasing a real release so we don't want to configure release-plan to do a pre-release.
+  - commit this merge
 - Update blueprint dependencies to latest
 
   ```
-  pnpm dlx update-blueprint-deps --filter 'ember-source' --tag latest files/package.json
+  pnpm dlx update-blueprint-deps --filter 'ember-source' --tag latest package.json files/package.json
   pnpm dlx update-blueprint-deps --filter '.*' package.json files/package.json
   ```
 
 - commit this update `git commit -am "update blueprint dependencies to latest"`
-- push and open a PR targeting `release` with a PR title like `Update all dependencies for 6.4 release`
-- mark this PR as an `enhancement` if it is a minor release
+- push and open a PR targeting `release` with a PR title like `Promote Beta and update all dependencies for 6.4 release`
+- mark this PR as an `enhancement` if it is a minor release, or `breaking` if it is a major release
 - check that everything is ok (i.e. that CI has run correctly and that you have the changes you expect)
 - merge branch
 - check that the `Prepare Release` PR has been correctly opened by `release-plan`
+- review the included PRs in the changelog and add `ignore` to things that shouldn't be there
+- after adding any `ignore` labels, wait for the `Prepare Release` PR to be updated
 - Merge the `Prepare Release` branch when you are ready to release
-- Check the `Release Stable` GitHub action to make sure the release succeeded
+- Check the `Publish` GitHub action to make sure the release succeeded
 
 ### Release ember-cli and update that dependency
 
@@ -110,7 +113,7 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 
 - commit this update `git commit -am "update blueprint dependencies to beta"`
 - push and open a PR targeting `beta` with a PR title like `Prepare 6.5-beta`
-- mark this PR as an `enchancement` if the next beta is a minor release
+- mark this PR as an `enchancement`
 - check that everything is ok i.e. CI passes
 - merge the `merge-release` branch into `beta` in GitHub
 - check that the `Prepare Beta Release` PR has been correctly opened by `release-plan`
@@ -141,7 +144,7 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 
 - commit this update `git commit -am "update blueprint dependencies to alpha"`
 - push and open a PR targeting `main` with a PR title like `Prepare 6.6-alpha`
-- mark this PR as an `enchancement` if the next alpha is a minor release
+- mark this PR as an `enchancement`
 - check that everything is ok i.e. CI passes
 - merge the `merge-beta` branch into `main` in GitHub
 - check that the `Prepare Alpha Release` PR has been correctly opened by `release-plan`
@@ -183,3 +186,6 @@ If you want to change the content of the Changelog then you should update the PR
 ## Patch Releases
 
 Now that we're using release-plan for all releases, patch releases have become super easy! Every time you merge a PR to any branch that is being released with `release-plan` a new `Prepare Release` PR will be created. When you merge this `Prepare Release` branch it will automatically release the new Patch version.
+
+> [!NOTE]
+> If you merge a patch into any branch other than main, you **must** merge all branches forward i.e. release -> beta -> main so that the change gets applied to all branches correctly. For example: if you update a dependency on the `release` branch, you should then create a branch from `beta` and merge `release` into that branch and open a PR with this change to target `beta`. The same should happen from `beta` to `main`. 
