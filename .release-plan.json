@@ -1,18 +1,22 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "patch",
-      "oldVersion": "6.12.2",
-      "newVersion": "6.12.3",
+      "impact": "major",
+      "oldVersion": "6.12.3",
+      "newVersion": "7.0.0",
       "tagName": "latest",
       "constraints": [
         {
+          "impact": "major",
+          "reason": "Appears in changelog section :boom: Breaking Change"
+        },
+        {
           "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-05-05)\n\n* @ember/app-blueprint 6.12.3 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#276](https://github.com/ember-cli/ember-app-blueprint/pull/276) [backport release] update vite to v8 and @rollup/plugin-babel to v7 ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2026-05-15)\n\n* @ember/app-blueprint 7.0.0 (major)\n\n#### :boom: Breaking Change\n* `@ember/app-blueprint`\n  * [#279](https://github.com/ember-cli/ember-app-blueprint/pull/279) Promote Beta and update all dependencies for 7.0 release ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#249](https://github.com/ember-cli/ember-app-blueprint/pull/249) fix publish ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
