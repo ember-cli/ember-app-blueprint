@@ -1,5 +1,20 @@
 # Changelog
 
+## Release (2026-05-15)
+
+* @ember/app-blueprint 7.0.0 (major)
+
+#### :boom: Breaking Change
+* `@ember/app-blueprint`
+  * [#279](https://github.com/ember-cli/ember-app-blueprint/pull/279) Promote Beta and update all dependencies for 7.0 release ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#249](https://github.com/ember-cli/ember-app-blueprint/pull/249) fix publish ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2026-05-05)
 
 * @ember/app-blueprint 6.12.3 (patch)
