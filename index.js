@@ -3,7 +3,6 @@
 const stringUtil = require('ember-cli-string-utils');
 const { styleText } = require('node:util');
 const directoryForPackageName = require('./lib/directory-for-package-name');
-const { sortPackageJson } = require('sort-package-json');
 const { join } = require('path');
 const { readFileSync } = require('fs');
 const ejs = require('ejs');
@@ -192,9 +191,9 @@ module.exports = {
     return fileInfo;
   },
 
-  updatePackageJson(options, content) {
+  updatePackageJson(_options, content) {
     let contents = JSON.parse(content);
 
-    return stringifyAndNormalize(sortPackageJson(contents));
+    return stringifyAndNormalize(contents);
   },
 };
