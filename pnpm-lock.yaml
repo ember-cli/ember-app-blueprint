@@ -17,9 +17,6 @@ importers:
       lodash:
         specifier: ^4.18.1
         version: 4.18.1
-      sort-package-json:
-        specifier: ^3.7.1
-        version: 3.7.1
       walk-sync:
         specifier: ^4.0.2
         version: 4.0.2
