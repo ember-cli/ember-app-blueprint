@@ -111,6 +111,7 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
   pnpm dlx update-blueprint-deps --filter '.*' package.json files/package.json
   ```
 
+- run `pnpm install` to install any updated packages
 - commit this update `git commit -am "update blueprint dependencies to beta"`
 - push and open a PR targeting `beta` with a PR title like `Prepare 6.5-beta`
 - mark this PR as an `enchancement`
