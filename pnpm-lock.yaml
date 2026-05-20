@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      chalk:
-        specifier: ^4.1.2
-        version: 4.1.2
       ejs:
         specifier: ^3.1.10
         version: 3.1.10
@@ -24,8 +21,8 @@ importers:
         specifier: ^3.6.1
         version: 3.6.1
       walk-sync:
-        specifier: ^3.0.0
-        version: 3.0.0
+        specifier: ^4.0.1
+        version: 4.0.1
     devDependencies:
       '@eslint/js':
         specifier: ^9.39.4
