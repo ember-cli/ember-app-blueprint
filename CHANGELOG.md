@@ -2,6 +2,34 @@
 
 ## Release (2026-05-20)
 
+* @ember/app-blueprint 7.1.0-beta.1 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#286](https://github.com/ember-cli/ember-app-blueprint/pull/286) Prepare Beta Release ([@mansona](https://github.com/mansona))
+  * [#266](https://github.com/ember-cli/ember-app-blueprint/pull/266) remove chalk in favour of native styleText ([@mansona](https://github.com/mansona))
+  * [#267](https://github.com/ember-cli/ember-app-blueprint/pull/267) update walk-sync to v4 ([@mansona](https://github.com/mansona))
+  * [#260](https://github.com/ember-cli/ember-app-blueprint/pull/260) update stylelint to v17 ([@mansona](https://github.com/mansona))
+  * [#264](https://github.com/ember-cli/ember-app-blueprint/pull/264) update ember-cli-deprecation-workflow to v4 ([@mansona](https://github.com/mansona))
+  * [#263](https://github.com/ember-cli/ember-app-blueprint/pull/263) update vite to v8 ([@mansona](https://github.com/mansona))
+  * [#262](https://github.com/ember-cli/ember-app-blueprint/pull/262) update babel-plugin-ember-template-compilation to v4 ([@mansona](https://github.com/mansona))
+  * [#261](https://github.com/ember-cli/ember-app-blueprint/pull/261) update @rollup/plugin-babel to v7 ([@mansona](https://github.com/mansona))
+  * [#258](https://github.com/ember-cli/ember-app-blueprint/pull/258) update typescript to v6 ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#272](https://github.com/ember-cli/ember-app-blueprint/pull/272) Fix an issue with the `--no-warp-drive` option ([@Windvis](https://github.com/Windvis))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#253](https://github.com/ember-cli/ember-app-blueprint/pull/253) Update RELEASE.md with notes from the latest release ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Sam Van Campenhout ([@Windvis](https://github.com/Windvis))
+
+## Release (2026-05-20)
+
 * @ember/app-blueprint 7.0.1 (patch)
 
 #### :bug: Bug Fix
