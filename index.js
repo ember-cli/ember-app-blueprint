@@ -65,8 +65,13 @@ module.exports = {
     let name = stringUtil.dasherize(rawName);
     let namespace = stringUtil.classify(rawName);
 
+    const warpDrive = options.warpDrive ?? options.emberData;
+
     let hasOptions =
-      !options.welcome || options.packageManager || options.ciProvider;
+      !options.welcome ||
+      options.packageManager ||
+      options.ciProvider ||
+      !warpDrive;
     let blueprintOptions = '';
     if (hasOptions) {
       let indent = `\n            `;
@@ -80,8 +85,7 @@ module.exports = {
           options.packageManager === 'pnpm' && '"--pnpm"',
           options.ciProvider && `"--ci-provider=${options.ciProvider}"`,
           options.typescript && `"--typescript"`,
-          !options.emberData && `"--no-ember-data"`,
-          !options.warpDrive && `"--no-warp-drive"`,
+          warpDrive === false && `"--no-warp-drive"`,
         ]
           .filter(Boolean)
           .join(',\n            ') +
@@ -117,7 +121,7 @@ module.exports = {
       blueprint: 'app',
       blueprintOptions,
       lang: options.lang,
-      warpDrive: options.warpDrive ?? options.emberData,
+      warpDrive,
       ciProvider: options.ciProvider,
       typescript: options.typescript,
       packageManager: options.packageManager ?? 'npm',
