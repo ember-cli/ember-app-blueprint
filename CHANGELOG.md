@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2026-05-21)
+
+* @ember/app-blueprint 7.2.0-alpha.1 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#288](https://github.com/ember-cli/ember-app-blueprint/pull/288) Prepare 7.2 Alpha ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2026-05-20)
 
 * @ember/app-blueprint 7.1.0-beta.1 (minor)
