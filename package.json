@@ -13,21 +13,13 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "lint": "concurrently 'pnpm:lint:*(!fix)'",
-    "lint:fix": "pnpm lint:eslint && pnpm format",
-    "lint:eslint": "eslint .",
-    "lint:prettier": "prettier . --check",
     "format": "prettier . --write",
-    "test": "vitest",
-    "new:app": "pnpm dlx ember-cli@latest new my-app --blueprint ."
-  },
-  "release-plan": {
-    "semverIncrementAs": {
-      "minor": "prerelease",
-      "patch": "prerelease"
-    },
-    "semverIncrementTag": "alpha",
-    "publishTag": "alpha"
+    "lint": "concurrently 'pnpm:lint:*(!fix)'",
+    "lint:eslint": "eslint .",
+    "lint:fix": "pnpm lint:eslint && pnpm format",
+    "lint:prettier": "prettier . --check",
+    "new:app": "pnpm dlx ember-cli@latest new my-app --blueprint .",
+    "test": "vitest"
   },
   "dependencies": {
     "ejs": "^3.1.10",
@@ -48,11 +40,19 @@
     "jsonc-parser": "^3.3.1",
     "prettier": "^3.8.3",
     "prettier-plugin-ember-template-tag": "^2.1.6",
-    "release-plan": "^0.17.4",
+    "release-plan": "^0.18.0",
     "strip-ansi": "^7.2.0",
     "tmp-promise": "^3.0.3",
     "vitest": "^4.1.6",
     "vitest-matrix": "^0.2.0"
   },
-  "packageManager": "pnpm@10.20.0"
+  "packageManager": "pnpm@10.20.0",
+  "release-plan": {
+    "semverIncrementAs": {
+      "minor": "prerelease",
+      "patch": "prerelease"
+    },
+    "semverIncrementTag": "alpha",
+    "publishTag": "alpha"
+  }
 }
