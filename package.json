@@ -1,6 +1,6 @@
 {
   "name": "@ember/app-blueprint",
-  "version": "7.1.0-alpha.4",
+  "version": "7.2.0-alpha.0",
   "description": "Blueprint for next generation of Ember apps",
   "keywords": [
     "ember-blueprint"
@@ -32,26 +32,26 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "ember-cli-string-utils": "^1.1.0",
-    "lodash": "^4.17.21",
-    "sort-package-json": "^3.6.0",
+    "lodash": "^4.18.1",
+    "sort-package-json": "^3.6.1",
     "walk-sync": "^4.0.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.3.0",
-    "concurrently": "^9.1.2",
-    "ember-cli": "^6.3.1",
+    "@eslint/js": "^9.39.4",
+    "concurrently": "^9.2.1",
+    "ember-cli": "^7.0.0",
     "eslint": "9.x",
-    "eslint-config-prettier": "^9.1.0",
-    "execa": "^9.1.0",
+    "eslint-config-prettier": "^9.1.2",
+    "execa": "^9.6.1",
     "fixturify": "^3.0.0",
-    "globals": "^15.3.0",
+    "globals": "^15.15.0",
     "jsonc-parser": "^3.3.1",
-    "prettier": "^3.2.5",
-    "prettier-plugin-ember-template-tag": "^2.0.2",
-    "release-plan": "^0.17.2",
-    "strip-ansi": "^7.1.0",
+    "prettier": "^3.8.3",
+    "prettier-plugin-ember-template-tag": "^2.1.6",
+    "release-plan": "^0.17.4",
+    "strip-ansi": "^7.2.0",
     "tmp-promise": "^3.0.3",
-    "vitest": "^4.0.0-beta.17",
+    "vitest": "^4.1.6",
     "vitest-matrix": "^0.2.0"
   },
   "packageManager": "pnpm@10.20.0"

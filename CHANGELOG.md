@@ -1,8 +1,20 @@
 # Changelog
 
-## Release (2026-04-28)
+## Release (2026-05-20)
 
-* @ember/app-blueprint 7.1.0-alpha.4 (patch)
+* @ember/app-blueprint 7.1.0-beta.1 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#286](https://github.com/ember-cli/ember-app-blueprint/pull/286) Prepare Beta Release ([@mansona](https://github.com/mansona))
+  * [#266](https://github.com/ember-cli/ember-app-blueprint/pull/266) remove chalk in favour of native styleText ([@mansona](https://github.com/mansona))
+  * [#267](https://github.com/ember-cli/ember-app-blueprint/pull/267) update walk-sync to v4 ([@mansona](https://github.com/mansona))
+  * [#260](https://github.com/ember-cli/ember-app-blueprint/pull/260) update stylelint to v17 ([@mansona](https://github.com/mansona))
+  * [#264](https://github.com/ember-cli/ember-app-blueprint/pull/264) update ember-cli-deprecation-workflow to v4 ([@mansona](https://github.com/mansona))
+  * [#263](https://github.com/ember-cli/ember-app-blueprint/pull/263) update vite to v8 ([@mansona](https://github.com/mansona))
+  * [#262](https://github.com/ember-cli/ember-app-blueprint/pull/262) update babel-plugin-ember-template-compilation to v4 ([@mansona](https://github.com/mansona))
+  * [#261](https://github.com/ember-cli/ember-app-blueprint/pull/261) update @rollup/plugin-babel to v7 ([@mansona](https://github.com/mansona))
+  * [#258](https://github.com/ember-cli/ember-app-blueprint/pull/258) update typescript to v6 ([@mansona](https://github.com/mansona))
 
 #### :bug: Bug Fix
 * `@ember/app-blueprint`
@@ -16,66 +28,53 @@
 - Chris Manson ([@mansona](https://github.com/mansona))
 - Sam Van Campenhout ([@Windvis](https://github.com/Windvis))
 
-## Release (2026-04-26)
+## Release (2026-05-20)
 
-* @ember/app-blueprint 7.1.0-alpha.3 (minor)
+* @ember/app-blueprint 7.0.1 (patch)
 
-#### :rocket: Enhancement
+#### :bug: Bug Fix
 * `@ember/app-blueprint`
-  * [#266](https://github.com/ember-cli/ember-app-blueprint/pull/266) remove chalk in favour of native styleText ([@mansona](https://github.com/mansona))
-  * [#267](https://github.com/ember-cli/ember-app-blueprint/pull/267) update walk-sync to v4 ([@mansona](https://github.com/mansona))
+  * [#284](https://github.com/ember-cli/ember-app-blueprint/pull/284) update ember-cli dependency to 7.0 ([@mansona](https://github.com/mansona))
 
 #### Committers: 1
 - Chris Manson ([@mansona](https://github.com/mansona))
 
-## Release (2026-04-20)
+## Release (2026-05-15)
 
-* @ember/app-blueprint 7.1.0-alpha.2 (minor)
+* @ember/app-blueprint 7.0.0 (major)
 
-#### :rocket: Enhancement
+#### :boom: Breaking Change
 * `@ember/app-blueprint`
-  * [#260](https://github.com/ember-cli/ember-app-blueprint/pull/260) update stylelint to v17 ([@mansona](https://github.com/mansona))
-  * [#264](https://github.com/ember-cli/ember-app-blueprint/pull/264) update ember-cli-deprecation-workflow to v4 ([@mansona](https://github.com/mansona))
-  * [#263](https://github.com/ember-cli/ember-app-blueprint/pull/263) update vite to v8 ([@mansona](https://github.com/mansona))
-  * [#262](https://github.com/ember-cli/ember-app-blueprint/pull/262) update babel-plugin-ember-template-compilation to v4 ([@mansona](https://github.com/mansona))
-  * [#261](https://github.com/ember-cli/ember-app-blueprint/pull/261) update @rollup/plugin-babel to v7 ([@mansona](https://github.com/mansona))
-  * [#258](https://github.com/ember-cli/ember-app-blueprint/pull/258) update typescript to v6 ([@mansona](https://github.com/mansona))
-
-#### Committers: 1
-- Chris Manson ([@mansona](https://github.com/mansona))
-
-## Release (2026-04-20)
-
-* @ember/app-blueprint 7.1.0-alpha.1 (minor)
-
-#### :rocket: Enhancement
-* `@ember/app-blueprint`
-  * [#256](https://github.com/ember-cli/ember-app-blueprint/pull/256) Prepare 7.1 Alpha ([@mansona](https://github.com/mansona))
-
-#### :house: Internal
-* `@ember/app-blueprint`
-  * [#247](https://github.com/ember-cli/ember-app-blueprint/pull/247) update node for Publish CI to a version that doesn't need to update npm ([@mansona](https://github.com/mansona))
-  * [#244](https://github.com/ember-cli/ember-app-blueprint/pull/244) split tests into individual matrix jobs ([@mansona](https://github.com/mansona))
-
-#### Committers: 1
-- Chris Manson ([@mansona](https://github.com/mansona))
-
-## Release (2026-04-18)
-
-* @ember/app-blueprint 7.0.0-beta.1 (minor)
-
-#### :rocket: Enhancement
-* `@ember/app-blueprint`
-  * [#254](https://github.com/ember-cli/ember-app-blueprint/pull/254) Prepare 7.0 Beta ([@mansona](https://github.com/mansona))
+  * [#279](https://github.com/ember-cli/ember-app-blueprint/pull/279) Promote Beta and update all dependencies for 7.0 release ([@mansona](https://github.com/mansona))
 
 #### :house: Internal
 * `@ember/app-blueprint`
   * [#249](https://github.com/ember-cli/ember-app-blueprint/pull/249) fix publish ([@mansona](https://github.com/mansona))
-  * [#247](https://github.com/ember-cli/ember-app-blueprint/pull/247) update node for Publish CI to a version that doesn't need to update npm ([@mansona](https://github.com/mansona))
-  * [#244](https://github.com/ember-cli/ember-app-blueprint/pull/244) split tests into individual matrix jobs ([@mansona](https://github.com/mansona))
 
 #### Committers: 1
 - Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-05-05)
+
+* @ember/app-blueprint 6.12.3 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#276](https://github.com/ember-cli/ember-app-blueprint/pull/276) [backport release] update vite to v8 and @rollup/plugin-babel to v7 ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-05-05)
+
+* @ember/app-blueprint 6.12.2 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#274](https://github.com/ember-cli/ember-app-blueprint/pull/274) Fix an issue with the `--no-warp-drive` option ([@Windvis](https://github.com/Windvis))
+
+#### Committers: 1
+- Sam Van Campenhout ([@Windvis](https://github.com/Windvis))
 
 ## Release (2026-04-18)
 
