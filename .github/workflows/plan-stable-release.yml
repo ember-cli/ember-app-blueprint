@@ -40,6 +40,8 @@ jobs:
         name: Run release-plan prepare
         with:
           ref: 'release'
+        env:
+          GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
         id: explanation
 
       - uses: peter-evans/create-pull-request@v8
