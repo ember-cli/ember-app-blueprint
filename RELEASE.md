@@ -49,7 +49,8 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - Update blueprint dependencies to latest
 
   ```
-  pnpm dlx update-blueprint-deps --ember-source latest files/package.json
+  pnpm dlx update-blueprint-deps --filter 'ember-source' --tag latest files/package.json
+  pnpm dlx update-blueprint-deps --filter '.*' package.json files/package.json
   ```
 
 - commit this update `git commit -am "update blueprint dependencies to latest"`
@@ -70,7 +71,7 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - Update ember-cli
 
   ```
-  pnpm dlx update-blueprint-deps --filter ember-cli --tag latest files/package.json
+  pnpm dlx update-blueprint-deps --filter ember-cli --tag latest package.json files/package.json
   ```
 - commit this update `git commit -am "update ember-cli dependency to latest"`
 - push and open a PR targeting `release` with a PR title like `Update ember-cli to 6.4`
@@ -103,7 +104,8 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - Update blueprint dependencies to beta
 
   ```
-  pnpm dlx update-blueprint-deps --filter ember-source --tag beta files/package.json
+  pnpm dlx update-blueprint-deps --filter ember-source --tag beta package.json files/package.json
+  pnpm dlx update-blueprint-deps --filter '.*' package.json files/package.json
   ```
 
 - commit this update `git commit -am "update blueprint dependencies to beta"`
@@ -133,7 +135,8 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - Update blueprint dependencies to alpha
 
   ```
-  pnpm dlx update-blueprint-deps --filter ember-source --tag alpha files/package.json
+  pnpm dlx update-blueprint-deps --filter ember-source --tag alpha package.json files/package.json
+  pnpm dlx update-blueprint-deps --filter '.*' package.json files/package.json
   ```
 
 - commit this update `git commit -am "update blueprint dependencies to alpha"`
@@ -146,6 +149,22 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
   - note: if there are a lot of PRs for previous releases that you don't want in the release notes you can add the `ignore` label to them
 - Merge the `Prepare Alpha Release` when you are ready to release the next alpha version
 - Check the `Release Alpha` GitHub action to make sure the release succeeded
+
+### Update all packages
+
+In the `update-blueprint-deps` steps described above we updated all packages that had in-range updates available. We also need to apply any out-of-range updates as part of the release process.
+
+Once the Alpha release has been completed we should run the following command to see if there are any releases that have out-of-range updates available:
+
+```
+pnpm dlx update-blueprint-deps --filter '.*' --tag latest package.json files/package.json
+```
+
+This is not intended to be committed and opened as a single PR, it is for illustrative purposes only. If your git diff shows that there are any packages that need to have the range updated (i.e. we have a `^` dependency defined but there is a new major release available) then you should run the same command to update that package with a filter on the package name e.g.
+
+```
+pnpm dlx update-blueprint-deps --filter 'walk-sync' --tag latest package.json files/package.json
+```
 
 
 ### Release ember-cli and update ember-cli versions
