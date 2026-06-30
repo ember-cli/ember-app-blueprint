@@ -1,5 +1,22 @@
 # Changelog
 
+## Release (2026-06-30)
+
+* @ember/app-blueprint 7.2.0-alpha.2 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#147](https://github.com/ember-cli/ember-app-blueprint/pull/147) Apply `typescript-eslint`'s recommended config to gts files ([@bendemboski](https://github.com/bendemboski))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#291](https://github.com/ember-cli/ember-app-blueprint/pull/291) update release-plan ([@mansona](https://github.com/mansona))
+  * [#281](https://github.com/ember-cli/ember-app-blueprint/pull/281) Update RELEASE.md ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Ben Demboski ([@bendemboski](https://github.com/bendemboski))
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2026-05-21)
 
 * @ember/app-blueprint 7.2.0-alpha.1 (minor)
