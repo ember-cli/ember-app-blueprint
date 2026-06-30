@@ -40,15 +40,13 @@ jobs:
         name: Run release-plan prepare
         with:
           ref: 'main'
-        env:
-          GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
         id: explanation
 
       - uses: peter-evans/create-pull-request@v8
         name: Create Prepare Release PR
         with:
           commit-message: "Prepare Release ${{ steps.explanation.outputs.new-version}} using 'release-plan'"
-          labels: "internal"
+          labels: internal, ignore
           sign-commits: true
           branch: release-preview
           title: Prepare Alpha Release ${{ steps.explanation.outputs.new-version }}
