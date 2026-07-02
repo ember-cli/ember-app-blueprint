@@ -76,6 +76,7 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
   ```
   pnpm dlx update-blueprint-deps --filter ember-cli --tag latest package.json files/package.json
   ```
+- run `pnpm install` to make sure that the pnpm-lock is updated
 - commit this update `git commit -am "update ember-cli dependency to latest"`
 - push and open a PR targeting `release` with a PR title like `Update ember-cli to 6.4`
 - mark this PR as a `bug` to make sure it goes out in a patch release
