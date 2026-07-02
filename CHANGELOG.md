@@ -1,12 +1,23 @@
 # Changelog
 
-## Release (2026-05-20)
+## Release (2026-07-02)
 
-* @ember/app-blueprint 7.1.0-beta.1 (minor)
+* @ember/app-blueprint 7.1.1 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#299](https://github.com/ember-cli/ember-app-blueprint/pull/299) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-06-30)
+
+* @ember/app-blueprint 7.1.0 (minor)
 
 #### :rocket: Enhancement
 * `@ember/app-blueprint`
-  * [#286](https://github.com/ember-cli/ember-app-blueprint/pull/286) Prepare Beta Release ([@mansona](https://github.com/mansona))
+  * [#295](https://github.com/ember-cli/ember-app-blueprint/pull/295) Promote Beta and update all dependencies for 7.1 release ([@mansona](https://github.com/mansona))
   * [#266](https://github.com/ember-cli/ember-app-blueprint/pull/266) remove chalk in favour of native styleText ([@mansona](https://github.com/mansona))
   * [#267](https://github.com/ember-cli/ember-app-blueprint/pull/267) update walk-sync to v4 ([@mansona](https://github.com/mansona))
   * [#260](https://github.com/ember-cli/ember-app-blueprint/pull/260) update stylelint to v17 ([@mansona](https://github.com/mansona))
@@ -22,6 +33,8 @@
 
 #### :house: Internal
 * `@ember/app-blueprint`
+  * [#298](https://github.com/ember-cli/ember-app-blueprint/pull/298) fix plan release for beta and stable ([@mansona](https://github.com/mansona))
+  * [#297](https://github.com/ember-cli/ember-app-blueprint/pull/297) fix release-plan plan CI ([@mansona](https://github.com/mansona))
   * [#253](https://github.com/ember-cli/ember-app-blueprint/pull/253) Update RELEASE.md with notes from the latest release ([@mansona](https://github.com/mansona))
 
 #### Committers: 2
