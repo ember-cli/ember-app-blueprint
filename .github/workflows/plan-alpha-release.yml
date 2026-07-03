@@ -48,7 +48,7 @@ jobs:
         name: Create Prepare Release PR
         with:
           commit-message: "Prepare Release ${{ steps.explanation.outputs.new-version}} using 'release-plan'"
-          labels: "internal"
+          labels: internal, ignore
           sign-commits: true
           branch: release-preview
           title: Prepare Alpha Release ${{ steps.explanation.outputs.new-version }}
