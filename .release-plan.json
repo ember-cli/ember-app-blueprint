@@ -2,13 +2,21 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "7.2.0-alpha.1",
-      "newVersion": "7.2.0-alpha.2",
+      "oldVersion": "7.3.0-alpha.0",
+      "newVersion": "7.3.0-alpha.1",
       "tagName": "alpha",
       "constraints": [
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :memo: Documentation"
         },
         {
           "impact": "patch",
@@ -18,5 +26,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-06-30)\n\n* @ember/app-blueprint 7.2.0-alpha.2 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#147](https://github.com/ember-cli/ember-app-blueprint/pull/147) Apply `typescript-eslint`'s recommended config to gts files ([@bendemboski](https://github.com/bendemboski))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#291](https://github.com/ember-cli/ember-app-blueprint/pull/291) update release-plan ([@mansona](https://github.com/mansona))\n  * [#281](https://github.com/ember-cli/ember-app-blueprint/pull/281) Update RELEASE.md ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Ben Demboski ([@bendemboski](https://github.com/bendemboski))\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2026-07-03)\n\n* @ember/app-blueprint 7.3.0-alpha.1 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#305](https://github.com/ember-cli/ember-app-blueprint/pull/305) Prepare 7.3 Alpha ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#299](https://github.com/ember-cli/ember-app-blueprint/pull/299) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))\n\n#### :memo: Documentation\n* `@ember/app-blueprint`\n  * [#300](https://github.com/ember-cli/ember-app-blueprint/pull/300) Update RELEASE.md ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#298](https://github.com/ember-cli/ember-app-blueprint/pull/298) fix plan release for beta and stable ([@mansona](https://github.com/mansona))\n  * [#297](https://github.com/ember-cli/ember-app-blueprint/pull/297) fix release-plan plan CI ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
