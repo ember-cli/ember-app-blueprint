@@ -2,6 +2,30 @@
 
 ## Release (2026-07-03)
 
+* @ember/app-blueprint 7.3.0-alpha.1 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#305](https://github.com/ember-cli/ember-app-blueprint/pull/305) Prepare 7.3 Alpha ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#299](https://github.com/ember-cli/ember-app-blueprint/pull/299) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))
+
+#### :memo: Documentation
+* `@ember/app-blueprint`
+  * [#300](https://github.com/ember-cli/ember-app-blueprint/pull/300) Update RELEASE.md ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#298](https://github.com/ember-cli/ember-app-blueprint/pull/298) fix plan release for beta and stable ([@mansona](https://github.com/mansona))
+  * [#297](https://github.com/ember-cli/ember-app-blueprint/pull/297) fix release-plan plan CI ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-07-03)
+
 * @ember/app-blueprint 7.2.0-beta.1 (minor)
 
 #### :rocket: Enhancement
