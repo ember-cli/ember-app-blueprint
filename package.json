@@ -43,7 +43,7 @@
     "strip-ansi": "^7.2.0",
     "tmp-promise": "^3.0.3",
     "vitest": "^4.1.9",
-    "vitest-matrix": "^0.2.0"
+    "vitest-matrix": "^0.2.1"
   },
   "packageManager": "pnpm@10.20.0",
   "release-plan": {
