@@ -54,6 +54,7 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
   pnpm dlx update-blueprint-deps --filter '.*' package.json files/package.json
   ```
 
+- run `pnpm install` to make sure the lock file is up to date
 - commit this update `git commit -am "update blueprint dependencies to latest"`
 - push and open a PR targeting `release` with a PR title like `Promote Beta and update all dependencies for 6.4 release`
 - mark this PR as an `enhancement` if it is a minor release, or `breaking` if it is a major release
