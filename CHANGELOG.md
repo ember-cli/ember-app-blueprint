@@ -1,5 +1,23 @@
 # Changelog
 
+## Release (2026-08-16)
+
+* @ember/app-blueprint 7.3.0-alpha.2 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#283](https://github.com/ember-cli/ember-app-blueprint/pull/283) refactor: remove sort-package-json dependency ([@olenderhub](https://github.com/olenderhub))
+  * [#307](https://github.com/ember-cli/ember-app-blueprint/pull/307) Don't use ember-cli for running tests. ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#310](https://github.com/ember-cli/ember-app-blueprint/pull/310) update vitest-matrix ([@mansona](https://github.com/mansona))
+
+#### Committers: 3
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Hubert Olender ([@olenderhub](https://github.com/olenderhub))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2026-07-03)
 
 * @ember/app-blueprint 7.3.0-alpha.1 (minor)
