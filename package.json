@@ -13,13 +13,13 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "lint": "concurrently 'pnpm:lint:*(!fix)'",
-    "lint:fix": "pnpm lint:eslint && pnpm format",
-    "lint:eslint": "eslint .",
-    "lint:prettier": "prettier . --check",
     "format": "prettier . --write",
-    "test": "vitest",
-    "new:app": "pnpm dlx ember-cli@latest new my-app --blueprint ."
+    "lint": "concurrently 'pnpm:lint:*(!fix)'",
+    "lint:eslint": "eslint .",
+    "lint:fix": "pnpm lint:eslint && pnpm format",
+    "lint:prettier": "prettier . --check",
+    "new:app": "pnpm dlx ember-cli@latest new my-app --blueprint .",
+    "test": "vitest"
   },
   "dependencies": {
     "ejs": "^3.1.10",
@@ -29,8 +29,8 @@
     "walk-sync": "^4.0.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.4",
-    "concurrently": "^9.2.3",
+    "@eslint/js": "^9.39.5",
+    "concurrently": "^9.2.4",
     "ember-cli": "^7.1.0",
     "eslint": "9.x",
     "eslint-config-prettier": "^9.1.2",
@@ -38,12 +38,12 @@
     "fixturify": "^3.0.0",
     "globals": "^15.15.0",
     "jsonc-parser": "^3.3.1",
-    "prettier": "^3.8.4",
-    "prettier-plugin-ember-template-tag": "^2.1.6",
-    "release-plan": "^0.17.4",
+    "prettier": "^3.9.6",
+    "prettier-plugin-ember-template-tag": "^2.1.7",
+    "release-plan": "^0.18.0",
     "strip-ansi": "^7.2.0",
     "tmp-promise": "^3.0.3",
-    "vitest": "^4.1.9",
+    "vitest": "^4.1.10",
     "vitest-matrix": "^0.2.0"
   },
   "packageManager": "pnpm@10.20.0"
