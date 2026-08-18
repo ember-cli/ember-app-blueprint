@@ -1,26 +1,18 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "7.1.1",
-      "newVersion": "7.2.0",
+      "impact": "patch",
+      "oldVersion": "7.2.0",
+      "newVersion": "7.2.1",
       "tagName": "latest",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
-        },
-        {
           "impact": "patch",
-          "reason": "Appears in changelog section :memo: Documentation"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-08-17)\n\n* @ember/app-blueprint 7.2.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#312](https://github.com/ember-cli/ember-app-blueprint/pull/312) Promote Beta and update all dependencies for 7.2 release ([@mansona](https://github.com/mansona))\n  * [#147](https://github.com/ember-cli/ember-app-blueprint/pull/147) Apply `typescript-eslint`'s recommended config to gts files ([@bendemboski](https://github.com/bendemboski))\n\n#### :memo: Documentation\n* `@ember/app-blueprint`\n  * [#300](https://github.com/ember-cli/ember-app-blueprint/pull/300) Update RELEASE.md ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#291](https://github.com/ember-cli/ember-app-blueprint/pull/291) update release-plan ([@mansona](https://github.com/mansona))\n  * [#281](https://github.com/ember-cli/ember-app-blueprint/pull/281) Update RELEASE.md ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Ben Demboski ([@bendemboski](https://github.com/bendemboski))\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2026-08-18)\n\n* @ember/app-blueprint 7.2.1 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#315](https://github.com/ember-cli/ember-app-blueprint/pull/315) update ember-cli dependency to 7.2 ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
