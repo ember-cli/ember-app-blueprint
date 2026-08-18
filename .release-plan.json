@@ -2,8 +2,8 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "7.2.0-beta.0",
-      "newVersion": "7.2.0-beta.1",
+      "oldVersion": "7.3.0-beta.0",
+      "newVersion": "7.3.0-beta.1",
       "tagName": "beta",
       "constraints": [
         {
@@ -16,15 +16,11 @@
         },
         {
           "impact": "patch",
-          "reason": "Appears in changelog section :memo: Documentation"
-        },
-        {
-          "impact": "patch",
           "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-07-03)\n\n* @ember/app-blueprint 7.2.0-beta.1 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#303](https://github.com/ember-cli/ember-app-blueprint/pull/303) Prepare 7.2 Beta ([@mansona](https://github.com/mansona))\n  * [#147](https://github.com/ember-cli/ember-app-blueprint/pull/147) Apply `typescript-eslint`'s recommended config to gts files ([@bendemboski](https://github.com/bendemboski))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#299](https://github.com/ember-cli/ember-app-blueprint/pull/299) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))\n\n#### :memo: Documentation\n* `@ember/app-blueprint`\n  * [#300](https://github.com/ember-cli/ember-app-blueprint/pull/300) Update RELEASE.md ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#298](https://github.com/ember-cli/ember-app-blueprint/pull/298) fix plan release for beta and stable ([@mansona](https://github.com/mansona))\n  * [#297](https://github.com/ember-cli/ember-app-blueprint/pull/297) fix release-plan plan CI ([@mansona](https://github.com/mansona))\n  * [#291](https://github.com/ember-cli/ember-app-blueprint/pull/291) update release-plan ([@mansona](https://github.com/mansona))\n  * [#281](https://github.com/ember-cli/ember-app-blueprint/pull/281) Update RELEASE.md ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Ben Demboski ([@bendemboski](https://github.com/bendemboski))\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2026-08-18)\n\n* @ember/app-blueprint 7.3.0-beta.1 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#317](https://github.com/ember-cli/ember-app-blueprint/pull/317) Prepare 7.3 beta ([@mansona](https://github.com/mansona))\n  * [#312](https://github.com/ember-cli/ember-app-blueprint/pull/312) Promote Beta and update all dependencies for 7.2 release ([@mansona](https://github.com/mansona))\n  * [#283](https://github.com/ember-cli/ember-app-blueprint/pull/283) refactor: remove sort-package-json dependency ([@olenderhub](https://github.com/olenderhub))\n  * [#307](https://github.com/ember-cli/ember-app-blueprint/pull/307) Don't use ember-cli for running tests. ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#315](https://github.com/ember-cli/ember-app-blueprint/pull/315) update ember-cli dependency to 7.2 ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#310](https://github.com/ember-cli/ember-app-blueprint/pull/310) update vitest-matrix ([@mansona](https://github.com/mansona))\n\n#### Committers: 3\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Hubert Olender ([@olenderhub](https://github.com/olenderhub))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
