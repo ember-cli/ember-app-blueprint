@@ -24,7 +24,7 @@
     "lint:js:fix": "eslint . --fix<% if (typescript) { %>",
     "lint:types": "ember-tsc --noEmit<% } %>",
     "start": "vite",
-    "test": "vite build --mode development && ember test --path dist"
+    "test": "vite build --mode development && testem ci --port 0"
   },
   "exports": {
     "./tests/*": "./tests/*",
