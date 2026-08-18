@@ -2,6 +2,30 @@
 
 ## Release (2026-08-18)
 
+* @ember/app-blueprint 7.3.0-beta.1 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#317](https://github.com/ember-cli/ember-app-blueprint/pull/317) Prepare 7.3 beta ([@mansona](https://github.com/mansona))
+  * [#312](https://github.com/ember-cli/ember-app-blueprint/pull/312) Promote Beta and update all dependencies for 7.2 release ([@mansona](https://github.com/mansona))
+  * [#283](https://github.com/ember-cli/ember-app-blueprint/pull/283) refactor: remove sort-package-json dependency ([@olenderhub](https://github.com/olenderhub))
+  * [#307](https://github.com/ember-cli/ember-app-blueprint/pull/307) Don't use ember-cli for running tests. ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#315](https://github.com/ember-cli/ember-app-blueprint/pull/315) update ember-cli dependency to 7.2 ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#310](https://github.com/ember-cli/ember-app-blueprint/pull/310) update vitest-matrix ([@mansona](https://github.com/mansona))
+
+#### Committers: 3
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Hubert Olender ([@olenderhub](https://github.com/olenderhub))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
+## Release (2026-08-18)
+
 * @ember/app-blueprint 7.2.1 (patch)
 
 #### :bug: Bug Fix
