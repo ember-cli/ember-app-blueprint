@@ -1,17 +1,24 @@
 # Changelog
 
-## Release (2026-07-03)
+## Release (2026-08-18)
 
-* @ember/app-blueprint 7.2.0-beta.1 (minor)
-
-#### :rocket: Enhancement
-* `@ember/app-blueprint`
-  * [#303](https://github.com/ember-cli/ember-app-blueprint/pull/303) Prepare 7.2 Beta ([@mansona](https://github.com/mansona))
-  * [#147](https://github.com/ember-cli/ember-app-blueprint/pull/147) Apply `typescript-eslint`'s recommended config to gts files ([@bendemboski](https://github.com/bendemboski))
+* @ember/app-blueprint 7.2.1 (patch)
 
 #### :bug: Bug Fix
 * `@ember/app-blueprint`
-  * [#299](https://github.com/ember-cli/ember-app-blueprint/pull/299) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))
+  * [#315](https://github.com/ember-cli/ember-app-blueprint/pull/315) update ember-cli dependency to 7.2 ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-08-17)
+
+* @ember/app-blueprint 7.2.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#312](https://github.com/ember-cli/ember-app-blueprint/pull/312) Promote Beta and update all dependencies for 7.2 release ([@mansona](https://github.com/mansona))
+  * [#147](https://github.com/ember-cli/ember-app-blueprint/pull/147) Apply `typescript-eslint`'s recommended config to gts files ([@bendemboski](https://github.com/bendemboski))
 
 #### :memo: Documentation
 * `@ember/app-blueprint`
@@ -19,8 +26,6 @@
 
 #### :house: Internal
 * `@ember/app-blueprint`
-  * [#298](https://github.com/ember-cli/ember-app-blueprint/pull/298) fix plan release for beta and stable ([@mansona](https://github.com/mansona))
-  * [#297](https://github.com/ember-cli/ember-app-blueprint/pull/297) fix release-plan plan CI ([@mansona](https://github.com/mansona))
   * [#291](https://github.com/ember-cli/ember-app-blueprint/pull/291) update release-plan ([@mansona](https://github.com/mansona))
   * [#281](https://github.com/ember-cli/ember-app-blueprint/pull/281) Update RELEASE.md ([@mansona](https://github.com/mansona))
 
