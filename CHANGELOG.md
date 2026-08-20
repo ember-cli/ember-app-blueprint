@@ -2,6 +2,17 @@
 
 ## Release (2026-08-20)
 
+* @ember/app-blueprint 7.4.0-alpha.2 (patch)
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#311](https://github.com/ember-cli/ember-app-blueprint/pull/311) add concurrency section to github CI ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-08-20)
+
 * @ember/app-blueprint 7.4.0-alpha.1 (minor)
 
 #### :rocket: Enhancement
