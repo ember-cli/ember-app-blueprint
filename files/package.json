@@ -31,11 +31,11 @@
     "./*": "./app/*"
   },
   "devDependencies": {
-    "@babel/core": "^7.29.7",
-    "@babel/runtime": "^7.29.7",
-    "@babel/plugin-transform-runtime": "^7.29.7<% if (typescript) { %>",
-    "@babel/plugin-transform-typescript": "^7.29.7<% } %>",
-    "@babel/eslint-parser": "^7.29.7<% if (typescript) { %>",
+    "@babel/core": "^8.0.1",
+    "@babel/runtime": "^8.0.0",
+    "@babel/plugin-transform-runtime": "^8.0.1<% if (typescript) { %>",
+    "@babel/plugin-transform-typescript": "^8.0.1<% } %>",
+    "@babel/eslint-parser": "^8.0.1<% if (typescript) { %>",
     "@ember/app-tsconfig": "^2.0.0<% } %>",
     "@ember/optional-features": "^3.0.0",
     "@ember/string": "^4.0.1",
