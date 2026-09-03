@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2026-09-03)
+
+* @ember/app-blueprint 7.3.0-beta.2 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#326](https://github.com/ember-cli/ember-app-blueprint/pull/326) [BUGFIX BETA] assert package.json template sort with sort-package-json ([@olenderhub](https://github.com/olenderhub))
+
+#### Committers: 1
+- Hubert Olender ([@olenderhub](https://github.com/olenderhub))
+
 ## Release (2026-08-18)
 
 * @ember/app-blueprint 7.3.0-beta.1 (minor)
