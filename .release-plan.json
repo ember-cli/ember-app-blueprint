@@ -1,26 +1,18 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "minor",
-      "oldVersion": "7.3.0-beta.0",
-      "newVersion": "7.3.0-beta.1",
+      "impact": "patch",
+      "oldVersion": "7.3.0-beta.1",
+      "newVersion": "7.3.0-beta.2",
       "tagName": "beta",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
-        },
-        {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-08-18)\n\n* @ember/app-blueprint 7.3.0-beta.1 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#317](https://github.com/ember-cli/ember-app-blueprint/pull/317) Prepare 7.3 beta ([@mansona](https://github.com/mansona))\n  * [#312](https://github.com/ember-cli/ember-app-blueprint/pull/312) Promote Beta and update all dependencies for 7.2 release ([@mansona](https://github.com/mansona))\n  * [#283](https://github.com/ember-cli/ember-app-blueprint/pull/283) refactor: remove sort-package-json dependency ([@olenderhub](https://github.com/olenderhub))\n  * [#307](https://github.com/ember-cli/ember-app-blueprint/pull/307) Don't use ember-cli for running tests. ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#315](https://github.com/ember-cli/ember-app-blueprint/pull/315) update ember-cli dependency to 7.2 ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#310](https://github.com/ember-cli/ember-app-blueprint/pull/310) update vitest-matrix ([@mansona](https://github.com/mansona))\n\n#### Committers: 3\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Hubert Olender ([@olenderhub](https://github.com/olenderhub))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2026-09-03)\n\n* @ember/app-blueprint 7.3.0-beta.2 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#326](https://github.com/ember-cli/ember-app-blueprint/pull/326) [BUGFIX BETA] assert package.json template sort with sort-package-json ([@olenderhub](https://github.com/olenderhub))\n\n#### Committers: 1\n- Hubert Olender ([@olenderhub](https://github.com/olenderhub))\n"
 }
