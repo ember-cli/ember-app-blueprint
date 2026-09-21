@@ -2,6 +2,17 @@
 
 ## Release (2026-09-21)
 
+* @ember/app-blueprint 7.3.1 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#330](https://github.com/ember-cli/ember-app-blueprint/pull/330) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-09-21)
+
 * @ember/app-blueprint 7.3.0 (minor)
 
 #### :rocket: Enhancement
