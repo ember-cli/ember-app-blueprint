@@ -1,18 +1,26 @@
 {
   "solution": {
     "@ember/app-blueprint": {
-      "impact": "patch",
-      "oldVersion": "7.2.0",
-      "newVersion": "7.2.1",
+      "impact": "minor",
+      "oldVersion": "7.2.1",
+      "newVersion": "7.3.0",
       "tagName": "latest",
       "constraints": [
         {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-08-18)\n\n* @ember/app-blueprint 7.2.1 (patch)\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#315](https://github.com/ember-cli/ember-app-blueprint/pull/315) update ember-cli dependency to 7.2 ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2026-09-21)\n\n* @ember/app-blueprint 7.3.0 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#328](https://github.com/ember-cli/ember-app-blueprint/pull/328) Promote Beta and update all dependencies for 7.3 release ([@mansona](https://github.com/mansona))\n  * [#283](https://github.com/ember-cli/ember-app-blueprint/pull/283) refactor: remove sort-package-json dependency ([@olenderhub](https://github.com/olenderhub))\n  * [#307](https://github.com/ember-cli/ember-app-blueprint/pull/307) Use testem directly instead of ember-cli for running tests ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#326](https://github.com/ember-cli/ember-app-blueprint/pull/326) [BUGFIX BETA] assert package.json template sort with sort-package-json ([@olenderhub](https://github.com/olenderhub))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#310](https://github.com/ember-cli/ember-app-blueprint/pull/310) update vitest-matrix ([@mansona](https://github.com/mansona))\n\n#### Committers: 3\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Hubert Olender ([@olenderhub](https://github.com/olenderhub))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }

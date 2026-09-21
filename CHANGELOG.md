@@ -1,5 +1,28 @@
 # Changelog
 
+## Release (2026-09-21)
+
+* @ember/app-blueprint 7.3.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#328](https://github.com/ember-cli/ember-app-blueprint/pull/328) Promote Beta and update all dependencies for 7.3 release ([@mansona](https://github.com/mansona))
+  * [#283](https://github.com/ember-cli/ember-app-blueprint/pull/283) refactor: remove sort-package-json dependency ([@olenderhub](https://github.com/olenderhub))
+  * [#307](https://github.com/ember-cli/ember-app-blueprint/pull/307) Use testem directly instead of ember-cli for running tests ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#326](https://github.com/ember-cli/ember-app-blueprint/pull/326) [BUGFIX BETA] assert package.json template sort with sort-package-json ([@olenderhub](https://github.com/olenderhub))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#310](https://github.com/ember-cli/ember-app-blueprint/pull/310) update vitest-matrix ([@mansona](https://github.com/mansona))
+
+#### Committers: 3
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Hubert Olender ([@olenderhub](https://github.com/olenderhub))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2026-08-18)
 
 * @ember/app-blueprint 7.2.1 (patch)
