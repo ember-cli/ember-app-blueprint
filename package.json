@@ -37,7 +37,7 @@
     "fixturify": "^3.0.0",
     "globals": "^15.15.0",
     "jsonc-parser": "^3.3.1",
-    "prettier": "^3.9.7",
+    "prettier": "^3.9.8",
     "prettier-plugin-ember-template-tag": "^2.1.8",
     "release-plan": "^0.18.0",
     "sort-package-json": "^3.7.1",
