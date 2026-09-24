@@ -1,38 +1,51 @@
 # Changelog
 
-## Release (2026-08-20)
+## Release (2026-09-24)
 
-* @ember/app-blueprint 7.4.0-alpha.1 (minor)
+* @ember/app-blueprint 7.4.0-beta.1 (minor)
 
 #### :rocket: Enhancement
 * `@ember/app-blueprint`
+  * [#332](https://github.com/ember-cli/ember-app-blueprint/pull/332) Prepare 7.4 Beta ([@mansona](https://github.com/mansona))
+  * [#328](https://github.com/ember-cli/ember-app-blueprint/pull/328) Promote Beta and update all dependencies for 7.3 release ([@mansona](https://github.com/mansona))
   * [#320](https://github.com/ember-cli/ember-app-blueprint/pull/320) Prepare 7.4 Alpha ([@mansona](https://github.com/mansona))
 
 #### :bug: Bug Fix
 * `@ember/app-blueprint`
-  * [#315](https://github.com/ember-cli/ember-app-blueprint/pull/315) update ember-cli dependency to 7.2 ([@mansona](https://github.com/mansona))
+  * [#330](https://github.com/ember-cli/ember-app-blueprint/pull/330) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))
 
 #### :house: Internal
 * `@ember/app-blueprint`
+  * [#311](https://github.com/ember-cli/ember-app-blueprint/pull/311) add concurrency section to github CI ([@mansona](https://github.com/mansona))
   * [#313](https://github.com/ember-cli/ember-app-blueprint/pull/313) Update RELEASE.md ([@mansona](https://github.com/mansona))
 
 #### Committers: 1
 - Chris Manson ([@mansona](https://github.com/mansona))
 
-## Release (2026-08-18)
+## Release (2026-09-21)
 
-* @ember/app-blueprint 7.3.0-beta.1 (minor)
-
-#### :rocket: Enhancement
-* `@ember/app-blueprint`
-  * [#317](https://github.com/ember-cli/ember-app-blueprint/pull/317) Prepare 7.3 beta ([@mansona](https://github.com/mansona))
-  * [#312](https://github.com/ember-cli/ember-app-blueprint/pull/312) Promote Beta and update all dependencies for 7.2 release ([@mansona](https://github.com/mansona))
-  * [#283](https://github.com/ember-cli/ember-app-blueprint/pull/283) refactor: remove sort-package-json dependency ([@olenderhub](https://github.com/olenderhub))
-  * [#307](https://github.com/ember-cli/ember-app-blueprint/pull/307) Don't use ember-cli for running tests. ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+* @ember/app-blueprint 7.3.1 (patch)
 
 #### :bug: Bug Fix
 * `@ember/app-blueprint`
-  * [#315](https://github.com/ember-cli/ember-app-blueprint/pull/315) update ember-cli dependency to 7.2 ([@mansona](https://github.com/mansona))
+  * [#330](https://github.com/ember-cli/ember-app-blueprint/pull/330) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2026-09-21)
+
+* @ember/app-blueprint 7.3.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#328](https://github.com/ember-cli/ember-app-blueprint/pull/328) Promote Beta and update all dependencies for 7.3 release ([@mansona](https://github.com/mansona))
+  * [#283](https://github.com/ember-cli/ember-app-blueprint/pull/283) refactor: remove sort-package-json dependency ([@olenderhub](https://github.com/olenderhub))
+  * [#307](https://github.com/ember-cli/ember-app-blueprint/pull/307) Use testem directly instead of ember-cli for running tests ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#326](https://github.com/ember-cli/ember-app-blueprint/pull/326) [BUGFIX BETA] assert package.json template sort with sort-package-json ([@olenderhub](https://github.com/olenderhub))
 
 #### :house: Internal
 * `@ember/app-blueprint`
