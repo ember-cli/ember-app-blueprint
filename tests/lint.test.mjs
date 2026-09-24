@@ -26,6 +26,12 @@ describe('linting & formatting', function () {
 
       expect(exitCode).to.equal(0);
     });
+
+    it('caches eslint results', function () {
+      expect(JSON.parse(app.files['package.json']).scripts['lint:js']).to.equal(
+        'eslint . --cache',
+      );
+    });
   });
 
   describe('TypeScript', function () {
@@ -57,6 +63,12 @@ describe('linting & formatting', function () {
       let { exitCode } = await app.execa('pnpm', ['lint']);
 
       expect(exitCode).to.equal(0);
+    });
+
+    it('does not cache eslint results', function () {
+      expect(JSON.parse(app.files['package.json']).scripts['lint:js']).to.equal(
+        'eslint .',
+      );
     });
 
     it('glint passes', async function () {
