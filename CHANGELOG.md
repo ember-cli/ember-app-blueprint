@@ -1,5 +1,30 @@
 # Changelog
 
+## Release (2026-09-25)
+
+* @ember/app-blueprint 7.5.0-alpha.1 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#335](https://github.com/ember-cli/ember-app-blueprint/pull/335) Prepare 7.5 Alpha ([@mansona](https://github.com/mansona))
+  * [#332](https://github.com/ember-cli/ember-app-blueprint/pull/332) Prepare 7.4 Beta ([@mansona](https://github.com/mansona))
+  * [#328](https://github.com/ember-cli/ember-app-blueprint/pull/328) Promote Beta and update all dependencies for 7.3 release ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#333](https://github.com/ember-cli/ember-app-blueprint/pull/333) Don't pass --cache to eslint in TypeScript apps ([@aklkv](https://github.com/aklkv))
+  * [#330](https://github.com/ember-cli/ember-app-blueprint/pull/330) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))
+  * [#326](https://github.com/ember-cli/ember-app-blueprint/pull/326) [BUGFIX BETA] assert package.json template sort with sort-package-json ([@olenderhub](https://github.com/olenderhub))
+
+#### :house: Internal
+* `@ember/app-blueprint`
+  * [#311](https://github.com/ember-cli/ember-app-blueprint/pull/311) add concurrency section to github CI ([@mansona](https://github.com/mansona))
+
+#### Committers: 3
+- Alexey Kulakov ([@aklkv](https://github.com/aklkv))
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Hubert Olender ([@olenderhub](https://github.com/olenderhub))
+
 ## Release (2026-09-24)
 
 * @ember/app-blueprint 7.4.0-beta.1 (minor)

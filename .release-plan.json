@@ -2,8 +2,8 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "7.4.0-alpha.0",
-      "newVersion": "7.4.0-alpha.1",
+      "oldVersion": "7.5.0-alpha.0",
+      "newVersion": "7.5.0-alpha.1",
       "tagName": "alpha",
       "constraints": [
         {
@@ -22,5 +22,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-08-20)\n\n* @ember/app-blueprint 7.4.0-alpha.1 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#320](https://github.com/ember-cli/ember-app-blueprint/pull/320) Prepare 7.4 Alpha ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#315](https://github.com/ember-cli/ember-app-blueprint/pull/315) update ember-cli dependency to 7.2 ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#313](https://github.com/ember-cli/ember-app-blueprint/pull/313) Update RELEASE.md ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2026-09-25)\n\n* @ember/app-blueprint 7.5.0-alpha.1 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#335](https://github.com/ember-cli/ember-app-blueprint/pull/335) Prepare 7.5 Alpha ([@mansona](https://github.com/mansona))\n  * [#332](https://github.com/ember-cli/ember-app-blueprint/pull/332) Prepare 7.4 Beta ([@mansona](https://github.com/mansona))\n  * [#328](https://github.com/ember-cli/ember-app-blueprint/pull/328) Promote Beta and update all dependencies for 7.3 release ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#333](https://github.com/ember-cli/ember-app-blueprint/pull/333) Don't pass --cache to eslint in TypeScript apps ([@aklkv](https://github.com/aklkv))\n  * [#330](https://github.com/ember-cli/ember-app-blueprint/pull/330) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))\n  * [#326](https://github.com/ember-cli/ember-app-blueprint/pull/326) [BUGFIX BETA] assert package.json template sort with sort-package-json ([@olenderhub](https://github.com/olenderhub))\n\n#### :house: Internal\n* `@ember/app-blueprint`\n  * [#311](https://github.com/ember-cli/ember-app-blueprint/pull/311) add concurrency section to github CI ([@mansona](https://github.com/mansona))\n\n#### Committers: 3\n- Alexey Kulakov ([@aklkv](https://github.com/aklkv))\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Hubert Olender ([@olenderhub](https://github.com/olenderhub))\n"
 }
