@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2026-10-01)
+
+* @ember/app-blueprint 7.5.0-alpha.2 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#336](https://github.com/ember-cli/ember-app-blueprint/pull/336) Upgrade qunit to v3 and ember-welcome-page to 8.0.6 in the app blueprint ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+
+#### Committers: 1
+- @NullVoxPopuli's reduced-access machine account for AI usage ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+
 ## Release (2026-09-25)
 
 * @ember/app-blueprint 7.5.0-alpha.1 (minor)
