@@ -3,16 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "description": "Small description for <%= name %> goes here",
-  "repository": "",
   "license": "MIT",
   "author": "",
-  "exports": {
-    "./tests/*": "./tests/*",
-    "./*": "./app/*"
-  },
+  "repository": "",
   "directories": {
     "doc": "doc",
     "test": "tests"
+  },
+  "exports": {
+    "./tests/*": "./tests/*",
+    "./*": "./app/*"
   },
   "scripts": {
     "build": "vite build",
@@ -71,7 +71,7 @@
     "ember-page-title": "^9.0.3",
     "ember-qunit": "^9.1.0",
     "ember-resolver": "^13.2.0",
-    "ember-source": "~7.5.0-alpha.1",
+    "ember-source": "~7.6.0-alpha.1",
     "ember-template-lint": "^7.9.3<% if (welcome) { %>",
     "ember-welcome-page": "^8.0.6<% } %>",
     "eslint": "^9.39.5",
