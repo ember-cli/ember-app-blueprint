@@ -2,8 +2,8 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "7.5.0-alpha.1",
-      "newVersion": "7.5.0-alpha.2",
+      "oldVersion": "7.5.0-alpha.2",
+      "newVersion": "7.5.0-alpha.3",
       "tagName": "alpha",
       "constraints": [
         {
@@ -14,5 +14,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-10-01)\n\n* @ember/app-blueprint 7.5.0-alpha.2 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#336](https://github.com/ember-cli/ember-app-blueprint/pull/336) Upgrade qunit to v3 and ember-welcome-page to 8.0.6 in the app blueprint ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))\n\n#### Committers: 1\n- @NullVoxPopuli's reduced-access machine account for AI usage ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))\n"
+  "description": "## Release (2026-11-02)\n\n* @ember/app-blueprint 7.5.0-alpha.3 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#338](https://github.com/ember-cli/ember-app-blueprint/pull/338) Use useRecommendedStore and drop @warp-drive/legacy ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))\n\n#### Committers: 1\n- @NullVoxPopuli's reduced-access machine account for AI usage ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))\n"
 }

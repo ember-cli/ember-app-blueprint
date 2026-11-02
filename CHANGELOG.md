@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2026-11-02)
+
+* @ember/app-blueprint 7.5.0-alpha.3 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#338](https://github.com/ember-cli/ember-app-blueprint/pull/338) Use useRecommendedStore and drop @warp-drive/legacy ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+
+#### Committers: 1
+- @NullVoxPopuli's reduced-access machine account for AI usage ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+
 ## Release (2026-10-01)
 
 * @ember/app-blueprint 7.5.0-alpha.2 (minor)
