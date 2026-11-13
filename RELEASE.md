@@ -155,13 +155,23 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 
 ### Alpha release from the `main` branch
 
+- run `scripts/next-alpha.sh`
+  - the script reads the beta version from `origin/beta`, and makes a branch like `merge-beta-6-7`
+  - if the script stops on merge conflicts, resolve them, `git add` the files, and run the script again
+
+<details><summary>How to do what the script does manually</summary>
+
 - fetch latest from origin `git fetch`
-- create a new branch to merge `beta` into `main` e.g. `git checkout --no-track -b merge-beta origin/main`
+- create a new branch to merge `beta` into `main` e.g. `git checkout --no-track -b merge-beta-6-7 origin/main`
 - merge beta into this new branch e.g. `git merge origin/beta --no-ff`
   - **make sure to not update the .release-plan file** this should only ever be changed by the release-plan github scripts
   - make sure to not update the `release-plan` config section to the `package.json` during this step.
   - **make sure to not update any .github/workflows/plan-alpha-release.yml file** this should still plan an alpha release
-  - **make sure to not update any .github/workflows/publish-alpha.yml file** this should still publish an alpha release
+  - **make sure to not update any .github/workflows/publish.yml file** this should still publish an alpha release
+  - make sure to not update the version in the package.json during this step, that step comes next
+  - if `package.json` or `files/package.json` has conflicts in dependency ranges, take the `origin/beta` side. A later step updates those ranges again.
+  - if `pnpm-lock.yaml` has conflicts, take the `origin/beta` copy. `pnpm install` rebuilds it in a later step.
+  - commit this merge
 - manually update the version in package.json to be the next alpha.
   - e.g. if the current alpha is `"version": "6.6.0-alpha.3",` update it to be `"version": "6.7.0-alpha.0",`
 - commit this change to the version in package.json: `git commit -am "update to the next alpha version"`
@@ -172,9 +182,13 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
   pnpm dlx update-blueprint-deps --filter '.*' package.json files/package.json
   ```
 
+- run `pnpm install` to make sure the lock file is up to date
 - commit this update `git commit -am "update blueprint dependencies to alpha"`
-- push and open a PR targeting `main` with a PR title like `Prepare 6.6-alpha`
-- mark this PR as an `enchancement`
+- push and open a PR targeting `main` with a PR title like `Prepare 6.7-alpha`
+- mark this PR as an `enhancement`
+
+</details>
+
 - check that everything is ok i.e. CI passes
 - merge the `merge-beta` branch into `main` in GitHub
 - check that the `Prepare Alpha Release` PR has been correctly opened by `release-plan`
