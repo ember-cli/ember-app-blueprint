@@ -1,26 +1,34 @@
 # Changelog
 
-## Release (2026-09-24)
+## Release (2026-11-13)
 
-* @ember/app-blueprint 7.4.0-beta.1 (minor)
-
-#### :rocket: Enhancement
-* `@ember/app-blueprint`
-  * [#332](https://github.com/ember-cli/ember-app-blueprint/pull/332) Prepare 7.4 Beta ([@mansona](https://github.com/mansona))
-  * [#328](https://github.com/ember-cli/ember-app-blueprint/pull/328) Promote Beta and update all dependencies for 7.3 release ([@mansona](https://github.com/mansona))
-  * [#320](https://github.com/ember-cli/ember-app-blueprint/pull/320) Prepare 7.4 Alpha ([@mansona](https://github.com/mansona))
+* @ember/app-blueprint 7.4.1 (patch)
 
 #### :bug: Bug Fix
 * `@ember/app-blueprint`
-  * [#330](https://github.com/ember-cli/ember-app-blueprint/pull/330) update ember-cli dependency to latest ([@mansona](https://github.com/mansona))
+  * [#344](https://github.com/ember-cli/ember-app-blueprint/pull/344) Update ember-cli to 7.4 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
+## Release (2026-11-13)
+
+* @ember/app-blueprint 7.4.0 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#342](https://github.com/ember-cli/ember-app-blueprint/pull/342) Promote Beta and update all dependencies for 7.4 release ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#332](https://github.com/ember-cli/ember-app-blueprint/pull/332) Prepare 7.4 Beta ([@mansona](https://github.com/mansona))
+  * [#320](https://github.com/ember-cli/ember-app-blueprint/pull/320) Prepare 7.4 Alpha ([@mansona](https://github.com/mansona))
 
 #### :house: Internal
 * `@ember/app-blueprint`
   * [#311](https://github.com/ember-cli/ember-app-blueprint/pull/311) add concurrency section to github CI ([@mansona](https://github.com/mansona))
   * [#313](https://github.com/ember-cli/ember-app-blueprint/pull/313) Update RELEASE.md ([@mansona](https://github.com/mansona))
 
-#### Committers: 1
+#### Committers: 2
 - Chris Manson ([@mansona](https://github.com/mansona))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
 
 ## Release (2026-09-21)
 
