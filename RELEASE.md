@@ -35,6 +35,11 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 
 ### Initial Stable Release from the `release` branch
 
+- run `scripts/promote-beta.sh <major.minor>` e.g. `scripts/promote-beta.sh 6.4`
+  - if the script stops on merge conflicts, resolve them, `git add` the files, and run the script again
+
+<details><summary>How to do what the script does manually</summary>
+
 - fetch latest from origin `git fetch`
 - create a new branch to do the release e.g. `git checkout --no-track -b release-plan-6-4 origin/release`
   - note: branches named like `release-6-4` are used to manage LTS patch releases so we don't want to create a branch with that name at this time
@@ -42,7 +47,7 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
   - `git merge origin/beta --no-ff`
   - **make sure to not update the .release-plan file** this should only ever be changed by the release-plan github scripts
   - **make sure to not update the .github/workflows/plan-stable-release.yml file** this should still plan a stable release
-  - **make sure to not update the .github/workflows/publish-stable.yml file** this should still publish a stable release
+  - **make sure to not update the .github/workflows/publish.yml file** this should still publish a stable release
   - **make sure to not update the CHANGELOG.md file** so as not to include the beta or alpha changelogs in the next release
   - make sure to not update the version in the package.json during this step, this will be release-plan's job
   - make sure to not add the `release-plan` config section to the package.json during this step. We are releasing a real release so we don't want to configure release-plan to do a pre-release.
@@ -58,6 +63,9 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - commit this update `git commit -am "update blueprint dependencies to latest"`
 - push and open a PR targeting `release` with a PR title like `Promote Beta and update all dependencies for 6.4 release`
 - mark this PR as an `enhancement` if it is a minor release, or `breaking` if it is a major release
+
+</details>
+
 - check that everything is ok (i.e. that CI has run correctly and that you have the changes you expect)
 - merge branch
 - check that the `Prepare Release` PR has been correctly opened by `release-plan`
@@ -70,8 +78,13 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 
 - Go to the [ember-cli release process](https://github.com/ember-cli/ember-cli/blob/master/RELEASE.md) and complete the initial stable release
 - Make sure that the ember-cli release process is completed and the new stabel release is on npm before continuing here
+- run `scripts/update-ember-cli.sh`
+  - the script reads the version from `ember-cli@latest` on npm, and makes a branch like `update-ember-cli-6-4`
+
+<details><summary>How to do what the script does manually</summary>
+
 - fetch latest from origin `git fetch`
-- create a new branch to update the ember-cli dependency e.g. `git checkout --no-track -b update-ember-cli origin/release`
+- create a new branch to update the ember-cli dependency e.g. `git checkout --no-track -b update-ember-cli-6-4 origin/release`
 - Update ember-cli
 
   ```
@@ -81,6 +94,9 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - commit this update `git commit -am "update ember-cli dependency to latest"`
 - push and open a PR targeting `release` with a PR title like `Update ember-cli to 6.4`
 - mark this PR as a `bug` to make sure it goes out in a patch release
+
+</details>
+
 - check that everything is ok (i.e. that CI has run correctly and that you have the changes you expect)
 - merge the PR
 - check that the `Prepare Release` PR has been correctly opened by `release-plan`
