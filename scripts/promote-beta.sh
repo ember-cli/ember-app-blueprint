@@ -69,10 +69,12 @@ fi
 
 pnpm dlx update-blueprint-deps --filter 'ember-source' --tag latest package.json files/package.json
 pnpm dlx update-blueprint-deps --filter '.*' package.json files/package.json
-if git diff --quiet; then
+pnpm install
+dep_files=(package.json files/package.json pnpm-lock.yaml)
+if git diff --quiet -- "${dep_files[@]}"; then
   echo "blueprint dependencies are already at latest"
 else
-  git commit --all --message "update blueprint dependencies to latest"
+  git commit --message "update blueprint dependencies to latest" -- "${dep_files[@]}"
 fi
 
 git push --set-upstream origin "$branch"
