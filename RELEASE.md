@@ -107,11 +107,17 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 
 ### Beta release from the `beta` branch
 
+- run `scripts/promote-alpha.sh`
+  - the script reads the alpha version from `origin/main`, and makes a branch like `merge-release-6-5`
+  - if the script stops on merge conflicts, resolve them, `git add` the files, and run the script again
+
+<details><summary>How to do what the script does manually</summary>
+
 - fetch latest from origin `git fetch`
-- create a new branch to merge `release` into `beta` e.g. `git checkout --no-track -b merge-release origin/beta`
+- create a new branch to merge `release` into `beta` e.g. `git checkout --no-track -b merge-release-6-5 origin/beta`
 - merge release into this new branch e.g. `git merge origin/release --no-ff`
   - **make sure to not update the .release-plan file** this should only ever be changed by the release-plan github scripts
-  - **make sure to not update any .github/workflows/plan-release.yml file** this should still plan a beta release
+  - **make sure to not update any .github/workflows/plan-beta-release.yml file** this should still plan a beta release
   - **make sure to not update any .github/workflows/publish.yml file** this should still publish a beta release
   - make sure to not update the version in the package.json during this step, that step comes later
   - make sure to not remove the `release-plan` config section of the the `package.json` during this step.
@@ -121,6 +127,8 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
   - **make sure to not update the CHANGELOG.md file** in this step. It should match the changelog on `origin/release` at this stage.
   - update the alpha version in package.json to be a beta i.e. if the incoming merge is `"version": "6.6.0-alpha.3",` update it to `"version": "6.6.0-beta.0",`
   - make sure not to update the `release-plan` config in `package.json`
+  - if `package.json` or `files/package.json` has conflicts in dependency ranges, take the `origin/main` side. The next step updates those ranges again.
+  - if `pnpm-lock.yaml` has conflicts, take the `origin/main` copy. `pnpm install` rebuilds it in a later step.
   - commit this merge
 - Update blueprint dependencies to beta
 
@@ -132,7 +140,10 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - run `pnpm install` to install any updated packages
 - commit this update `git commit -am "update blueprint dependencies to beta"`
 - push and open a PR targeting `beta` with a PR title like `Prepare 6.5-beta`
-- mark this PR as an `enchancement`
+- mark this PR as an `enhancement`
+
+</details>
+
 - check that everything is ok i.e. CI passes
 - merge the `merge-release` branch into `beta` in GitHub
 - check that the `Prepare Beta Release` PR has been correctly opened by `release-plan`
