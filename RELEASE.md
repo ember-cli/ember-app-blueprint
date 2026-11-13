@@ -78,8 +78,13 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 
 - Go to the [ember-cli release process](https://github.com/ember-cli/ember-cli/blob/master/RELEASE.md) and complete the initial stable release
 - Make sure that the ember-cli release process is completed and the new stabel release is on npm before continuing here
+- run `scripts/update-ember-cli.sh`
+  - the script reads the version from `ember-cli@latest` on npm, and makes a branch like `update-ember-cli-6-4`
+
+<details><summary>How to do what the script does manually</summary>
+
 - fetch latest from origin `git fetch`
-- create a new branch to update the ember-cli dependency e.g. `git checkout --no-track -b update-ember-cli origin/release`
+- create a new branch to update the ember-cli dependency e.g. `git checkout --no-track -b update-ember-cli-6-4 origin/release`
 - Update ember-cli
 
   ```
@@ -89,6 +94,9 @@ You can use [this saved search](https://github.com/ember-cli/ember-app-blueprint
 - commit this update `git commit -am "update ember-cli dependency to latest"`
 - push and open a PR targeting `release` with a PR title like `Update ember-cli to 6.4`
 - mark this PR as a `bug` to make sure it goes out in a patch release
+
+</details>
+
 - check that everything is ok (i.e. that CI has run correctly and that you have the changes you expect)
 - merge the PR
 - check that the `Prepare Release` PR has been correctly opened by `release-plan`
