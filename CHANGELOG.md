@@ -2,6 +2,23 @@
 
 ## Release (2026-11-13)
 
+* @ember/app-blueprint 7.6.0-alpha.1 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#348](https://github.com/ember-cli/ember-app-blueprint/pull/348) Prepare 7.6-alpha ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#346](https://github.com/ember-cli/ember-app-blueprint/pull/346) Prepare 7.5-beta ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#342](https://github.com/ember-cli/ember-app-blueprint/pull/342) Promote Beta and update all dependencies for 7.4 release ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#344](https://github.com/ember-cli/ember-app-blueprint/pull/344) Update ember-cli to 7.4 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
+## Release (2026-11-13)
+
 * @ember/app-blueprint 7.5.0-beta.1 (minor)
 
 #### :rocket: Enhancement
