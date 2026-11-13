@@ -2,6 +2,17 @@
 
 ## Release (2026-11-13)
 
+* @ember/app-blueprint 7.4.1 (patch)
+
+#### :bug: Bug Fix
+* `@ember/app-blueprint`
+  * [#344](https://github.com/ember-cli/ember-app-blueprint/pull/344) Update ember-cli to 7.4 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
+## Release (2026-11-13)
+
 * @ember/app-blueprint 7.4.0 (minor)
 
 #### :rocket: Enhancement
