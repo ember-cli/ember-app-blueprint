@@ -196,14 +196,11 @@ module.exports = {
 
     if (options.npm) {
       /**
-       * These packages have the peer `@babel/core ^7`:
-       * - @rollup/plugin-babel
-       * - ember-cli-babel
+       * ember-cli-babel has the peer `@babel/core ^7`.
        *
        * pnpm only warns, but npm fails to install.
        */
       contents.overrides = {
-        '@rollup/plugin-babel': { '@babel/core': '$@babel/core' },
         'ember-cli-babel': { '@babel/core': '$@babel/core' },
       };
     }
