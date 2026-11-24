@@ -45,7 +45,7 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install
       - id: set-matrix
-        run: echo "matrix=$(pnpm vitest-matrix --node 20 22 24 --os ubuntu-latest windows-latest)" >> $GITHUB_OUTPUT
+        run: echo "matrix=$(pnpm vitest-matrix --node 22 24 26 --os ubuntu-latest windows-latest)" >> $GITHUB_OUTPUT
 
   tests:
     name: ${{ matrix.name }} - Node ${{matrix.node}} - ${{matrix.os}}
