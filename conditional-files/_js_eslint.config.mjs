@@ -17,6 +17,7 @@ import js from '@eslint/js';
 import { defineConfig, globalIgnores } from 'eslint/config';
 
 import ember from 'eslint-plugin-ember/recommended';
+import emberTemplateLintMigration from 'eslint-plugin-ember/configs/template-lint-migration';
 <% if (warpDrive) { %>import WarpDrive from 'eslint-plugin-warp-drive/recommended';
 <% } %>import eslintConfigPrettier from 'eslint-config-prettier';
 import qunit from 'eslint-plugin-qunit';
@@ -35,6 +36,7 @@ export default defineConfig([
   eslintConfigPrettier,
   ember.configs.base,
   ember.configs.gjs,
+  ...emberTemplateLintMigration,
   <% if (warpDrive) { %>...WarpDrive,
   <% } %>/**
    * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
