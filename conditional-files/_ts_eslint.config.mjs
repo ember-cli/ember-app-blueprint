@@ -28,7 +28,7 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 import qunit from 'eslint-plugin-qunit';
 import n from 'eslint-plugin-n';
 
-import babelParser from '@babel/eslint-parser/experimental-worker';
+import babelParser from '@babel/eslint-parser';
 
 const parserOptions = {
   esm: {

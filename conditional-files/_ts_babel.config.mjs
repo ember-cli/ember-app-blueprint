@@ -40,8 +40,6 @@ export default {
       '@babel/plugin-transform-runtime',
       {
         absoluteRuntime: dirname(fileURLToPath(import.meta.url)),
-        useESModules: true,
-        regenerator: false,
       },
     ],
     ...babelCompatSupport(),

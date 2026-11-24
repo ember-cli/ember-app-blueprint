@@ -22,7 +22,7 @@ import ember from 'eslint-plugin-ember/recommended';
 import qunit from 'eslint-plugin-qunit';
 import n from 'eslint-plugin-n';
 
-import babelParser from '@babel/eslint-parser/experimental-worker';
+import babelParser from '@babel/eslint-parser';
 
 const esmParserOptions = {
   ecmaFeatures: { modules: true },
