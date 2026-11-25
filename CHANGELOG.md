@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2026-11-25)
+
+* @ember/app-blueprint 7.6.0-alpha.2 (minor)
+
+#### :rocket: Enhancement
+* `@ember/app-blueprint`
+  * [#353](https://github.com/ember-cli/ember-app-blueprint/pull/353) Drop Node 20 and test on Node 26 ([@aklkv](https://github.com/aklkv))
+
+#### Committers: 1
+- Alexey Kulakov ([@aklkv](https://github.com/aklkv))
+
 ## Release (2026-11-13)
 
 * @ember/app-blueprint 7.6.0-alpha.1 (minor)
