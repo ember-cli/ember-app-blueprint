@@ -22,6 +22,7 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 import ts from 'typescript-eslint';
 
 import ember from 'eslint-plugin-ember/recommended';
+import emberTemplateLintMigration from 'eslint-plugin-ember/configs/template-lint-migration';
 <% if (warpDrive) { %>import WarpDrive from 'eslint-plugin-warp-drive/recommended';
 <% } %>
 import eslintConfigPrettier from 'eslint-config-prettier';
@@ -49,6 +50,7 @@ export default defineConfig([
   ember.configs.base,
   ember.configs.gjs,
   ember.configs.gts,
+  ...emberTemplateLintMigration,
   <% if (warpDrive) { %>...WarpDrive,
   <% } %>eslintConfigPrettier,
   /**
