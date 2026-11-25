@@ -2,21 +2,17 @@
   "solution": {
     "@ember/app-blueprint": {
       "impact": "minor",
-      "oldVersion": "7.6.0-alpha.0",
-      "newVersion": "7.6.0-alpha.1",
+      "oldVersion": "7.6.0-alpha.1",
+      "newVersion": "7.6.0-alpha.2",
       "tagName": "alpha",
       "constraints": [
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-11-13)\n\n* @ember/app-blueprint 7.6.0-alpha.1 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#348](https://github.com/ember-cli/ember-app-blueprint/pull/348) Prepare 7.6-alpha ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#346](https://github.com/ember-cli/ember-app-blueprint/pull/346) Prepare 7.5-beta ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#342](https://github.com/ember-cli/ember-app-blueprint/pull/342) Promote Beta and update all dependencies for 7.4 release ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :bug: Bug Fix\n* `@ember/app-blueprint`\n  * [#344](https://github.com/ember-cli/ember-app-blueprint/pull/344) Update ember-cli to 7.4 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2026-11-25)\n\n* @ember/app-blueprint 7.6.0-alpha.2 (minor)\n\n#### :rocket: Enhancement\n* `@ember/app-blueprint`\n  * [#353](https://github.com/ember-cli/ember-app-blueprint/pull/353) Drop Node 20 and test on Node 26 ([@aklkv](https://github.com/aklkv))\n\n#### Committers: 1\n- Alexey Kulakov ([@aklkv](https://github.com/aklkv))\n"
 }
