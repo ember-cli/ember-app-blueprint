@@ -191,8 +191,19 @@ module.exports = {
     return fileInfo;
   },
 
-  updatePackageJson(_options, content) {
+  updatePackageJson(options, content) {
     let contents = JSON.parse(content);
+
+    if (options.npm) {
+      /**
+       * ember-cli-babel has the peer `@babel/core ^7`.
+       *
+       * pnpm only warns, but npm fails to install.
+       */
+      contents.overrides = {
+        'ember-cli-babel': { '@babel/core': '$@babel/core' },
+      };
+    }
 
     return stringifyAndNormalize(contents);
   },
